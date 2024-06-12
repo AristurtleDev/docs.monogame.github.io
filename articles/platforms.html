@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Supported Platforms | MonoGame ">
+
+    <title>Supported Platforms | MonoGame </title>
+<meta name="description" content="Platforms that MonoGame supports building games for.">
+
+    <meta name="og:url" content="https://monogame.net/articles/platforms.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Supported Platforms | MonoGame ">
+    <meta name="og:description" content="Platforms that MonoGame supports building games for.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/platforms.html">
+    <meta name="twitter:title" content="Supported Platforms | MonoGame ">
+    <meta name="twitter:description" content="Platforms that MonoGame supports building games for.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/platforms.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="supported-platforms">Supported Platforms</h1>
+<p class="text-secondary">Platforms that MonoGame supports building games for.</p>
+<p>MonoGame supports building games for the following <strong>systems</strong>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Desktop PCs</strong></th>
+<th><strong>Mobiles</strong></th>
+<th><strong>Gaming consoles</strong>*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows<br>macOS<br>Linux</td>
+<td>iOS<br>iPadOS<br>Android</td>
+<td>Xbox<br>PlayStation 4<br>PlayStation 5<br>Nintendo Switch<br>Google Stadia</td>
+</tr>
+</tbody>
+</table>
+<p>*<em>Gaming consoles are restricted to registered developers and are not publicly available nor publicly documented. To get access to those platforms, please contact your console account manager(s). MonoGame documentation for closed platforms is available in their respective repositories.</em></p>
+<h2 id="understanding-monogames-platform-types">Understanding MonoGame's platform types</h2>
+<p>There are different implementations of MonoGame that we call <strong>target platforms</strong> (or just <strong>platforms</strong>).</p>
+<p>The platforms mostly correspond to the systems MonoGame supports but some platforms support multiple systems. For instance, the <em>DesktopGL</em> platform can be used to build games that will run either on Windows, macOS, or Linux with the same base code and project.</p>
+<p>Each platform comes with its own project template that you can choose when starting a project.</p>
+<p>Below is a list of public platforms with their corresponding NuGet package, the <code>dotnet new</code> template identifier, and an explanation of the platform.</p>
+<ul>
+<li><a href="#windowsdx">WindowsDX</a></li>
+<li><a href="#desktopgl">DesktopGL</a></li>
+<li><a href="#windowsuniversal">Windows Universal</a></li>
+<li><a href="#android">Android</a></li>
+<li><a href="#ios">iOS</a></li>
+</ul>
+<p>Beside these target platforms, MonoGame provides additional templates for shared game logic and extensions to the MonoGame Content Pipeline that can be used across all platforms.</p>
+<ul>
+<li><a href="#net-standard-library">.NET Standard Library</a></li>
+<li><a href="#shared-project">Shared Project</a></li>
+<li><a href="#content-pipeline-extension">Content Pipeline Extension</a></li>
+</ul>
+<h2 id="platform-details">Platform details</h2>
+<h3 id="windowsdx">WindowsDX</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Supported Systems</strong></th>
+<th><strong>NuGet Package</strong></th>
+<th><strong>Template ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>MonoGame.Framework.WindowsDX</td>
+<td>mgwindowsdx</td>
+</tr>
+</tbody>
+</table>
+<p>WindowsDX uses WinForms to manage the game window, <strong>DirectX</strong> (9.0c or newer) is used for graphics, and XAudio is used for audio.</p>
+<p>You can target <strong>Windows</strong>* 8.1 and up with this platform.</p>
+<p>WindowsDX requires the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109">DirectX June 2010</a> runtime to both build and run games. Make sure that your players have it installed (otherwise you might be missing sound and gamepad rumble support).</p>
+<h3 id="desktopgl">DesktopGL</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Supported Systems</strong></th>
+<th><strong>NuGet Package</strong></th>
+<th><strong>Template ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows, macOS, Linux</td>
+<td>MonoGame.Framework.DesktopGL</td>
+<td>mgdesktopgl</td>
+</tr>
+</tbody>
+</table>
+<p>DesktopGL uses SDL for windowing, <strong>OpenGL</strong> for graphics, and OpenAL-Soft for audio.</p>
+<p>DesktopGL supports <strong>Windows</strong> (8.1 and up), <strong>macOS</strong> (Catalina 10.15 and up) and <strong>Linux</strong> (64bit-only).</p>
+<p>DesktopGL requires at least OpenGL 2.0 with the ARB_framebuffer_object extension (or alternatively at least OpenGL 3.0).</p>
+<p>DesktopGL is a convenient way to publish builds for Windows, macOS, and Linux from a single project and source code. It also allows to cross-compile any build from any of these operating systems (e.g. you can build a Linux game from Windows).</p>
+<p>You can target Windows 8.1 (and up), macOS Catalina 10.15 (and up), and Linux with this platform.</p>
+<p>DesktopGL currently does not have a <code>VideoPlayer</code> implementation.</p>
+<h3 id="windowsuniversal">WindowsUniversal</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Supported Systems</strong></th>
+<th><strong>NuGet Package</strong></th>
+<th><strong>Template ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 10, Xbox (UWP-only, not XDK)</td>
+<td>MonoGame.Framework.WindowsUniversal</td>
+<td>mguwpcore (core app, no xaml), mguwpxaml (xaml app)</td>
+</tr>
+</tbody>
+</table>
+<p>The WindowsUniversal platform runs on <a href="https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide">Universal Windows Platform (UWP)</a>.</p>
+<p>WindowsUniversal uses <strong>DirectX</strong> for graphics, and XAudio for audio just like the WindowsDX platform.</p>
+<p>UWP comes in two flavors, each with its own project template:</p>
+<ul>
+<li><p><strong>XAML app template</strong>: an app in which your game will be hosted within an XAML page. This can be useful if you wish to offer a more complex UWP experience with multiple pages or XAML controls.</p>
+</li>
+<li><p><strong>Core app template</strong>: a raw app without any XAML, more straightforward if you don't need XAML controls.</p>
+</li>
+</ul>
+<p>This platform is meant to publish games on the <strong>Windows Store</strong>, for both <strong>Windows</strong> and <strong>Xbox</strong> (through the <a href="https://www.xbox.com/en-US/developers/creators-program">Xbox Live Creators Program</a>).</p>
+<p>Note that UWP games running on Xbox get <a href="https://docs.microsoft.com/en-us/windows/uwp/xbox-apps/system-resource-allocation">restricted access</a> to the console capabilities. To unlock those restrictions, MonoGame has a dedicated Xbox platform for registered <a href="https://www.xbox.com/en-US/Developers/id">ID@Xbox</a> developers targeting the XDK (this platform is private and requires you to contact your ID@Xbox manager).</p>
+<p>Building for UWP requires the Windows SDK version 19041 or better to be installed.</p>
+<h3 id="android">Android</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Supported Systems</strong></th>
+<th><strong>NuGet Package</strong></th>
+<th><strong>Template ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>MonoGame.Framework.Android</td>
+<td>mgandroid</td>
+</tr>
+</tbody>
+</table>
+<p>The Android platform uses <a href="https://docs.microsoft.com/en-us/xamarin/android/">Xamarin.Android</a>. <strong>OpenGL</strong> is used for graphics, and OpenAL for audio.</p>
+<p>Building for Android requires the .NET Xamarin component to be installed. You can install it with the Visual Studio installer (if you're using Visual Studio) or with the CLI command <code>dotnet workload install android</code> (if you're working with Rider, VS Code, or the CLI).</p>
+<p>Building for Android also requires the Java 11 JDK (we recommand that you use <a href="https://docs.microsoft.com/en-us/java/openjdk/download#openjdk-11">the Microsoft's distribution</a>) as well as the Android SDK 31.</p>
+<h3 id="ios">iOS</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Supported Systems</strong></th>
+<th><strong>NuGet Package</strong></th>
+<th><strong>Template ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iOS, iPadOS</td>
+<td>MonoGame.Framework.iOS</td>
+<td>mgios</td>
+</tr>
+</tbody>
+</table>
+<p>The iOS platform uses <a href="https://docs.microsoft.com/en-us/xamarin/ios/">Xamarin.iOS</a>. <strong>OpenGL</strong> is used for graphics, and OpenAL for audio.</p>
+<p>Building for Android requires the .NET Xamarin component to be installed. You can install it with the Visual Studio installer (if you're using Visual Studio) or with the CLI command <code>dotnet workload install ios</code> (if you're working with Rider, VS Code, or the CLI).</p>
+<p>The latest version of Xcode will also be required.</p>
+<p>You can test and deploy an iOS game on Windows by <a href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/windows/connecting-to-mac/">pairing your Visual Studio 2022 with a mac on your local network</a>. This feature is not avaible for Rider, Visual Studio Code, or the CLI.</p>
+<h2 id="other-templates">Other templates</h2>
+<h3 id="net-standard-library">.NET Standard Library</h3>
+<p><strong>Template ID</strong>: mgnetstandard</p>
+<p>A project template to create <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard</a> libraries to distribute code through a DLL. This can be used to redistribute libraries or to share code between multiple projects (like different platforms).</p>
+<h3 id="shared-project">Shared Project</h3>
+<p><strong>Template ID</strong>: mgshared</p>
+<p>A project template to create a <a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/shared-projects">shared project</a> which can be used to share code between multiple other projects. The difference with .NET Standard libraries is that shared projects don't produce an intermediate DLL and the code is directly shared and built into the other projects it reference.</p>
+<h3 id="content-pipeline-extension">Content Pipeline Extension</h3>
+<p><strong>Template ID</strong>: mgpipeline</p>
+<p>A project template for writing custom logic for handling content and building it into XNB files.</p>
+<h1 id="section"></h1>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/platforms.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

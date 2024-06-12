@@ -1,0 +1,675 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class VertexContent | MonoGame ">
+
+    <title>Class VertexContent | MonoGame </title>
+<meta name="description" content="Provides methods and properties for maintaining the vertex data of a GeometryContent.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class VertexContent | MonoGame ">
+    <meta name="og:description" content="Provides methods and properties for maintaining the vertex data of a GeometryContent.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.html">
+    <meta name="twitter:title" content="Class VertexContent | MonoGame ">
+    <meta name="twitter:description" content="Provides methods and properties for maintaining the vertex data of a GeometryContent.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent" class="text-break">
+Class VertexContent  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.html">Content</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.html">Pipeline</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.Content.Pipeline.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides methods and properties for maintaining the vertex data of a GeometryContent.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class VertexContent</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VertexContent</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This class combines a collection of arbitrarily named data channels with a list of position indices that reference the Positions collection of the parent MeshContent.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Channels_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Channels*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Channels" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Channels">
+  Channels
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the list of named vertex data channels in the VertexContent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VertexChannelCollection Channels { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannelCollection.html">VertexChannelCollection</a></dt>
+    <dd><p>Collection of vertex data channels.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_PositionIndices_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.PositionIndices*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_PositionIndices" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.PositionIndices">
+  PositionIndices
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the list of position indices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VertexChannel&lt;int&gt; PositionIndices { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel-1.html">VertexChannel</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>Position of the position index being retrieved.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_PositionIndices_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This list adds a level of indirection between the actual triangle indices and the Positions member of the parent. This indirection preserves the topological vertex identity in cases where a single vertex position is used by triangles that straddle a discontinuity in some other data channel.
+For example, the following code gets the position of the first vertex of the first triangle in a GeometryContent object:
+parent.Positions[Vertices.PositionIndices[Indices[0]]]</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Positions_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Positions*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Positions" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Positions">
+  Positions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets position data from the parent mesh object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndirectPositionCollection Positions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.IndirectPositionCollection.html">IndirectPositionCollection</a></dt>
+    <dd><p>Collection of vertex positions for the mesh.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Positions_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The collection returned from this call provides a virtualized view of the vertex positions for this batch. The collection uses the contents of the PositionIndices property to index into the parent Positions. This collection is read-only. If you need to modify any contained values, edit the PositionIndices or Positions members directly.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_VertexCount_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.VertexCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_VertexCount" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.VertexCount">
+  VertexCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of vertices for the content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int VertexCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of vertices.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Add_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Add*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Add_System_Int32_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Add(System.Int32)">
+  Add(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a new vertex index to the end of the PositionIndices collection.
+Other vertex channels will automatically be extended and the new indices populated with default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Add(int positionIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>positionIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index into the MeshContent.Positions member of the parent.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index of the new entry. This can be added to the Indices member of the parent.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_AddRange_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.AddRange*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_AddRange_System_Collections_Generic_IEnumerable_System_Int32__" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.AddRange(System.Collections.Generic.IEnumerable{System.Int32})">
+  AddRange(IEnumerable&lt;int&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends multiple vertex indices to the end of the PositionIndices collection.
+Other vertex channels will automatically be extended and the new indices populated with default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRange(IEnumerable&lt;int&gt; positionIndexCollection)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>positionIndexCollection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>Index into the Positions member of the parent.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_CreateVertexBuffer_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.CreateVertexBuffer*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_CreateVertexBuffer" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.CreateVertexBuffer">
+  CreateVertexBuffer()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts design-time vertex position and channel data into a vertex buffer format that a graphics device can recognize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VertexBufferContent CreateVertexBuffer()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Processors.VertexBufferContent.html">VertexBufferContent</a></dt>
+    <dd><p>A packed vertex buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.InvalidContentException.html">InvalidContentException</a></dt>
+    <dd><p>One or more of the vertex channel types are invalid or an unrecognized name was passed to VertexElementUsage.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Insert_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Insert*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_Insert_System_Int32_System_Int32_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.Insert(System.Int32,System.Int32)">
+  Insert(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a new vertex index to the PositionIndices collection.
+Other vertex channels will automatically be extended and the new indices populated with default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insert(int index, int positionIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Vertex index to be inserted.</p>
+</dd>
+    <dt><code>positionIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Position of new vertex index in the collection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_InsertRange_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.InsertRange*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_InsertRange_System_Int32_System_Collections_Generic_IEnumerable_System_Int32__" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+  InsertRange(int, IEnumerable&lt;int&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts multiple vertex indices to the PositionIndices collection.
+Other vertex channels will automatically be extended and the new indices populated with default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertRange(int index, IEnumerable&lt;int&gt; positionIndexCollection)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Vertex index to be inserted.</p>
+</dd>
+    <dt><code>positionIndexCollection</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd><p>Position of the first element of the inserted range in the collection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_RemoveAt_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.RemoveAt*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_RemoveAt_System_Int32_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.RemoveAt(System.Int32)">
+  RemoveAt(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a vertex index from the specified location in both PositionIndices and VertexChannel&lt;T&gt;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index of the vertex to be removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_RemoveRange_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.RemoveRange*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexContent_RemoveRange_System_Int32_System_Int32_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexContent.RemoveRange(System.Int32,System.Int32)">
+  RemoveRange(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a range of vertex indices from the specified location in both PositionIndices and VertexChannel&lt;T&gt;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveRange(int index, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index of the first vertex index to be removed.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of indices to remove.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

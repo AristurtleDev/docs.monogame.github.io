@@ -1,0 +1,934 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class SamplerState | MonoGame ">
+
+    <title>Class SamplerState | MonoGame </title>
+<meta name="description" content="Contains sampler state, which determines how to sample texture data.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.SamplerState.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class SamplerState | MonoGame ">
+    <meta name="og:description" content="Contains sampler state, which determines how to sample texture data.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.SamplerState.html">
+    <meta name="twitter:title" content="Class SamplerState | MonoGame ">
+    <meta name="twitter:description" content="Contains sampler state, which determines how to sample texture data.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Graphics.SamplerState">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Graphics_SamplerState" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState" class="text-break">
+Class SamplerState  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Contains sampler state, which determines how to sample texture data.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SamplerState : GraphicsResource, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html">GraphicsResource</a></div>
+      <div><span class="xref">SamplerState</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_GraphicsDeviceResetting">GraphicsResource.GraphicsDeviceResetting()</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Dispose">GraphicsResource.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Disposing">GraphicsResource.Disposing</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_GraphicsDevice">GraphicsResource.GraphicsDevice</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_IsDisposed">GraphicsResource.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Name">GraphicsResource.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Tag">GraphicsResource.Tag</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_ToString">GraphicsResource.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState__ctor_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState__ctor" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.#ctor">
+  SamplerState()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of the <a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a> class
+with default values equivalent to <a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html#Microsoft_Xna_Framework_Graphics_SamplerState_LinearWrap">LinearWrap</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SamplerState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_AnisotropicClamp" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AnisotropicClamp">
+  AnisotropicClamp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains default state for anisotropic filtering and texture coordinate clamping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly SamplerState AnisotropicClamp</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_AnisotropicClamp_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This built-in state object has the following settings:</p>
+<pre><code class="lang-csharp">Filter = TextureFilter.Anisotropic,
+AddressU = TextureAddressMode.Clamp,
+AddressV = TextureAddressMode.Clamp,
+AddressW = TextureAddressMode.Clamp,</code></pre>
+</div>
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_AnisotropicWrap" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AnisotropicWrap">
+  AnisotropicWrap
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains default state for anisotropic filtering and texture coordinate wrapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly SamplerState AnisotropicWrap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_AnisotropicWrap_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This built-in state object has the following settings:</p>
+<pre><code class="lang-csharp">Filter = TextureFilter.Anisotropic,
+AddressU = TextureAddressMode.Wrap,
+AddressV = TextureAddressMode.Wrap,
+AddressW = TextureAddressMode.Wrap,</code></pre>
+</div>
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_LinearClamp" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.LinearClamp">
+  LinearClamp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains default state for linear filtering and texture coordinate clamping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly SamplerState LinearClamp</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_LinearClamp_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This built-in state object has the following settings:</p>
+<pre><code class="lang-csharp">Filter = TextureFilter.Linear,
+AddressU = TextureAddressMode.Clamp,
+AddressV = TextureAddressMode.Clamp,
+AddressW = TextureAddressMode.Clamp,</code></pre>
+</div>
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_LinearWrap" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.LinearWrap">
+  LinearWrap
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains default state for linear filtering and texture coordinate wrapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly SamplerState LinearWrap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_LinearWrap_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This built-in state object has the following settings:</p>
+<pre><code class="lang-csharp">Filter = TextureFilter.Linear,
+AddressU = TextureAddressMode.Wrap,
+AddressV = TextureAddressMode.Wrap,
+AddressW = TextureAddressMode.Wrap,</code></pre>
+</div>
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_PointClamp" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.PointClamp">
+  PointClamp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains default state for point filtering and texture coordinate clamping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly SamplerState PointClamp</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_PointClamp_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This built-in state object has the following settings:</p>
+<pre><code class="lang-csharp">Filter = TextureFilter.Point,
+AddressU = TextureAddressMode.Clamp,
+AddressV = TextureAddressMode.Clamp,
+AddressW = TextureAddressMode.Clamp,</code></pre>
+</div>
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_PointWrap" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.PointWrap">
+  PointWrap
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains default state for point filtering and texture coordinate wrapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly SamplerState PointWrap</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_PointWrap_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This built-in state object has the following settings:</p>
+<pre><code class="lang-csharp">Filter = TextureFilter.Point,
+AddressU = TextureAddressMode.Wrap,
+AddressV = TextureAddressMode.Wrap,
+AddressW = TextureAddressMode.Wrap,</code></pre>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_AddressU_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AddressU*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_AddressU" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AddressU">
+  AddressU
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the texture-address mode for the u-coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureAddressMode AddressU { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureAddressMode.html">TextureAddressMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_AddressV_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AddressV*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_AddressV" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AddressV">
+  AddressV
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the texture-address mode for the v-coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureAddressMode AddressV { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureAddressMode.html">TextureAddressMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_AddressW_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AddressW*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_AddressW" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.AddressW">
+  AddressW
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the texture-address mode for the w-coordinate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureAddressMode AddressW { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureAddressMode.html">TextureAddressMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_BorderColor_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.BorderColor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_BorderColor" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.BorderColor">
+  BorderColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the color to use for texels outside of range,
+when <a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureAddressMode.html#Microsoft_Xna_Framework_Graphics_TextureAddressMode_Border">Border</a> is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color BorderColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_ComparisonFunction_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.ComparisonFunction*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_ComparisonFunction" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.ComparisonFunction">
+  ComparisonFunction
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>When using comparison sampling, also set <a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html#Microsoft_Xna_Framework_Graphics_SamplerState_FilterMode">FilterMode</a> to <a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureFilterMode.html#Microsoft_Xna_Framework_Graphics_TextureFilterMode_Comparison">Comparison</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompareFunction ComparisonFunction { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.CompareFunction.html">CompareFunction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_Filter_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.Filter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_Filter" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.Filter">
+  Filter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the type of filtering during sampling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureFilter Filter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureFilter.html">TextureFilter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_FilterMode_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.FilterMode*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_FilterMode" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.FilterMode">
+  FilterMode
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets filtering mode for texture samplers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureFilterMode FilterMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureFilterMode.html">TextureFilterMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_MaxAnisotropy_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.MaxAnisotropy*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_MaxAnisotropy" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.MaxAnisotropy">
+  MaxAnisotropy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum anisotropy.
+The default value is 4.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxAnisotropy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_MaxAnisotropy_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Use anisotropic filtering to reduce blur and aliasing effects
+when texturing a surface that will be viewed at an extreme viewing angle.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_MaxMipLevel_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.MaxMipLevel*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_MaxMipLevel" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.MaxMipLevel">
+  MaxMipLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the level of detail (LOD) index of the largest map to use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxMipLevel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum LOD, which ranges from 0 to n-1, where n is the index of the largest map.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_MipMapLevelOfDetailBias_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.MipMapLevelOfDetailBias*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_MipMapLevelOfDetailBias" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.MipMapLevelOfDetailBias">
+  MipMapLevelOfDetailBias
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the mipmap LOD bias. The default value is 0. <p></p>
+A negative value indicates a larger mipmap level; a positive value indicates a smaller mipmap level.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MipMapLevelOfDetailBias { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Graphics_SamplerState_MipMapLevelOfDetailBias_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Mipmap LOD bias offsets the mipmap level from which a texture is sampled
+(the result is computed using trilinear texturing between the nearest two levels).</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_SamplerState_Dispose_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_SamplerState_Dispose_System_Boolean_" data-uid="Microsoft.Xna.Framework.Graphics.SamplerState.Dispose(System.Boolean)">
+  Dispose(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

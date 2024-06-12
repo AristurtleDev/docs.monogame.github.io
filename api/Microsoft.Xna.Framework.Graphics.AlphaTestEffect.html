@@ -1,0 +1,865 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class AlphaTestEffect | MonoGame ">
+
+    <title>Class AlphaTestEffect | MonoGame </title>
+<meta name="description" content="Built-in effect that supports alpha testing.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.AlphaTestEffect.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class AlphaTestEffect | MonoGame ">
+    <meta name="og:description" content="Built-in effect that supports alpha testing.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.AlphaTestEffect.html">
+    <meta name="twitter:title" content="Class AlphaTestEffect | MonoGame ">
+    <meta name="twitter:description" content="Built-in effect that supports alpha testing.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect" class="text-break">
+Class AlphaTestEffect  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Built-in effect that supports alpha testing.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AlphaTestEffect : Effect, IDisposable, IEffectMatrices, IEffectFog</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html">GraphicsResource</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html">Effect</a></div>
+      <div><span class="xref">AlphaTestEffect</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Graphics.IEffectMatrices.html">IEffectMatrices</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Graphics.IEffectFog.html">IEffectFog</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html#Microsoft_Xna_Framework_Graphics_Effect_Parameters">Effect.Parameters</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html#Microsoft_Xna_Framework_Graphics_Effect_Techniques">Effect.Techniques</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html#Microsoft_Xna_Framework_Graphics_Effect_CurrentTechnique">Effect.CurrentTechnique</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html#Microsoft_Xna_Framework_Graphics_Effect_Dispose_System_Boolean_">Effect.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html#Microsoft_Xna_Framework_Graphics_Effect_GraphicsDeviceResetting">Effect.GraphicsDeviceResetting()</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Dispose">GraphicsResource.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Disposing">GraphicsResource.Disposing</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_GraphicsDevice">GraphicsResource.GraphicsDevice</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_IsDisposed">GraphicsResource.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Name">GraphicsResource.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_Tag">GraphicsResource.Tag</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html#Microsoft_Xna_Framework_Graphics_GraphicsResource_ToString">GraphicsResource.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect__ctor_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect__ctor_Microsoft_Xna_Framework_Graphics_AlphaTestEffect_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.#ctor(Microsoft.Xna.Framework.Graphics.AlphaTestEffect)">
+  AlphaTestEffect(AlphaTestEffect)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new AlphaTestEffect by cloning parameter settings from an existing instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AlphaTestEffect(AlphaTestEffect cloneSource)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cloneSource</code> <a class="xref" href="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.html">AlphaTestEffect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect__ctor_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+  AlphaTestEffect(GraphicsDevice)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new AlphaTestEffect with default parameter settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlphaTestEffect(GraphicsDevice device)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>device</code> <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Alpha_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Alpha*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Alpha" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Alpha">
+  Alpha
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the material alpha.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Alpha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_AlphaFunction_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.AlphaFunction*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_AlphaFunction" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.AlphaFunction">
+  AlphaFunction
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the alpha compare function (default Greater).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompareFunction AlphaFunction { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.CompareFunction.html">CompareFunction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_DiffuseColor_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.DiffuseColor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_DiffuseColor" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.DiffuseColor">
+  DiffuseColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the material diffuse color (range 0 to 1).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 DiffuseColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogColor_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogColor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogColor" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogColor">
+  FogColor
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the fog color.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 FogColor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogEnabled_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogEnabled*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogEnabled" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogEnabled">
+  FogEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the fog enable flag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FogEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogEnd_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogEnd*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogEnd" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogEnd">
+  FogEnd
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the fog end distance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FogEnd { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogStart_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogStart*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_FogStart" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.FogStart">
+  FogStart
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the fog start distance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FogStart { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Projection_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Projection*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Projection" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Projection">
+  Projection
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the projection matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix Projection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_ReferenceAlpha_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.ReferenceAlpha*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_ReferenceAlpha" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.ReferenceAlpha">
+  ReferenceAlpha
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the reference alpha value (default 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ReferenceAlpha { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Texture_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Texture*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Texture" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Texture">
+  Texture
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the current texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture2D Texture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture2D.html">Texture2D</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_VertexColorEnabled_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.VertexColorEnabled*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_VertexColorEnabled" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.VertexColorEnabled">
+  VertexColorEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether vertex color is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool VertexColorEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_View_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.View*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_View" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.View">
+  View
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the view matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix View { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_World_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.World*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_World" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.World">
+  World
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the world matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix World { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Clone_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Clone*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_Clone" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.Clone">
+  Clone()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a clone of the current AlphaTestEffect instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Effect Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html">Effect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_OnApply_" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.OnApply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_AlphaTestEffect_OnApply" data-uid="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.OnApply">
+  OnApply()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lazily computes derived parameter values immediately before applying the effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnApply()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

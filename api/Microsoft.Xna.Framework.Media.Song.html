@@ -1,0 +1,951 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class Song | MonoGame ">
+
+    <title>Class Song | MonoGame </title>
+<meta name="description" content="Provides access to a song in the song library.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Media.Song.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class Song | MonoGame ">
+    <meta name="og:description" content="Provides access to a song in the song library.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Media.Song.html">
+    <meta name="twitter:title" content="Class Song | MonoGame ">
+    <meta name="twitter:description" content="Provides access to a song in the song library.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Media.Song">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Media_Song" data-uid="Microsoft.Xna.Framework.Media.Song" class="text-break">
+Class Song  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Media.html">Media</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides access to a song in the song library.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Song : IEquatable&lt;Song&gt;, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Song</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Album_" data-uid="Microsoft.Xna.Framework.Media.Song.Album*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Album" data-uid="Microsoft.Xna.Framework.Media.Song.Album">
+  Album
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html#Microsoft_Xna_Framework_Media_Song_Album">Album</a> on which the Song appears.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Album Album { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Media.Album.html">Album</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Artist_" data-uid="Microsoft.Xna.Framework.Media.Song.Artist*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Artist" data-uid="Microsoft.Xna.Framework.Media.Song.Artist">
+  Artist
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Microsoft.Xna.Framework.Media.Artist.html">Artist</a> of the Song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Artist Artist { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Media.Artist.html">Artist</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Duration_" data-uid="Microsoft.Xna.Framework.Media.Song.Duration*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Duration" data-uid="Microsoft.Xna.Framework.Media.Song.Duration">
+  Duration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the duration of the <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Duration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Genre_" data-uid="Microsoft.Xna.Framework.Media.Song.Genre*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Genre" data-uid="Microsoft.Xna.Framework.Media.Song.Genre">
+  Genre
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Microsoft.Xna.Framework.Media.Genre.html">Genre</a> of the Song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Genre Genre { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Media.Genre.html">Genre</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_IsDisposed_" data-uid="Microsoft.Xna.Framework.Media.Song.IsDisposed*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_IsDisposed" data-uid="Microsoft.Xna.Framework.Media.Song.IsDisposed">
+  IsDisposed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the object is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisposed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_IsProtected_" data-uid="Microsoft.Xna.Framework.Media.Song.IsProtected*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_IsProtected" data-uid="Microsoft.Xna.Framework.Media.Song.IsProtected">
+  IsProtected
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether the song is DRM protected content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsProtected { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_IsRated_" data-uid="Microsoft.Xna.Framework.Media.Song.IsRated*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_IsRated" data-uid="Microsoft.Xna.Framework.Media.Song.IsRated">
+  IsRated
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value that indicates whether the song has been rated by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRated { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Name_" data-uid="Microsoft.Xna.Framework.Media.Song.Name*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Name" data-uid="Microsoft.Xna.Framework.Media.Song.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_PlayCount_" data-uid="Microsoft.Xna.Framework.Media.Song.PlayCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_PlayCount" data-uid="Microsoft.Xna.Framework.Media.Song.PlayCount">
+  PlayCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the song play count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PlayCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Position_" data-uid="Microsoft.Xna.Framework.Media.Song.Position*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Position" data-uid="Microsoft.Xna.Framework.Media.Song.Position">
+  Position
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the position of the Song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Position { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Rating_" data-uid="Microsoft.Xna.Framework.Media.Song.Rating*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Rating" data-uid="Microsoft.Xna.Framework.Media.Song.Rating">
+  Rating
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the user's rating for the <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Rating { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>User's rating for this <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a>, or 0 if the song is unrated.
+Ratings range from 1 (dislike the most) to 10 (like the most).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_TrackNumber_" data-uid="Microsoft.Xna.Framework.Media.Song.TrackNumber*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_TrackNumber" data-uid="Microsoft.Xna.Framework.Media.Song.TrackNumber">
+  TrackNumber
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the track number of the song on the song's <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html#Microsoft_Xna_Framework_Media_Song_Album">Album</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TrackNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Track number of this <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a> on the song's <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html#Microsoft_Xna_Framework_Media_Song_Album">Album</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Dispose_" data-uid="Microsoft.Xna.Framework.Media.Song.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Dispose" data-uid="Microsoft.Xna.Framework.Media.Song.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Equals_" data-uid="Microsoft.Xna.Framework.Media.Song.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Equals_Microsoft_Xna_Framework_Media_Song_" data-uid="Microsoft.Xna.Framework.Media.Song.Equals(Microsoft.Xna.Framework.Media.Song)">
+  Equals(Song)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two instances of <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a> are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Song song)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>song</code> <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a> to compare with the current object</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a> is equal to the current object;
+otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Equals_" data-uid="Microsoft.Xna.Framework.Media.Song.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Equals_System_Object_" data-uid="Microsoft.Xna.Framework.Media.Song.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_Finalize_" data-uid="Microsoft.Xna.Framework.Media.Song.Finalize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_Finalize" data-uid="Microsoft.Xna.Framework.Media.Song.Finalize">
+  ~Song()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~Song()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_FromUri_" data-uid="Microsoft.Xna.Framework.Media.Song.FromUri*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_FromUri_System_String_System_Uri_" data-uid="Microsoft.Xna.Framework.Media.Song.FromUri(System.String,System.Uri)">
+  FromUri(string, Uri)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a song that can be played via <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html">MediaPlayer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Song FromUri(string name, Uri uri)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name for the song. See <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html#Microsoft_Xna_Framework_Media_Song_Name">Song.Name</a>.</p>
+</dd>
+    <dt><code>uri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
+    <dd><p>The path to the song file.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_GetHashCode_" data-uid="Microsoft.Xna.Framework.Media.Song.GetHashCode*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_GetHashCode" data-uid="Microsoft.Xna.Framework.Media.Song.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_op_Equality_" data-uid="Microsoft.Xna.Framework.Media.Song.op_Equality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_op_Equality_Microsoft_Xna_Framework_Media_Song_Microsoft_Xna_Framework_Media_Song_" data-uid="Microsoft.Xna.Framework.Media.Song.op_Equality(Microsoft.Xna.Framework.Media.Song,Microsoft.Xna.Framework.Media.Song)">
+  operator ==(Song, Song)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified Song instances are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Song song1, Song song2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>song1</code> <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd></dd>
+    <dt><code>song2</code> <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_Song_op_Inequality_" data-uid="Microsoft.Xna.Framework.Media.Song.op_Inequality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_Song_op_Inequality_Microsoft_Xna_Framework_Media_Song_Microsoft_Xna_Framework_Media_Song_" data-uid="Microsoft.Xna.Framework.Media.Song.op_Inequality(Microsoft.Xna.Framework.Media.Song,Microsoft.Xna.Framework.Media.Song)">
+  operator !=(Song, Song)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified Song instances are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Song song1, Song song2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>song1</code> <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd></dd>
+    <dt><code>song2</code> <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

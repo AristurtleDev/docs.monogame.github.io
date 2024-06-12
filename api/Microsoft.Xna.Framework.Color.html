@@ -1,0 +1,6116 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Struct Color | MonoGame ">
+
+    <title>Struct Color | MonoGame </title>
+<meta name="description" content="Describes a 32-bit packed color.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Color.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Struct Color | MonoGame ">
+    <meta name="og:description" content="Describes a 32-bit packed color.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Color.html">
+    <meta name="twitter:title" content="Struct Color | MonoGame ">
+    <meta name="twitter:description" content="Describes a 32-bit packed color.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Color">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Color" data-uid="Microsoft.Xna.Framework.Color" class="text-break">
+Struct Color  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Describes a 32-bit packed color.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public struct Color : IEquatable&lt;Color&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_Microsoft_Xna_Framework_Color_System_Int32_" data-uid="Microsoft.Xna.Framework.Color.#ctor(Microsoft.Xna.Framework.Color,System.Int32)">
+  Color(Color, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from a <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> and an alpha value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(Color color, int alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> for RGB values of new <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instance.</p>
+</dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The alpha component value from 0 to 255.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_Microsoft_Xna_Framework_Color_System_Single_" data-uid="Microsoft.Xna.Framework.Color.#ctor(Microsoft.Xna.Framework.Color,System.Single)">
+  Color(Color, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from color and alpha value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(Color color, float alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> for RGB values of new <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instance.</p>
+</dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Alpha component value from 0.0f to 1.0f.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Color.#ctor(Microsoft.Xna.Framework.Vector3)">
+  Color(Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from the XYZ unit length components of a vector. Alpha value will be opaque.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(Vector3 color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> representing color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_Microsoft_Xna_Framework_Vector4_" data-uid="Microsoft.Xna.Framework.Color.#ctor(Microsoft.Xna.Framework.Vector4)">
+  Color(Vector4)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from the XYZW unit length components of a vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(Vector4 color)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>color</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> representing color.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_System_Byte_System_Byte_System_Byte_System_Byte_" data-uid="Microsoft.Xna.Framework.Color.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+  Color(byte, byte, byte, byte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from scalars representing red, green, blue and alpha values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(byte r, byte g, byte b, byte alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Color__ctor_System_Byte_System_Byte_System_Byte_System_Byte__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This overload sets the values directly without clamping, and may therefore be faster than the other overloads.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_System_Int32_System_Int32_System_Int32_" data-uid="Microsoft.Xna.Framework.Color.#ctor(System.Int32,System.Int32,System.Int32)">
+  Color(int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from scalars representing red, green and blue values. Alpha value will be opaque.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(int r, int g, int b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Red component value from 0 to 255.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Green component value from 0 to 255.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Blue component value from 0 to 255.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Microsoft.Xna.Framework.Color.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+  Color(int, int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from scalars representing red, green, blue and alpha values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(int r, int g, int b, int alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Red component value from 0 to 255.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Green component value from 0 to 255.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Blue component value from 0 to 255.</p>
+</dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Alpha component value from 0 to 255.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Color.#ctor(System.Single,System.Single,System.Single)">
+  Color(float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from scalars representing red, green and blue values. Alpha value will be opaque.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(float r, float g, float b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Red component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Green component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Blue component value from 0.0f to 1.0f.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Color.#ctor(System.Single,System.Single,System.Single,System.Single)">
+  Color(float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from scalars representing red, green, blue and alpha values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(float r, float g, float b, float alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Red component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Green component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Blue component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Alpha component value from 0.0f to 1.0f.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color__ctor_" data-uid="Microsoft.Xna.Framework.Color.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color__ctor_System_UInt32_" data-uid="Microsoft.Xna.Framework.Color.#ctor(System.UInt32)">
+  Color(uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs an RGBA color from a packed value.
+The value is a 32-bit unsigned integer, with R in the least significant octet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color(uint packedValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>packedValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The packed value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Color_A_" data-uid="Microsoft.Xna.Framework.Color.A*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_A" data-uid="Microsoft.Xna.Framework.Color.A">
+  A
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the alpha component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public byte A { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_AliceBlue_" data-uid="Microsoft.Xna.Framework.Color.AliceBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_AliceBlue" data-uid="Microsoft.Xna.Framework.Color.AliceBlue">
+  AliceBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>AliceBlue color (R:240,G:248,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color AliceBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_AntiqueWhite_" data-uid="Microsoft.Xna.Framework.Color.AntiqueWhite*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_AntiqueWhite" data-uid="Microsoft.Xna.Framework.Color.AntiqueWhite">
+  AntiqueWhite
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>AntiqueWhite color (R:250,G:235,B:215,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color AntiqueWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Aqua_" data-uid="Microsoft.Xna.Framework.Color.Aqua*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Aqua" data-uid="Microsoft.Xna.Framework.Color.Aqua">
+  Aqua
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Aqua color (R:0,G:255,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Aqua { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Aquamarine_" data-uid="Microsoft.Xna.Framework.Color.Aquamarine*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Aquamarine" data-uid="Microsoft.Xna.Framework.Color.Aquamarine">
+  Aquamarine
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Aquamarine color (R:127,G:255,B:212,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Aquamarine { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Azure_" data-uid="Microsoft.Xna.Framework.Color.Azure*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Azure" data-uid="Microsoft.Xna.Framework.Color.Azure">
+  Azure
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Azure color (R:240,G:255,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Azure { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_B_" data-uid="Microsoft.Xna.Framework.Color.B*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_B" data-uid="Microsoft.Xna.Framework.Color.B">
+  B
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the blue component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public byte B { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Beige_" data-uid="Microsoft.Xna.Framework.Color.Beige*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Beige" data-uid="Microsoft.Xna.Framework.Color.Beige">
+  Beige
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Beige color (R:245,G:245,B:220,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Beige { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Bisque_" data-uid="Microsoft.Xna.Framework.Color.Bisque*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Bisque" data-uid="Microsoft.Xna.Framework.Color.Bisque">
+  Bisque
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bisque color (R:255,G:228,B:196,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Bisque { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Black_" data-uid="Microsoft.Xna.Framework.Color.Black*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Black" data-uid="Microsoft.Xna.Framework.Color.Black">
+  Black
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Black color (R:0,G:0,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Black { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_BlanchedAlmond_" data-uid="Microsoft.Xna.Framework.Color.BlanchedAlmond*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_BlanchedAlmond" data-uid="Microsoft.Xna.Framework.Color.BlanchedAlmond">
+  BlanchedAlmond
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>BlanchedAlmond color (R:255,G:235,B:205,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color BlanchedAlmond { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Blue_" data-uid="Microsoft.Xna.Framework.Color.Blue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Blue" data-uid="Microsoft.Xna.Framework.Color.Blue">
+  Blue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Blue color (R:0,G:0,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Blue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_BlueViolet_" data-uid="Microsoft.Xna.Framework.Color.BlueViolet*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_BlueViolet" data-uid="Microsoft.Xna.Framework.Color.BlueViolet">
+  BlueViolet
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>BlueViolet color (R:138,G:43,B:226,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color BlueViolet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Brown_" data-uid="Microsoft.Xna.Framework.Color.Brown*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Brown" data-uid="Microsoft.Xna.Framework.Color.Brown">
+  Brown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Brown color (R:165,G:42,B:42,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Brown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_BurlyWood_" data-uid="Microsoft.Xna.Framework.Color.BurlyWood*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_BurlyWood" data-uid="Microsoft.Xna.Framework.Color.BurlyWood">
+  BurlyWood
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>BurlyWood color (R:222,G:184,B:135,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color BurlyWood { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_CadetBlue_" data-uid="Microsoft.Xna.Framework.Color.CadetBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_CadetBlue" data-uid="Microsoft.Xna.Framework.Color.CadetBlue">
+  CadetBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>CadetBlue color (R:95,G:158,B:160,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color CadetBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Chartreuse_" data-uid="Microsoft.Xna.Framework.Color.Chartreuse*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Chartreuse" data-uid="Microsoft.Xna.Framework.Color.Chartreuse">
+  Chartreuse
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Chartreuse color (R:127,G:255,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Chartreuse { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Chocolate_" data-uid="Microsoft.Xna.Framework.Color.Chocolate*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Chocolate" data-uid="Microsoft.Xna.Framework.Color.Chocolate">
+  Chocolate
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Chocolate color (R:210,G:105,B:30,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Chocolate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Coral_" data-uid="Microsoft.Xna.Framework.Color.Coral*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Coral" data-uid="Microsoft.Xna.Framework.Color.Coral">
+  Coral
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Coral color (R:255,G:127,B:80,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Coral { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_CornflowerBlue_" data-uid="Microsoft.Xna.Framework.Color.CornflowerBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_CornflowerBlue" data-uid="Microsoft.Xna.Framework.Color.CornflowerBlue">
+  CornflowerBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>CornflowerBlue color (R:100,G:149,B:237,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color CornflowerBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Cornsilk_" data-uid="Microsoft.Xna.Framework.Color.Cornsilk*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Cornsilk" data-uid="Microsoft.Xna.Framework.Color.Cornsilk">
+  Cornsilk
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cornsilk color (R:255,G:248,B:220,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Cornsilk { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Crimson_" data-uid="Microsoft.Xna.Framework.Color.Crimson*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Crimson" data-uid="Microsoft.Xna.Framework.Color.Crimson">
+  Crimson
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Crimson color (R:220,G:20,B:60,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Crimson { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Cyan_" data-uid="Microsoft.Xna.Framework.Color.Cyan*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Cyan" data-uid="Microsoft.Xna.Framework.Color.Cyan">
+  Cyan
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cyan color (R:0,G:255,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Cyan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkBlue_" data-uid="Microsoft.Xna.Framework.Color.DarkBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkBlue" data-uid="Microsoft.Xna.Framework.Color.DarkBlue">
+  DarkBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkBlue color (R:0,G:0,B:139,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkCyan_" data-uid="Microsoft.Xna.Framework.Color.DarkCyan*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkCyan" data-uid="Microsoft.Xna.Framework.Color.DarkCyan">
+  DarkCyan
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkCyan color (R:0,G:139,B:139,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkCyan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkGoldenrod_" data-uid="Microsoft.Xna.Framework.Color.DarkGoldenrod*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkGoldenrod" data-uid="Microsoft.Xna.Framework.Color.DarkGoldenrod">
+  DarkGoldenrod
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkGoldenrod color (R:184,G:134,B:11,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkGoldenrod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkGray_" data-uid="Microsoft.Xna.Framework.Color.DarkGray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkGray" data-uid="Microsoft.Xna.Framework.Color.DarkGray">
+  DarkGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkGray color (R:169,G:169,B:169,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkGreen_" data-uid="Microsoft.Xna.Framework.Color.DarkGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkGreen" data-uid="Microsoft.Xna.Framework.Color.DarkGreen">
+  DarkGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkGreen color (R:0,G:100,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkKhaki_" data-uid="Microsoft.Xna.Framework.Color.DarkKhaki*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkKhaki" data-uid="Microsoft.Xna.Framework.Color.DarkKhaki">
+  DarkKhaki
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkKhaki color (R:189,G:183,B:107,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkKhaki { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkMagenta_" data-uid="Microsoft.Xna.Framework.Color.DarkMagenta*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkMagenta" data-uid="Microsoft.Xna.Framework.Color.DarkMagenta">
+  DarkMagenta
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkMagenta color (R:139,G:0,B:139,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkMagenta { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkOliveGreen_" data-uid="Microsoft.Xna.Framework.Color.DarkOliveGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkOliveGreen" data-uid="Microsoft.Xna.Framework.Color.DarkOliveGreen">
+  DarkOliveGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkOliveGreen color (R:85,G:107,B:47,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkOliveGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkOrange_" data-uid="Microsoft.Xna.Framework.Color.DarkOrange*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkOrange" data-uid="Microsoft.Xna.Framework.Color.DarkOrange">
+  DarkOrange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkOrange color (R:255,G:140,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkOrange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkOrchid_" data-uid="Microsoft.Xna.Framework.Color.DarkOrchid*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkOrchid" data-uid="Microsoft.Xna.Framework.Color.DarkOrchid">
+  DarkOrchid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkOrchid color (R:153,G:50,B:204,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkOrchid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkRed_" data-uid="Microsoft.Xna.Framework.Color.DarkRed*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkRed" data-uid="Microsoft.Xna.Framework.Color.DarkRed">
+  DarkRed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkRed color (R:139,G:0,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkSalmon_" data-uid="Microsoft.Xna.Framework.Color.DarkSalmon*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkSalmon" data-uid="Microsoft.Xna.Framework.Color.DarkSalmon">
+  DarkSalmon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkSalmon color (R:233,G:150,B:122,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkSalmon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkSeaGreen_" data-uid="Microsoft.Xna.Framework.Color.DarkSeaGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkSeaGreen" data-uid="Microsoft.Xna.Framework.Color.DarkSeaGreen">
+  DarkSeaGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkSeaGreen color (R:143,G:188,B:139,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkSeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkSlateBlue_" data-uid="Microsoft.Xna.Framework.Color.DarkSlateBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkSlateBlue" data-uid="Microsoft.Xna.Framework.Color.DarkSlateBlue">
+  DarkSlateBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkSlateBlue color (R:72,G:61,B:139,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkSlateBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkSlateGray_" data-uid="Microsoft.Xna.Framework.Color.DarkSlateGray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkSlateGray" data-uid="Microsoft.Xna.Framework.Color.DarkSlateGray">
+  DarkSlateGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkSlateGray color (R:47,G:79,B:79,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkSlateGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkTurquoise_" data-uid="Microsoft.Xna.Framework.Color.DarkTurquoise*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkTurquoise" data-uid="Microsoft.Xna.Framework.Color.DarkTurquoise">
+  DarkTurquoise
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkTurquoise color (R:0,G:206,B:209,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkTurquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DarkViolet_" data-uid="Microsoft.Xna.Framework.Color.DarkViolet*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DarkViolet" data-uid="Microsoft.Xna.Framework.Color.DarkViolet">
+  DarkViolet
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DarkViolet color (R:148,G:0,B:211,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DarkViolet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DeepPink_" data-uid="Microsoft.Xna.Framework.Color.DeepPink*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DeepPink" data-uid="Microsoft.Xna.Framework.Color.DeepPink">
+  DeepPink
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DeepPink color (R:255,G:20,B:147,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DeepPink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DeepSkyBlue_" data-uid="Microsoft.Xna.Framework.Color.DeepSkyBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DeepSkyBlue" data-uid="Microsoft.Xna.Framework.Color.DeepSkyBlue">
+  DeepSkyBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DeepSkyBlue color (R:0,G:191,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DeepSkyBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DimGray_" data-uid="Microsoft.Xna.Framework.Color.DimGray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DimGray" data-uid="Microsoft.Xna.Framework.Color.DimGray">
+  DimGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DimGray color (R:105,G:105,B:105,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DimGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_DodgerBlue_" data-uid="Microsoft.Xna.Framework.Color.DodgerBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_DodgerBlue" data-uid="Microsoft.Xna.Framework.Color.DodgerBlue">
+  DodgerBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DodgerBlue color (R:30,G:144,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DodgerBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Firebrick_" data-uid="Microsoft.Xna.Framework.Color.Firebrick*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Firebrick" data-uid="Microsoft.Xna.Framework.Color.Firebrick">
+  Firebrick
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Firebrick color (R:178,G:34,B:34,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Firebrick { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_FloralWhite_" data-uid="Microsoft.Xna.Framework.Color.FloralWhite*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_FloralWhite" data-uid="Microsoft.Xna.Framework.Color.FloralWhite">
+  FloralWhite
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>FloralWhite color (R:255,G:250,B:240,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FloralWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_ForestGreen_" data-uid="Microsoft.Xna.Framework.Color.ForestGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_ForestGreen" data-uid="Microsoft.Xna.Framework.Color.ForestGreen">
+  ForestGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>ForestGreen color (R:34,G:139,B:34,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color ForestGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Fuchsia_" data-uid="Microsoft.Xna.Framework.Color.Fuchsia*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Fuchsia" data-uid="Microsoft.Xna.Framework.Color.Fuchsia">
+  Fuchsia
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Fuchsia color (R:255,G:0,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Fuchsia { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_G_" data-uid="Microsoft.Xna.Framework.Color.G*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_G" data-uid="Microsoft.Xna.Framework.Color.G">
+  G
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the green component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public byte G { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Gainsboro_" data-uid="Microsoft.Xna.Framework.Color.Gainsboro*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Gainsboro" data-uid="Microsoft.Xna.Framework.Color.Gainsboro">
+  Gainsboro
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gainsboro color (R:220,G:220,B:220,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Gainsboro { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_GhostWhite_" data-uid="Microsoft.Xna.Framework.Color.GhostWhite*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_GhostWhite" data-uid="Microsoft.Xna.Framework.Color.GhostWhite">
+  GhostWhite
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>GhostWhite color (R:248,G:248,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color GhostWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Gold_" data-uid="Microsoft.Xna.Framework.Color.Gold*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Gold" data-uid="Microsoft.Xna.Framework.Color.Gold">
+  Gold
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gold color (R:255,G:215,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Gold { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Goldenrod_" data-uid="Microsoft.Xna.Framework.Color.Goldenrod*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Goldenrod" data-uid="Microsoft.Xna.Framework.Color.Goldenrod">
+  Goldenrod
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Goldenrod color (R:218,G:165,B:32,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Goldenrod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Gray_" data-uid="Microsoft.Xna.Framework.Color.Gray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Gray" data-uid="Microsoft.Xna.Framework.Color.Gray">
+  Gray
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gray color (R:128,G:128,B:128,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Gray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Green_" data-uid="Microsoft.Xna.Framework.Color.Green*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Green" data-uid="Microsoft.Xna.Framework.Color.Green">
+  Green
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Green color (R:0,G:128,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Green { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_GreenYellow_" data-uid="Microsoft.Xna.Framework.Color.GreenYellow*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_GreenYellow" data-uid="Microsoft.Xna.Framework.Color.GreenYellow">
+  GreenYellow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>GreenYellow color (R:173,G:255,B:47,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color GreenYellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Honeydew_" data-uid="Microsoft.Xna.Framework.Color.Honeydew*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Honeydew" data-uid="Microsoft.Xna.Framework.Color.Honeydew">
+  Honeydew
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Honeydew color (R:240,G:255,B:240,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Honeydew { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_HotPink_" data-uid="Microsoft.Xna.Framework.Color.HotPink*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_HotPink" data-uid="Microsoft.Xna.Framework.Color.HotPink">
+  HotPink
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>HotPink color (R:255,G:105,B:180,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color HotPink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_IndianRed_" data-uid="Microsoft.Xna.Framework.Color.IndianRed*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_IndianRed" data-uid="Microsoft.Xna.Framework.Color.IndianRed">
+  IndianRed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>IndianRed color (R:205,G:92,B:92,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color IndianRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Indigo_" data-uid="Microsoft.Xna.Framework.Color.Indigo*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Indigo" data-uid="Microsoft.Xna.Framework.Color.Indigo">
+  Indigo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indigo color (R:75,G:0,B:130,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Indigo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Ivory_" data-uid="Microsoft.Xna.Framework.Color.Ivory*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Ivory" data-uid="Microsoft.Xna.Framework.Color.Ivory">
+  Ivory
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ivory color (R:255,G:255,B:240,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Ivory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Khaki_" data-uid="Microsoft.Xna.Framework.Color.Khaki*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Khaki" data-uid="Microsoft.Xna.Framework.Color.Khaki">
+  Khaki
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Khaki color (R:240,G:230,B:140,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Khaki { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Lavender_" data-uid="Microsoft.Xna.Framework.Color.Lavender*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Lavender" data-uid="Microsoft.Xna.Framework.Color.Lavender">
+  Lavender
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lavender color (R:230,G:230,B:250,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Lavender { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LavenderBlush_" data-uid="Microsoft.Xna.Framework.Color.LavenderBlush*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LavenderBlush" data-uid="Microsoft.Xna.Framework.Color.LavenderBlush">
+  LavenderBlush
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LavenderBlush color (R:255,G:240,B:245,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LavenderBlush { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LawnGreen_" data-uid="Microsoft.Xna.Framework.Color.LawnGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LawnGreen" data-uid="Microsoft.Xna.Framework.Color.LawnGreen">
+  LawnGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LawnGreen color (R:124,G:252,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LawnGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LemonChiffon_" data-uid="Microsoft.Xna.Framework.Color.LemonChiffon*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LemonChiffon" data-uid="Microsoft.Xna.Framework.Color.LemonChiffon">
+  LemonChiffon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LemonChiffon color (R:255,G:250,B:205,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LemonChiffon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightBlue_" data-uid="Microsoft.Xna.Framework.Color.LightBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightBlue" data-uid="Microsoft.Xna.Framework.Color.LightBlue">
+  LightBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightBlue color (R:173,G:216,B:230,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightCoral_" data-uid="Microsoft.Xna.Framework.Color.LightCoral*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightCoral" data-uid="Microsoft.Xna.Framework.Color.LightCoral">
+  LightCoral
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightCoral color (R:240,G:128,B:128,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightCoral { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightCyan_" data-uid="Microsoft.Xna.Framework.Color.LightCyan*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightCyan" data-uid="Microsoft.Xna.Framework.Color.LightCyan">
+  LightCyan
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightCyan color (R:224,G:255,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightCyan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightGoldenrodYellow_" data-uid="Microsoft.Xna.Framework.Color.LightGoldenrodYellow*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightGoldenrodYellow" data-uid="Microsoft.Xna.Framework.Color.LightGoldenrodYellow">
+  LightGoldenrodYellow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightGoldenrodYellow color (R:250,G:250,B:210,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightGoldenrodYellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightGray_" data-uid="Microsoft.Xna.Framework.Color.LightGray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightGray" data-uid="Microsoft.Xna.Framework.Color.LightGray">
+  LightGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightGray color (R:211,G:211,B:211,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightGreen_" data-uid="Microsoft.Xna.Framework.Color.LightGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightGreen" data-uid="Microsoft.Xna.Framework.Color.LightGreen">
+  LightGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightGreen color (R:144,G:238,B:144,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightPink_" data-uid="Microsoft.Xna.Framework.Color.LightPink*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightPink" data-uid="Microsoft.Xna.Framework.Color.LightPink">
+  LightPink
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightPink color (R:255,G:182,B:193,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightPink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightSalmon_" data-uid="Microsoft.Xna.Framework.Color.LightSalmon*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightSalmon" data-uid="Microsoft.Xna.Framework.Color.LightSalmon">
+  LightSalmon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightSalmon color (R:255,G:160,B:122,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightSalmon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightSeaGreen_" data-uid="Microsoft.Xna.Framework.Color.LightSeaGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightSeaGreen" data-uid="Microsoft.Xna.Framework.Color.LightSeaGreen">
+  LightSeaGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightSeaGreen color (R:32,G:178,B:170,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightSeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightSkyBlue_" data-uid="Microsoft.Xna.Framework.Color.LightSkyBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightSkyBlue" data-uid="Microsoft.Xna.Framework.Color.LightSkyBlue">
+  LightSkyBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightSkyBlue color (R:135,G:206,B:250,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightSkyBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightSlateGray_" data-uid="Microsoft.Xna.Framework.Color.LightSlateGray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightSlateGray" data-uid="Microsoft.Xna.Framework.Color.LightSlateGray">
+  LightSlateGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightSlateGray color (R:119,G:136,B:153,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightSlateGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightSteelBlue_" data-uid="Microsoft.Xna.Framework.Color.LightSteelBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightSteelBlue" data-uid="Microsoft.Xna.Framework.Color.LightSteelBlue">
+  LightSteelBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightSteelBlue color (R:176,G:196,B:222,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightSteelBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LightYellow_" data-uid="Microsoft.Xna.Framework.Color.LightYellow*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LightYellow" data-uid="Microsoft.Xna.Framework.Color.LightYellow">
+  LightYellow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LightYellow color (R:255,G:255,B:224,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LightYellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Lime_" data-uid="Microsoft.Xna.Framework.Color.Lime*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Lime" data-uid="Microsoft.Xna.Framework.Color.Lime">
+  Lime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Lime color (R:0,G:255,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Lime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LimeGreen_" data-uid="Microsoft.Xna.Framework.Color.LimeGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LimeGreen" data-uid="Microsoft.Xna.Framework.Color.LimeGreen">
+  LimeGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>LimeGreen color (R:50,G:205,B:50,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color LimeGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Linen_" data-uid="Microsoft.Xna.Framework.Color.Linen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Linen" data-uid="Microsoft.Xna.Framework.Color.Linen">
+  Linen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Linen color (R:250,G:240,B:230,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Linen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Magenta_" data-uid="Microsoft.Xna.Framework.Color.Magenta*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Magenta" data-uid="Microsoft.Xna.Framework.Color.Magenta">
+  Magenta
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Magenta color (R:255,G:0,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Magenta { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Maroon_" data-uid="Microsoft.Xna.Framework.Color.Maroon*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Maroon" data-uid="Microsoft.Xna.Framework.Color.Maroon">
+  Maroon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maroon color (R:128,G:0,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Maroon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumAquamarine_" data-uid="Microsoft.Xna.Framework.Color.MediumAquamarine*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumAquamarine" data-uid="Microsoft.Xna.Framework.Color.MediumAquamarine">
+  MediumAquamarine
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumAquamarine color (R:102,G:205,B:170,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumAquamarine { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumBlue_" data-uid="Microsoft.Xna.Framework.Color.MediumBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumBlue" data-uid="Microsoft.Xna.Framework.Color.MediumBlue">
+  MediumBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumBlue color (R:0,G:0,B:205,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumOrchid_" data-uid="Microsoft.Xna.Framework.Color.MediumOrchid*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumOrchid" data-uid="Microsoft.Xna.Framework.Color.MediumOrchid">
+  MediumOrchid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumOrchid color (R:186,G:85,B:211,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumOrchid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumPurple_" data-uid="Microsoft.Xna.Framework.Color.MediumPurple*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumPurple" data-uid="Microsoft.Xna.Framework.Color.MediumPurple">
+  MediumPurple
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumPurple color (R:147,G:112,B:219,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumPurple { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumSeaGreen_" data-uid="Microsoft.Xna.Framework.Color.MediumSeaGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumSeaGreen" data-uid="Microsoft.Xna.Framework.Color.MediumSeaGreen">
+  MediumSeaGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumSeaGreen color (R:60,G:179,B:113,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumSeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumSlateBlue_" data-uid="Microsoft.Xna.Framework.Color.MediumSlateBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumSlateBlue" data-uid="Microsoft.Xna.Framework.Color.MediumSlateBlue">
+  MediumSlateBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumSlateBlue color (R:123,G:104,B:238,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumSlateBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumSpringGreen_" data-uid="Microsoft.Xna.Framework.Color.MediumSpringGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumSpringGreen" data-uid="Microsoft.Xna.Framework.Color.MediumSpringGreen">
+  MediumSpringGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumSpringGreen color (R:0,G:250,B:154,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumSpringGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumTurquoise_" data-uid="Microsoft.Xna.Framework.Color.MediumTurquoise*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumTurquoise" data-uid="Microsoft.Xna.Framework.Color.MediumTurquoise">
+  MediumTurquoise
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumTurquoise color (R:72,G:209,B:204,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumTurquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MediumVioletRed_" data-uid="Microsoft.Xna.Framework.Color.MediumVioletRed*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MediumVioletRed" data-uid="Microsoft.Xna.Framework.Color.MediumVioletRed">
+  MediumVioletRed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MediumVioletRed color (R:199,G:21,B:133,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MediumVioletRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MidnightBlue_" data-uid="Microsoft.Xna.Framework.Color.MidnightBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MidnightBlue" data-uid="Microsoft.Xna.Framework.Color.MidnightBlue">
+  MidnightBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MidnightBlue color (R:25,G:25,B:112,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MidnightBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MintCream_" data-uid="Microsoft.Xna.Framework.Color.MintCream*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MintCream" data-uid="Microsoft.Xna.Framework.Color.MintCream">
+  MintCream
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MintCream color (R:245,G:255,B:250,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MintCream { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MistyRose_" data-uid="Microsoft.Xna.Framework.Color.MistyRose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MistyRose" data-uid="Microsoft.Xna.Framework.Color.MistyRose">
+  MistyRose
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MistyRose color (R:255,G:228,B:225,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MistyRose { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Moccasin_" data-uid="Microsoft.Xna.Framework.Color.Moccasin*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Moccasin" data-uid="Microsoft.Xna.Framework.Color.Moccasin">
+  Moccasin
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moccasin color (R:255,G:228,B:181,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Moccasin { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_MonoGameOrange_" data-uid="Microsoft.Xna.Framework.Color.MonoGameOrange*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_MonoGameOrange" data-uid="Microsoft.Xna.Framework.Color.MonoGameOrange">
+  MonoGameOrange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>MonoGame orange theme color (R:231,G:60,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color MonoGameOrange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_NavajoWhite_" data-uid="Microsoft.Xna.Framework.Color.NavajoWhite*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_NavajoWhite" data-uid="Microsoft.Xna.Framework.Color.NavajoWhite">
+  NavajoWhite
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>NavajoWhite color (R:255,G:222,B:173,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color NavajoWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Navy_" data-uid="Microsoft.Xna.Framework.Color.Navy*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Navy" data-uid="Microsoft.Xna.Framework.Color.Navy">
+  Navy
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Navy color (R:0,G:0,B:128,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Navy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_OldLace_" data-uid="Microsoft.Xna.Framework.Color.OldLace*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_OldLace" data-uid="Microsoft.Xna.Framework.Color.OldLace">
+  OldLace
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>OldLace color (R:253,G:245,B:230,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color OldLace { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Olive_" data-uid="Microsoft.Xna.Framework.Color.Olive*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Olive" data-uid="Microsoft.Xna.Framework.Color.Olive">
+  Olive
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Olive color (R:128,G:128,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Olive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_OliveDrab_" data-uid="Microsoft.Xna.Framework.Color.OliveDrab*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_OliveDrab" data-uid="Microsoft.Xna.Framework.Color.OliveDrab">
+  OliveDrab
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>OliveDrab color (R:107,G:142,B:35,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color OliveDrab { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Orange_" data-uid="Microsoft.Xna.Framework.Color.Orange*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Orange" data-uid="Microsoft.Xna.Framework.Color.Orange">
+  Orange
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Orange color (R:255,G:165,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Orange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_OrangeRed_" data-uid="Microsoft.Xna.Framework.Color.OrangeRed*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_OrangeRed" data-uid="Microsoft.Xna.Framework.Color.OrangeRed">
+  OrangeRed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>OrangeRed color (R:255,G:69,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color OrangeRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Orchid_" data-uid="Microsoft.Xna.Framework.Color.Orchid*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Orchid" data-uid="Microsoft.Xna.Framework.Color.Orchid">
+  Orchid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Orchid color (R:218,G:112,B:214,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Orchid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PackedValue_" data-uid="Microsoft.Xna.Framework.Color.PackedValue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PackedValue" data-uid="Microsoft.Xna.Framework.Color.PackedValue">
+  PackedValue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets packed value of this <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint PackedValue { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PaleGoldenrod_" data-uid="Microsoft.Xna.Framework.Color.PaleGoldenrod*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PaleGoldenrod" data-uid="Microsoft.Xna.Framework.Color.PaleGoldenrod">
+  PaleGoldenrod
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>PaleGoldenrod color (R:238,G:232,B:170,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PaleGoldenrod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PaleGreen_" data-uid="Microsoft.Xna.Framework.Color.PaleGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PaleGreen" data-uid="Microsoft.Xna.Framework.Color.PaleGreen">
+  PaleGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>PaleGreen color (R:152,G:251,B:152,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PaleGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PaleTurquoise_" data-uid="Microsoft.Xna.Framework.Color.PaleTurquoise*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PaleTurquoise" data-uid="Microsoft.Xna.Framework.Color.PaleTurquoise">
+  PaleTurquoise
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>PaleTurquoise color (R:175,G:238,B:238,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PaleTurquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PaleVioletRed_" data-uid="Microsoft.Xna.Framework.Color.PaleVioletRed*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PaleVioletRed" data-uid="Microsoft.Xna.Framework.Color.PaleVioletRed">
+  PaleVioletRed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>PaleVioletRed color (R:219,G:112,B:147,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PaleVioletRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PapayaWhip_" data-uid="Microsoft.Xna.Framework.Color.PapayaWhip*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PapayaWhip" data-uid="Microsoft.Xna.Framework.Color.PapayaWhip">
+  PapayaWhip
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>PapayaWhip color (R:255,G:239,B:213,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PapayaWhip { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PeachPuff_" data-uid="Microsoft.Xna.Framework.Color.PeachPuff*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PeachPuff" data-uid="Microsoft.Xna.Framework.Color.PeachPuff">
+  PeachPuff
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>PeachPuff color (R:255,G:218,B:185,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PeachPuff { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Peru_" data-uid="Microsoft.Xna.Framework.Color.Peru*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Peru" data-uid="Microsoft.Xna.Framework.Color.Peru">
+  Peru
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Peru color (R:205,G:133,B:63,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Peru { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Pink_" data-uid="Microsoft.Xna.Framework.Color.Pink*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Pink" data-uid="Microsoft.Xna.Framework.Color.Pink">
+  Pink
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pink color (R:255,G:192,B:203,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Pink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Plum_" data-uid="Microsoft.Xna.Framework.Color.Plum*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Plum" data-uid="Microsoft.Xna.Framework.Color.Plum">
+  Plum
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plum color (R:221,G:160,B:221,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Plum { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_PowderBlue_" data-uid="Microsoft.Xna.Framework.Color.PowderBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_PowderBlue" data-uid="Microsoft.Xna.Framework.Color.PowderBlue">
+  PowderBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>PowderBlue color (R:176,G:224,B:230,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color PowderBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Purple_" data-uid="Microsoft.Xna.Framework.Color.Purple*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Purple" data-uid="Microsoft.Xna.Framework.Color.Purple">
+  Purple
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Purple color (R:128,G:0,B:128,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Purple { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_R_" data-uid="Microsoft.Xna.Framework.Color.R*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_R" data-uid="Microsoft.Xna.Framework.Color.R">
+  R
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the red component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public byte R { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Red_" data-uid="Microsoft.Xna.Framework.Color.Red*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Red" data-uid="Microsoft.Xna.Framework.Color.Red">
+  Red
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Red color (R:255,G:0,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Red { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_RosyBrown_" data-uid="Microsoft.Xna.Framework.Color.RosyBrown*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_RosyBrown" data-uid="Microsoft.Xna.Framework.Color.RosyBrown">
+  RosyBrown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>RosyBrown color (R:188,G:143,B:143,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color RosyBrown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_RoyalBlue_" data-uid="Microsoft.Xna.Framework.Color.RoyalBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_RoyalBlue" data-uid="Microsoft.Xna.Framework.Color.RoyalBlue">
+  RoyalBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>RoyalBlue color (R:65,G:105,B:225,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color RoyalBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SaddleBrown_" data-uid="Microsoft.Xna.Framework.Color.SaddleBrown*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SaddleBrown" data-uid="Microsoft.Xna.Framework.Color.SaddleBrown">
+  SaddleBrown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SaddleBrown color (R:139,G:69,B:19,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SaddleBrown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Salmon_" data-uid="Microsoft.Xna.Framework.Color.Salmon*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Salmon" data-uid="Microsoft.Xna.Framework.Color.Salmon">
+  Salmon
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Salmon color (R:250,G:128,B:114,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Salmon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SandyBrown_" data-uid="Microsoft.Xna.Framework.Color.SandyBrown*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SandyBrown" data-uid="Microsoft.Xna.Framework.Color.SandyBrown">
+  SandyBrown
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SandyBrown color (R:244,G:164,B:96,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SandyBrown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SeaGreen_" data-uid="Microsoft.Xna.Framework.Color.SeaGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SeaGreen" data-uid="Microsoft.Xna.Framework.Color.SeaGreen">
+  SeaGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SeaGreen color (R:46,G:139,B:87,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SeaShell_" data-uid="Microsoft.Xna.Framework.Color.SeaShell*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SeaShell" data-uid="Microsoft.Xna.Framework.Color.SeaShell">
+  SeaShell
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SeaShell color (R:255,G:245,B:238,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SeaShell { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Sienna_" data-uid="Microsoft.Xna.Framework.Color.Sienna*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Sienna" data-uid="Microsoft.Xna.Framework.Color.Sienna">
+  Sienna
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sienna color (R:160,G:82,B:45,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Sienna { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Silver_" data-uid="Microsoft.Xna.Framework.Color.Silver*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Silver" data-uid="Microsoft.Xna.Framework.Color.Silver">
+  Silver
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Silver color (R:192,G:192,B:192,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Silver { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SkyBlue_" data-uid="Microsoft.Xna.Framework.Color.SkyBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SkyBlue" data-uid="Microsoft.Xna.Framework.Color.SkyBlue">
+  SkyBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SkyBlue color (R:135,G:206,B:235,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SkyBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SlateBlue_" data-uid="Microsoft.Xna.Framework.Color.SlateBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SlateBlue" data-uid="Microsoft.Xna.Framework.Color.SlateBlue">
+  SlateBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SlateBlue color (R:106,G:90,B:205,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SlateBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SlateGray_" data-uid="Microsoft.Xna.Framework.Color.SlateGray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SlateGray" data-uid="Microsoft.Xna.Framework.Color.SlateGray">
+  SlateGray
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SlateGray color (R:112,G:128,B:144,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SlateGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Snow_" data-uid="Microsoft.Xna.Framework.Color.Snow*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Snow" data-uid="Microsoft.Xna.Framework.Color.Snow">
+  Snow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Snow color (R:255,G:250,B:250,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Snow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SpringGreen_" data-uid="Microsoft.Xna.Framework.Color.SpringGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SpringGreen" data-uid="Microsoft.Xna.Framework.Color.SpringGreen">
+  SpringGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SpringGreen color (R:0,G:255,B:127,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SpringGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_SteelBlue_" data-uid="Microsoft.Xna.Framework.Color.SteelBlue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_SteelBlue" data-uid="Microsoft.Xna.Framework.Color.SteelBlue">
+  SteelBlue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>SteelBlue color (R:70,G:130,B:180,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color SteelBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Tan_" data-uid="Microsoft.Xna.Framework.Color.Tan*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Tan" data-uid="Microsoft.Xna.Framework.Color.Tan">
+  Tan
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tan color (R:210,G:180,B:140,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Tan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Teal_" data-uid="Microsoft.Xna.Framework.Color.Teal*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Teal" data-uid="Microsoft.Xna.Framework.Color.Teal">
+  Teal
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Teal color (R:0,G:128,B:128,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Teal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Thistle_" data-uid="Microsoft.Xna.Framework.Color.Thistle*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Thistle" data-uid="Microsoft.Xna.Framework.Color.Thistle">
+  Thistle
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Thistle color (R:216,G:191,B:216,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Thistle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Tomato_" data-uid="Microsoft.Xna.Framework.Color.Tomato*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Tomato" data-uid="Microsoft.Xna.Framework.Color.Tomato">
+  Tomato
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tomato color (R:255,G:99,B:71,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Tomato { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Transparent_" data-uid="Microsoft.Xna.Framework.Color.Transparent*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Transparent" data-uid="Microsoft.Xna.Framework.Color.Transparent">
+  Transparent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transparent color (R:0,G:0,B:0,A:0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Transparent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Turquoise_" data-uid="Microsoft.Xna.Framework.Color.Turquoise*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Turquoise" data-uid="Microsoft.Xna.Framework.Color.Turquoise">
+  Turquoise
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Turquoise color (R:64,G:224,B:208,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Turquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Violet_" data-uid="Microsoft.Xna.Framework.Color.Violet*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Violet" data-uid="Microsoft.Xna.Framework.Color.Violet">
+  Violet
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Violet color (R:238,G:130,B:238,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Violet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Wheat_" data-uid="Microsoft.Xna.Framework.Color.Wheat*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Wheat" data-uid="Microsoft.Xna.Framework.Color.Wheat">
+  Wheat
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Wheat color (R:245,G:222,B:179,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Wheat { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_White_" data-uid="Microsoft.Xna.Framework.Color.White*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_White" data-uid="Microsoft.Xna.Framework.Color.White">
+  White
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>White color (R:255,G:255,B:255,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color White { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_WhiteSmoke_" data-uid="Microsoft.Xna.Framework.Color.WhiteSmoke*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_WhiteSmoke" data-uid="Microsoft.Xna.Framework.Color.WhiteSmoke">
+  WhiteSmoke
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>WhiteSmoke color (R:245,G:245,B:245,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color WhiteSmoke { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Yellow_" data-uid="Microsoft.Xna.Framework.Color.Yellow*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Yellow" data-uid="Microsoft.Xna.Framework.Color.Yellow">
+  Yellow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Yellow color (R:255,G:255,B:0,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Yellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_YellowGreen_" data-uid="Microsoft.Xna.Framework.Color.YellowGreen*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_YellowGreen" data-uid="Microsoft.Xna.Framework.Color.YellowGreen">
+  YellowGreen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>YellowGreen color (R:154,G:205,B:50,A:255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color YellowGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Color_Deconstruct_" data-uid="Microsoft.Xna.Framework.Color.Deconstruct*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Deconstruct_System_Byte__System_Byte__System_Byte__" data-uid="Microsoft.Xna.Framework.Color.Deconstruct(System.Byte@,System.Byte@,System.Byte@)">
+  Deconstruct(out byte, out byte, out byte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deconstruction method for <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out byte r, out byte g, out byte b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Red component value from 0 to 255.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Green component value from 0 to 255.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Blue component value from 0 to 255.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Deconstruct_" data-uid="Microsoft.Xna.Framework.Color.Deconstruct*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Deconstruct_System_Byte__System_Byte__System_Byte__System_Byte__" data-uid="Microsoft.Xna.Framework.Color.Deconstruct(System.Byte@,System.Byte@,System.Byte@,System.Byte@)">
+  Deconstruct(out byte, out byte, out byte, out byte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deconstruction method for <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> with Alpha.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out byte r, out byte g, out byte b, out byte a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Red component value from 0 to 255.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Green component value from 0 to 255.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Blue component value from 0 to 255.</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>Alpha component value from 0 to 255.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Deconstruct_" data-uid="Microsoft.Xna.Framework.Color.Deconstruct*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Deconstruct_System_Single__System_Single__System_Single__" data-uid="Microsoft.Xna.Framework.Color.Deconstruct(System.Single@,System.Single@,System.Single@)">
+  Deconstruct(out float, out float, out float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deconstruction method for <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out float r, out float g, out float b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Red component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Green component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Blue component value from 0.0f to 1.0f.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Deconstruct_" data-uid="Microsoft.Xna.Framework.Color.Deconstruct*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Deconstruct_System_Single__System_Single__System_Single__System_Single__" data-uid="Microsoft.Xna.Framework.Color.Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)">
+  Deconstruct(out float, out float, out float, out float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deconstruction method for <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> with Alpha.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out float r, out float g, out float b, out float a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Red component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Green component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Blue component value from 0.0f to 1.0f.</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Alpha component value from 0.0f to 1.0f.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Equals_" data-uid="Microsoft.Xna.Framework.Color.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Equals_Microsoft_Xna_Framework_Color_" data-uid="Microsoft.Xna.Framework.Color.Equals(Microsoft.Xna.Framework.Color)">
+  Equals(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether current instance is equal to specified <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Color other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Equals_" data-uid="Microsoft.Xna.Framework.Color.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Equals_System_Object_" data-uid="Microsoft.Xna.Framework.Color.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether current instance is equal to specified object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_FromNonPremultiplied_" data-uid="Microsoft.Xna.Framework.Color.FromNonPremultiplied*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_FromNonPremultiplied_Microsoft_Xna_Framework_Vector4_" data-uid="Microsoft.Xna.Framework.Color.FromNonPremultiplied(Microsoft.Xna.Framework.Vector4)">
+  FromNonPremultiplied(Vector4)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translate a non-premultipled alpha <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> to a <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> that contains premultiplied alpha.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FromNonPremultiplied(Vector4 vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> representing color.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> which contains premultiplied alpha data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_FromNonPremultiplied_" data-uid="Microsoft.Xna.Framework.Color.FromNonPremultiplied*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_FromNonPremultiplied_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Microsoft.Xna.Framework.Color.FromNonPremultiplied(System.Int32,System.Int32,System.Int32,System.Int32)">
+  FromNonPremultiplied(int, int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Translate a non-premultipled alpha <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> to a <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> that contains premultiplied alpha.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color FromNonPremultiplied(int r, int g, int b, int a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Red component value.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Green component value.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Blue component value.</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Alpha component value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> which contains premultiplied alpha data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_GetHashCode_" data-uid="Microsoft.Xna.Framework.Color.GetHashCode*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_GetHashCode" data-uid="Microsoft.Xna.Framework.Color.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the hash code of this <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Hash code of this <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Lerp_" data-uid="Microsoft.Xna.Framework.Color.Lerp*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Lerp_Microsoft_Xna_Framework_Color_Microsoft_Xna_Framework_Color_System_Single_" data-uid="Microsoft.Xna.Framework.Color.Lerp(Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Color,System.Single)">
+  Lerp(Color, Color, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs linear interpolation of <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Lerp(Color value1, Color value2, float amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value1</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</dd>
+    <dt><code>value2</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>Destination <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Interpolation factor.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>Interpolated <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_LerpPrecise_" data-uid="Microsoft.Xna.Framework.Color.LerpPrecise*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_LerpPrecise_Microsoft_Xna_Framework_Color_Microsoft_Xna_Framework_Color_System_Single_" data-uid="Microsoft.Xna.Framework.Color.LerpPrecise(Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Color,System.Single)">
+  LerpPrecise(Color, Color, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="Microsoft.Xna.Framework.Color.html#Microsoft_Xna_Framework_Color_Lerp_Microsoft_Xna_Framework_Color_Microsoft_Xna_Framework_Color_System_Single_">Lerp(Color, Color, float)</a> should be used instead of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Color.Lerp should be used instead of this function.&quot;)]
+public static Color LerpPrecise(Color value1, Color value2, float amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value1</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+    <dt><code>value2</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd></dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>Interpolated <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_Multiply_" data-uid="Microsoft.Xna.Framework.Color.Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_Multiply_Microsoft_Xna_Framework_Color_System_Single_" data-uid="Microsoft.Xna.Framework.Color.Multiply(Microsoft.Xna.Framework.Color,System.Single)">
+  Multiply(Color, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies the RGBA component values of a color by the specified value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color Multiply(Color value, float scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The source color value to multiply.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The value to multiply the RGBA component values by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The new color value created as a result of the multiplication.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_ToString_" data-uid="Microsoft.Xna.Framework.Color.ToString*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_ToString" data-uid="Microsoft.Xna.Framework.Color.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of this <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> in the format:
+{R:[red] G:[green] B:[blue] A:[alpha]}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of this <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_ToVector3_" data-uid="Microsoft.Xna.Framework.Color.ToVector3*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_ToVector3" data-uid="Microsoft.Xna.Framework.Color.ToVector3">
+  ToVector3()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> representation for this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 ToVector3()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> representation for this object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_ToVector4_" data-uid="Microsoft.Xna.Framework.Color.ToVector4*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_ToVector4" data-uid="Microsoft.Xna.Framework.Color.ToVector4">
+  ToVector4()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> representation for this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector4 ToVector4()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> representation for this object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Color_op_Equality_" data-uid="Microsoft.Xna.Framework.Color.op_Equality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_op_Equality_Microsoft_Xna_Framework_Color_Microsoft_Xna_Framework_Color_" data-uid="Microsoft.Xna.Framework.Color.op_Equality(Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Color)">
+  operator ==(Color, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether two <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instances are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Color a, Color b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instance on the left of the equal sign.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instance on the right of the equal sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_op_Inequality_" data-uid="Microsoft.Xna.Framework.Color.op_Inequality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_op_Inequality_Microsoft_Xna_Framework_Color_Microsoft_Xna_Framework_Color_" data-uid="Microsoft.Xna.Framework.Color.op_Inequality(Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Color)">
+  operator !=(Color, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether two <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instances are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Color a, Color b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instance on the left of the not equal sign.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> instance on the right of the not equal sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are not equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_op_Multiply_" data-uid="Microsoft.Xna.Framework.Color.op_Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_op_Multiply_Microsoft_Xna_Framework_Color_System_Single_" data-uid="Microsoft.Xna.Framework.Color.op_Multiply(Microsoft.Xna.Framework.Color,System.Single)">
+  operator *(Color, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies the RGBA component values of a color by the specified value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color operator *(Color value, float scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The source color value to multiply.</p>
+</dd>
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The value to multiply the RGBA component values by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The new color value created as a result of the multiplication.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Color_op_Multiply_" data-uid="Microsoft.Xna.Framework.Color.op_Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Color_op_Multiply_System_Single_Microsoft_Xna_Framework_Color_" data-uid="Microsoft.Xna.Framework.Color.op_Multiply(System.Single,Microsoft.Xna.Framework.Color)">
+  operator *(float, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies the RGBA component values of a color by the specified value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color operator *(float scale, Color value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The value to multiply the RGBA component values by.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The source color value to multiply.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The new color value created as a result of the multiplication.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

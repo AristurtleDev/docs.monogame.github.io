@@ -1,0 +1,1357 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class PipelineManager | MonoGame ">
+
+    <title>Class PipelineManager | MonoGame </title>
+
+
+    <meta name="og:url" content="https://monogame.net/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class PipelineManager | MonoGame ">
+    <meta name="og:description" content="">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.html">
+    <meta name="twitter:title" content="Class PipelineManager | MonoGame ">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager">
+
+
+
+  <h1 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager" class="text-break">
+Class PipelineManager  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MonoGame.html">MonoGame</a>.<a class="xref" href="MonoGame.Framework.html">Framework</a>.<a class="xref" href="MonoGame.Framework.Content.html">Content</a>.<a class="xref" href="MonoGame.Framework.Content.Pipeline.html">Pipeline</a>.<a class="xref" href="MonoGame.Framework.Content.Pipeline.Builder.html">Builder</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.Content.Pipeline.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PipelineManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PipelineManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager__ctor_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.#ctor*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager__ctor_System_String_System_String_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.#ctor(System.String,System.String,System.String)">
+  PipelineManager(string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PipelineManager(string projectDir, string outputDir, string intermediateDir)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projectDir</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>outputDir</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>intermediateDir</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Assemblies_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Assemblies*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Assemblies" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Assemblies">
+  Assemblies
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Assemblies { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CompressContent_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CompressContent*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CompressContent" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CompressContent">
+  CompressContent
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets if the content is compressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CompressContent { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Config_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Config*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Config" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Config">
+  Config
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The build configuration passed thru to content processors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Config { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ContentStats_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ContentStats*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ContentStats" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ContentStats">
+  ContentStats
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContentStatsCollection ContentStats { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.ContentStatsCollection.html">ContentStatsCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_IntermediateDirectory_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.IntermediateDirectory*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_IntermediateDirectory" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.IntermediateDirectory">
+  IntermediateDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string IntermediateDirectory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Logger_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Logger*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Logger" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Logger">
+  Logger
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContentBuildLogger Logger { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.ContentBuildLogger.html">ContentBuildLogger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_OutputDirectory_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.OutputDirectory*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_OutputDirectory" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.OutputDirectory">
+  OutputDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OutputDirectory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Platform_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Platform*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Platform" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Platform">
+  Platform
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current target platform for which all content is built.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TargetPlatform Platform { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.TargetPlatform.html">TargetPlatform</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Profile_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Profile*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_Profile" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.Profile">
+  Profile
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current target graphics profile for which all content is built.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsProfile Profile { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsProfile.html">GraphicsProfile</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ProjectDirectory_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ProjectDirectory*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ProjectDirectory" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ProjectDirectory">
+  ProjectDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ProjectDirectory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_RethrowExceptions_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.RethrowExceptions*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_RethrowExceptions" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.RethrowExceptions">
+  RethrowExceptions
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true exceptions thrown from within an importer or processor are caught and then
+thrown from the context. Default value is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RethrowExceptions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_AddAssembly_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.AddAssembly*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_AddAssembly_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.AddAssembly(System.String)">
+  AddAssembly(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddAssembly(string assemblyFilePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assemblyFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_AssignTypeConverter_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.AssignTypeConverter*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_AssignTypeConverter__2" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.AssignTypeConverter``2">
+  AssignTypeConverter&lt;TType, TTypeConverter&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AssignTypeConverter&lt;TType, TTypeConverter&gt;()</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TType</code></dt>
+    <dd></dd>
+    <dt><code>TTypeConverter</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_BuildContent_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.BuildContent*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_BuildContent_System_String_System_String_System_String_System_String_Microsoft_Xna_Framework_Content_Pipeline_OpaqueDataDictionary_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.BuildContent(System.String,System.String,System.String,System.String,Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary)">
+  BuildContent(string, string, string, string, OpaqueDataDictionary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PipelineBuildEvent BuildContent(string sourceFilepath, string outputFilepath = null, string importerName = null, string processorName = null, OpaqueDataDictionary processorParameters = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceFilepath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>outputFilepath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>importerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processorParameters</code> <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildEvent.html">PipelineBuildEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CleanContent_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CleanContent*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CleanContent_System_String_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CleanContent(System.String,System.String)">
+  CleanContent(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CleanContent(string sourceFilepath, string outputFilepath = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceFilepath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>outputFilepath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CreateImporter_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CreateImporter*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CreateImporter_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CreateImporter(System.String)">
+  CreateImporter(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IContentImporter CreateImporter(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.IContentImporter.html">IContentImporter</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CreateProcessor_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CreateProcessor*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_CreateProcessor_System_String_Microsoft_Xna_Framework_Content_Pipeline_OpaqueDataDictionary_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.CreateProcessor(System.String,Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary)">
+  CreateProcessor(string, OpaqueDataDictionary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IContentProcessor CreateProcessor(string name, OpaqueDataDictionary processorParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processorParameters</code> <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.IContentProcessor.html">IContentProcessor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_FindDefaultProcessor_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.FindDefaultProcessor*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_FindDefaultProcessor_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.FindDefaultProcessor(System.String)">
+  FindDefaultProcessor(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FindDefaultProcessor(string importer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>importer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_FindImporterByExtension_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.FindImporterByExtension*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_FindImporterByExtension_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.FindImporterByExtension(System.String)">
+  FindImporterByExtension(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FindImporterByExtension(string ext)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetAssetName_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetAssetName*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetAssetName_System_String_System_String_System_String_Microsoft_Xna_Framework_Content_Pipeline_OpaqueDataDictionary_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetAssetName(System.String,System.String,System.String,Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary)">
+  GetAssetName(string, string, string, OpaqueDataDictionary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an automatic asset name, such as &quot;AssetName_0&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetAssetName(string sourceFileName, string importerName, string processorName, OpaqueDataDictionary processorParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The source file name.</p>
+</dd>
+    <dt><code>importerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the content importer. Can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>processorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the content processor. Can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><code>processorParameters</code> <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></dt>
+    <dd><p>The processor parameters. Can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The asset name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetImporterAssemblyTimestamp_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetImporterAssemblyTimestamp*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetImporterAssemblyTimestamp_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetImporterAssemblyTimestamp(System.String)">
+  GetImporterAssemblyTimestamp(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime GetImporterAssemblyTimestamp(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetImporterTypes_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetImporterTypes*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetImporterTypes" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetImporterTypes">
+  GetImporterTypes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type[] GetImporterTypes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorAssemblyTimestamp_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorAssemblyTimestamp*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorAssemblyTimestamp_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorAssemblyTimestamp(System.String)">
+  GetProcessorAssemblyTimestamp(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime GetProcessorAssemblyTimestamp(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorDefaultValues_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorDefaultValues*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorDefaultValues_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorDefaultValues(System.String)">
+  GetProcessorDefaultValues(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default values for the content processor parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OpaqueDataDictionary GetProcessorDefaultValues(string processorName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the content processor.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></dt>
+    <dd><p>A dictionary containing the default value for each parameter. Returns
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the content processor has not been created yet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorType_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorType*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorType_System_String_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorType(System.String)">
+  GetProcessorType(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type GetProcessorType(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorTypes_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorTypes*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_GetProcessorTypes" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.GetProcessorTypes">
+  GetProcessorTypes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type[] GetProcessorTypes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ProcessContent_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ProcessContent*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ProcessContent_MonoGame_Framework_Content_Pipeline_Builder_PipelineBuildEvent_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ProcessContent(MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildEvent)">
+  ProcessContent(PipelineBuildEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object ProcessContent(PipelineBuildEvent pipelineEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pipelineEvent</code> <a class="xref" href="MonoGame.Framework.Content.Pipeline.Builder.PipelineBuildEvent.html">PipelineBuildEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_RegisterContent_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.RegisterContent*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_RegisterContent_System_String_System_String_System_String_System_String_Microsoft_Xna_Framework_Content_Pipeline_OpaqueDataDictionary_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.RegisterContent(System.String,System.String,System.String,System.String,Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary)">
+  RegisterContent(string, string, string, string, OpaqueDataDictionary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterContent(string sourceFilepath, string outputFilepath = null, string importerName = null, string processorName = null, OpaqueDataDictionary processorParameters = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceFilepath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>outputFilepath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>importerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processorParameters</code> <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ResolveImporterAndProcessor_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ResolveImporterAndProcessor*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ResolveImporterAndProcessor_System_String_System_String__System_String__" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ResolveImporterAndProcessor(System.String,System.String@,System.String@)">
+  ResolveImporterAndProcessor(string, ref string, ref string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResolveImporterAndProcessor(string sourceFilepath, ref string importerName, ref string processorName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceFilepath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>importerName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processorName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ValidateProcessorParameters_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ValidateProcessorParameters*"></a>
+
+  <h3 id="MonoGame_Framework_Content_Pipeline_Builder_PipelineManager_ValidateProcessorParameters_System_String_Microsoft_Xna_Framework_Content_Pipeline_OpaqueDataDictionary_" data-uid="MonoGame.Framework.Content.Pipeline.Builder.PipelineManager.ValidateProcessorParameters(System.String,Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary)">
+  ValidateProcessorParameters(string, OpaqueDataDictionary)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OpaqueDataDictionary ValidateProcessorParameters(string name, OpaqueDataDictionary processorParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>processorParameters</code> <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

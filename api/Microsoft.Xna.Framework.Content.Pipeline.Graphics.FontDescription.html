@@ -1,0 +1,648 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class FontDescription | MonoGame ">
+
+    <title>Class FontDescription | MonoGame </title>
+<meta name="description" content="Provides information to the FontDescriptionProcessor describing which font to rasterize, which font size to utilize, and which Unicode characters to include in the processor output.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class FontDescription | MonoGame ">
+    <meta name="og:description" content="Provides information to the FontDescriptionProcessor describing which font to rasterize, which font size to utilize, and which Unicode characters to include in the processor output.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.html">
+    <meta name="twitter:title" content="Class FontDescription | MonoGame ">
+    <meta name="twitter:description" content="Provides information to the FontDescriptionProcessor describing which font to rasterize, which font size to utilize, and which Unicode characters to include in the processor output.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription" class="text-break">
+Class FontDescription  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.html">Content</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.html">Pipeline</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.Content.Pipeline.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides information to the FontDescriptionProcessor describing which font to rasterize, which font size to utilize, and which Unicode characters to include in the processor output.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FontDescription : ContentItem</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.ContentItem.html">ContentItem</a></div>
+      <div><span class="xref">FontDescription</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.LocalizedFontDescription.html">LocalizedFontDescription</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.ContentItem.html#Microsoft_Xna_Framework_Content_Pipeline_ContentItem_Identity">ContentItem.Identity</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.ContentItem.html#Microsoft_Xna_Framework_Content_Pipeline_ContentItem_Name">ContentItem.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.ContentItem.html#Microsoft_Xna_Framework_Content_Pipeline_ContentItem_OpaqueData">ContentItem.OpaqueData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription__ctor_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription__ctor_System_String_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.#ctor(System.String,System.Single,System.Single)">
+  FontDescription(string, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of FontDescription and initializes its members to the specified font, size, and spacing, using FontDescriptionStyle.Regular as the default value for Style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontDescription(string fontName, float size, float spacing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fontName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the font, such as Times New Roman.</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The size, in points, of the font.</p>
+</dd>
+    <dt><code>spacing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The amount of space, in pixels, to insert between letters in a string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription__ctor_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription__ctor_System_String_System_Single_System_Single_Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescriptionStyle_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.#ctor(System.String,System.Single,System.Single,Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle)">
+  FontDescription(string, float, float, FontDescriptionStyle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of FontDescription and initializes its members to the specified font, size, spacing, and style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontDescription(string fontName, float size, float spacing, FontDescriptionStyle fontStyle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fontName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the font, such as Times New Roman.</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The size, in points, of the font.</p>
+</dd>
+    <dt><code>spacing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The amount of space, in pixels, to insert between letters in a string.</p>
+</dd>
+    <dt><code>fontStyle</code> <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle.html">FontDescriptionStyle</a></dt>
+    <dd><p>The font style for the font.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription__ctor_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription__ctor_System_String_System_Single_System_Single_Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescriptionStyle_System_Boolean_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.#ctor(System.String,System.Single,System.Single,Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle,System.Boolean)">
+  FontDescription(string, float, float, FontDescriptionStyle, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of FontDescription using the specified values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontDescription(string fontName, float size, float spacing, FontDescriptionStyle fontStyle, bool useKerning)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fontName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the font, such as Times New Roman.</p>
+</dd>
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The size, in points, of the font.</p>
+</dd>
+    <dt><code>spacing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The amount of space, in pixels, to insert between letters in a string.</p>
+</dd>
+    <dt><code>fontStyle</code> <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle.html">FontDescriptionStyle</a></dt>
+    <dd><p>The font style for the font.</p>
+</dd>
+    <dt><code>useKerning</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if kerning information is used when drawing characters; false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Characters_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Characters*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Characters" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Characters">
+  Characters
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;char&gt; Characters { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_DefaultCharacter_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.DefaultCharacter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_DefaultCharacter" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.DefaultCharacter">
+  DefaultCharacter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the default character for the font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ContentSerializer(Optional = true)]
+public char? DefaultCharacter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_FontName_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.FontName*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_FontName" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.FontName">
+  FontName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the name of the font, such as &quot;Times New Roman&quot; or &quot;Arial&quot;. This value cannot be null or empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ContentSerializer(AllowNull = false)]
+public string FontName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Size_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Size*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Size" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Size">
+  Size
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the size, in points, of the font.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Size { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Spacing_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Spacing*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Spacing" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Spacing">
+  Spacing
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the amount of space, in pixels, to insert between letters in a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ContentSerializer(Optional = true)]
+public float Spacing { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Style_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Style*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_Style" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.Style">
+  Style
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the style of the font, expressed as a combination of one or more FontDescriptionStyle flags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontDescriptionStyle Style { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescriptionStyle.html">FontDescriptionStyle</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_UseKerning_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.UseKerning*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_FontDescription_UseKerning" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription.UseKerning">
+  UseKerning
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates if kerning information is used when drawing characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ContentSerializer(Optional = true)]
+public bool UseKerning { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

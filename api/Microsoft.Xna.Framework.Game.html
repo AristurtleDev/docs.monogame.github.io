@@ -1,0 +1,1509 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class Game | MonoGame ">
+
+    <title>Class Game | MonoGame </title>
+<meta name="description" content="This class is the entry point for most games. Handles setting up a window and graphics and runs a game loop that calls  and .">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Game.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class Game | MonoGame ">
+    <meta name="og:description" content="This class is the entry point for most games. Handles setting up a window and graphics and runs a game loop that calls  and .">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Game.html">
+    <meta name="twitter:title" content="Class Game | MonoGame ">
+    <meta name="twitter:description" content="This class is the entry point for most games. Handles setting up a window and graphics and runs a game loop that calls  and .">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Game">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Game" data-uid="Microsoft.Xna.Framework.Game" class="text-break">
+Class Game  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This class is the entry point for most games. Handles setting up
+a window and graphics and runs a game loop that calls <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Update_Microsoft_Xna_Framework_GameTime_">Update(GameTime)</a> and <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Game : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Game</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Game__ctor_" data-uid="Microsoft.Xna.Framework.Game.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game__ctor" data-uid="Microsoft.Xna.Framework.Game.#ctor">
+  Game()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Game()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Game_Components_" data-uid="Microsoft.Xna.Framework.Game.Components*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Components" data-uid="Microsoft.Xna.Framework.Game.Components">
+  Components
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A collection of game components attached to this <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameComponentCollection Components { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.GameComponentCollection.html">GameComponentCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Content_" data-uid="Microsoft.Xna.Framework.Game.Content*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Content" data-uid="Microsoft.Xna.Framework.Game.Content">
+  Content
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Microsoft.Xna.Framework.Content.ContentManager.html">ContentManager</a> of this <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContentManager Content { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentManager.html">ContentManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If Content is set to <pre><code class="lang-csharp">null</code></pre>.
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_GraphicsDevice_" data-uid="Microsoft.Xna.Framework.Game.GraphicsDevice*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_GraphicsDevice" data-uid="Microsoft.Xna.Framework.Game.GraphicsDevice">
+  GraphicsDevice
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_GraphicsDevice">GraphicsDevice</a> used for rendering by this <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDevice GraphicsDevice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>There is no <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a> attached to this <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_InactiveSleepTime_" data-uid="Microsoft.Xna.Framework.Game.InactiveSleepTime*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_InactiveSleepTime" data-uid="Microsoft.Xna.Framework.Game.InactiveSleepTime">
+  InactiveSleepTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets time to sleep between frames when the game is not active</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan InactiveSleepTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_IsActive_" data-uid="Microsoft.Xna.Framework.Game.IsActive*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_IsActive" data-uid="Microsoft.Xna.Framework.Game.IsActive">
+  IsActive
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates if the game is the focused application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_IsFixedTimeStep_" data-uid="Microsoft.Xna.Framework.Game.IsFixedTimeStep*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_IsFixedTimeStep" data-uid="Microsoft.Xna.Framework.Game.IsFixedTimeStep">
+  IsFixedTimeStep
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates if this game is running with a fixed time between frames.</p>
+<p>When set to <pre><code class="lang-csharp">true</code></pre> the target time between frames is
+given by <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_TargetElapsedTime">TargetElapsedTime</a>.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFixedTimeStep { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_IsMouseVisible_" data-uid="Microsoft.Xna.Framework.Game.IsMouseVisible*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_IsMouseVisible" data-uid="Microsoft.Xna.Framework.Game.IsMouseVisible">
+  IsMouseVisible
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates if the mouse cursor is visible on the game screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMouseVisible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_LaunchParameters_" data-uid="Microsoft.Xna.Framework.Game.LaunchParameters*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_LaunchParameters" data-uid="Microsoft.Xna.Framework.Game.LaunchParameters">
+  LaunchParameters
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The start up parameters for this <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LaunchParameters LaunchParameters { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.LaunchParameters.html">LaunchParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_MaxElapsedTime_" data-uid="Microsoft.Xna.Framework.Game.MaxElapsedTime*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_MaxElapsedTime" data-uid="Microsoft.Xna.Framework.Game.MaxElapsedTime">
+  MaxElapsedTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum amount of time we will frameskip over and only perform Update calls with no Draw calls.
+MonoGame extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan MaxElapsedTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Services_" data-uid="Microsoft.Xna.Framework.Game.Services*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Services" data-uid="Microsoft.Xna.Framework.Game.Services">
+  Services
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a container holding service providers attached to this <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameServiceContainer Services { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.GameServiceContainer.html">GameServiceContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_TargetElapsedTime_" data-uid="Microsoft.Xna.Framework.Game.TargetElapsedTime*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_TargetElapsedTime" data-uid="Microsoft.Xna.Framework.Game.TargetElapsedTime">
+  TargetElapsedTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time between frames when running with a fixed time step. <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_IsFixedTimeStep">IsFixedTimeStep</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan TargetElapsedTime { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Target elapsed time must be strictly larger than zero.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Window_" data-uid="Microsoft.Xna.Framework.Game.Window*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Window" data-uid="Microsoft.Xna.Framework.Game.Window">
+  Window
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The system window that this game is displayed on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameWindow Window { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.GameWindow.html">GameWindow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Game_BeginDraw_" data-uid="Microsoft.Xna.Framework.Game.BeginDraw*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_BeginDraw" data-uid="Microsoft.Xna.Framework.Game.BeginDraw">
+  BeginDraw()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called right before <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a> is normally called. Can return <pre><code class="lang-csharp">false</code></pre>
+to let the game loop not call <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a>.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool BeginDraw()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code class="lang-csharp">true</code></pre> if <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a> should be called, <pre><code class="lang-csharp">false</code></pre> if it should not.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_BeginRun_" data-uid="Microsoft.Xna.Framework.Game.BeginRun*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_BeginRun" data-uid="Microsoft.Xna.Framework.Game.BeginRun">
+  BeginRun()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called after <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Initialize">Initialize()</a>, but before the first call to <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Update_Microsoft_Xna_Framework_GameTime_">Update(GameTime)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void BeginRun()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Dispose_" data-uid="Microsoft.Xna.Framework.Game.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Dispose" data-uid="Microsoft.Xna.Framework.Game.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Dispose_" data-uid="Microsoft.Xna.Framework.Game.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Dispose_System_Boolean_" data-uid="Microsoft.Xna.Framework.Game.Dispose(System.Boolean)">
+  Dispose(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Draw_" data-uid="Microsoft.Xna.Framework.Game.Draw*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_" data-uid="Microsoft.Xna.Framework.Game.Draw(Microsoft.Xna.Framework.GameTime)">
+  Draw(GameTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the game should draw a frame.</p>
+<p>Draws the <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html">DrawableGameComponent</a> instances attached to this game.
+Override this to render your game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Draw(GameTime gameTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameTime</code> <a class="xref" href="Microsoft.Xna.Framework.GameTime.html">GameTime</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.GameTime.html">GameTime</a> instance containing the elapsed time since the last call to <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a> and the total time elapsed since the game started.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_EndDraw_" data-uid="Microsoft.Xna.Framework.Game.EndDraw*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_EndDraw" data-uid="Microsoft.Xna.Framework.Game.EndDraw">
+  EndDraw()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called right after <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a>. Presents the
+rendered frame in the <a class="xref" href="Microsoft.Xna.Framework.GameWindow.html">GameWindow</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void EndDraw()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_EndRun_" data-uid="Microsoft.Xna.Framework.Game.EndRun*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_EndRun" data-uid="Microsoft.Xna.Framework.Game.EndRun">
+  EndRun()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the game loop has been terminated before exiting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void EndRun()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Exit_" data-uid="Microsoft.Xna.Framework.Game.Exit*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Exit" data-uid="Microsoft.Xna.Framework.Game.Exit">
+  Exit()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exit the game at the end of this tick.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Exit()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Finalize_" data-uid="Microsoft.Xna.Framework.Game.Finalize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Finalize" data-uid="Microsoft.Xna.Framework.Game.Finalize">
+  ~Game()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~Game()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Initialize_" data-uid="Microsoft.Xna.Framework.Game.Initialize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Initialize" data-uid="Microsoft.Xna.Framework.Game.Initialize">
+  Initialize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this to initialize the game and load any needed non-graphical resources.</p>
+<p>Initializes attached <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html">GameComponent</a> instances and calls <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_LoadContent">LoadContent()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Initialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_LoadContent_" data-uid="Microsoft.Xna.Framework.Game.LoadContent*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_LoadContent" data-uid="Microsoft.Xna.Framework.Game.LoadContent">
+  LoadContent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this to load graphical resources required by the game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LoadContent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_OnActivated_" data-uid="Microsoft.Xna.Framework.Game.OnActivated*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_OnActivated_System_Object_System_EventArgs_" data-uid="Microsoft.Xna.Framework.Game.OnActivated(System.Object,System.EventArgs)">
+  OnActivated(object, EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the game gains focus. Raises the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Activated">Activated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnActivated(object sender, EventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>This <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd><p>The arguments to the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Activated">Activated</a> event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_OnDeactivated_" data-uid="Microsoft.Xna.Framework.Game.OnDeactivated*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_OnDeactivated_System_Object_System_EventArgs_" data-uid="Microsoft.Xna.Framework.Game.OnDeactivated(System.Object,System.EventArgs)">
+  OnDeactivated(object, EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the game loses focus. Raises the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Deactivated">Deactivated</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDeactivated(object sender, EventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>This <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd><p>The arguments to the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Deactivated">Deactivated</a> event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_OnExiting_" data-uid="Microsoft.Xna.Framework.Game.OnExiting*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_OnExiting_System_Object_Microsoft_Xna_Framework_ExitingEventArgs_" data-uid="Microsoft.Xna.Framework.Game.OnExiting(System.Object,Microsoft.Xna.Framework.ExitingEventArgs)">
+  OnExiting(object, ExitingEventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the game is exiting. Raises the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Exiting">Exiting</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnExiting(object sender, ExitingEventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>This <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a>.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="Microsoft.Xna.Framework.ExitingEventArgs.html">ExitingEventArgs</a></dt>
+    <dd><p>The arguments to the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Exiting">Exiting</a> event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_ResetElapsedTime_" data-uid="Microsoft.Xna.Framework.Game.ResetElapsedTime*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_ResetElapsedTime" data-uid="Microsoft.Xna.Framework.Game.ResetElapsedTime">
+  ResetElapsedTime()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset the elapsed game time to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan.zero">Zero</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetElapsedTime()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Run_" data-uid="Microsoft.Xna.Framework.Game.Run*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Run" data-uid="Microsoft.Xna.Framework.Game.Run">
+  Run()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run the game using the default <a class="xref" href="Microsoft.Xna.Framework.GameRunBehavior.html">GameRunBehavior</a> for the current platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Run_" data-uid="Microsoft.Xna.Framework.Game.Run*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Run_Microsoft_Xna_Framework_GameRunBehavior_" data-uid="Microsoft.Xna.Framework.Game.Run(Microsoft.Xna.Framework.GameRunBehavior)">
+  Run(GameRunBehavior)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run the game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run(GameRunBehavior runBehavior)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>runBehavior</code> <a class="xref" href="Microsoft.Xna.Framework.GameRunBehavior.html">GameRunBehavior</a></dt>
+    <dd><p>Indicate if the game should be run synchronously or asynchronously.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_RunOneFrame_" data-uid="Microsoft.Xna.Framework.Game.RunOneFrame*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_RunOneFrame" data-uid="Microsoft.Xna.Framework.Game.RunOneFrame">
+  RunOneFrame()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run the game for one frame, then exit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RunOneFrame()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_SuppressDraw_" data-uid="Microsoft.Xna.Framework.Game.SuppressDraw*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_SuppressDraw" data-uid="Microsoft.Xna.Framework.Game.SuppressDraw">
+  SuppressDraw()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supress calling <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a> in the game loop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SuppressDraw()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Tick_" data-uid="Microsoft.Xna.Framework.Game.Tick*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Tick" data-uid="Microsoft.Xna.Framework.Game.Tick">
+  Tick()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Run one iteration of the game loop.</p>
+<p>Makes at least one call to <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Update_Microsoft_Xna_Framework_GameTime_">Update(GameTime)</a>
+and exactly one call to <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a> if drawing is not supressed.
+When <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_IsFixedTimeStep">IsFixedTimeStep</a> is set to <pre><code class="lang-csharp">false</code></pre> this will
+make exactly one call to <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Update_Microsoft_Xna_Framework_GameTime_">Update(GameTime)</a>.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Tick()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_UnloadContent_" data-uid="Microsoft.Xna.Framework.Game.UnloadContent*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_UnloadContent" data-uid="Microsoft.Xna.Framework.Game.UnloadContent">
+  UnloadContent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this to unload graphical resources loaded by the game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UnloadContent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Game_Update_" data-uid="Microsoft.Xna.Framework.Game.Update*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Game_Update_Microsoft_Xna_Framework_GameTime_" data-uid="Microsoft.Xna.Framework.Game.Update(Microsoft.Xna.Framework.GameTime)">
+  Update(GameTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the game should update.</p>
+<p>Updates the <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html">GameComponent</a> instances attached to this game.
+Override this to update your game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Update(GameTime gameTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameTime</code> <a class="xref" href="Microsoft.Xna.Framework.GameTime.html">GameTime</a></dt>
+    <dd><p>The elapsed time since the last call to <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Update_Microsoft_Xna_Framework_GameTime_">Update(GameTime)</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Game_Activated" data-uid="Microsoft.Xna.Framework.Game.Activated">
+  Activated
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when the game gains focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Activated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Game_Deactivated" data-uid="Microsoft.Xna.Framework.Game.Deactivated">
+  Deactivated
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when the game loses focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Deactivated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Game_Disposed" data-uid="Microsoft.Xna.Framework.Game.Disposed">
+  Disposed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when this game is being disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; Disposed</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Game_Exiting" data-uid="Microsoft.Xna.Framework.Game.Exiting">
+  Exiting
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when this game is exiting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;ExitingEventArgs&gt; Exiting</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="Microsoft.Xna.Framework.ExitingEventArgs.html">ExitingEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

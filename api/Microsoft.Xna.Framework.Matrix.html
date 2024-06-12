@@ -1,0 +1,4751 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Struct Matrix | MonoGame ">
+
+    <title>Struct Matrix | MonoGame </title>
+<meta name="description" content="Represents the right-handed 4x4 floating point matrix, which can store translation, scale and rotation information.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Matrix.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Struct Matrix | MonoGame ">
+    <meta name="og:description" content="Represents the right-handed 4x4 floating point matrix, which can store translation, scale and rotation information.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Matrix.html">
+    <meta name="twitter:title" content="Struct Matrix | MonoGame ">
+    <meta name="twitter:description" content="Represents the right-handed 4x4 floating point matrix, which can store translation, scale and rotation information.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Matrix">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Matrix" data-uid="Microsoft.Xna.Framework.Matrix" class="text-break">
+Struct Matrix  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents the right-handed 4x4 floating point matrix, which can store translation, scale and rotation information.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public struct Matrix : IEquatable&lt;Matrix&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Matrix__ctor_" data-uid="Microsoft.Xna.Framework.Matrix.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix__ctor_Microsoft_Xna_Framework_Vector4_Microsoft_Xna_Framework_Vector4_Microsoft_Xna_Framework_Vector4_Microsoft_Xna_Framework_Vector4_" data-uid="Microsoft.Xna.Framework.Matrix.#ctor(Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector4,Microsoft.Xna.Framework.Vector4)">
+  Matrix(Vector4, Vector4, Vector4, Vector4)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix(Vector4 row1, Vector4 row2, Vector4 row3, Vector4 row4)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>row1</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A first row of the created matrix.</p>
+</dd>
+    <dt><code>row2</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A second row of the created matrix.</p>
+</dd>
+    <dt><code>row3</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A third row of the created matrix.</p>
+</dd>
+    <dt><code>row4</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A fourth row of the created matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix__ctor_" data-uid="Microsoft.Xna.Framework.Matrix.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix__ctor_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  Matrix(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>m11</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A first row and first column value.</p>
+</dd>
+    <dt><code>m12</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A first row and second column value.</p>
+</dd>
+    <dt><code>m13</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A first row and third column value.</p>
+</dd>
+    <dt><code>m14</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A first row and fourth column value.</p>
+</dd>
+    <dt><code>m21</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A second row and first column value.</p>
+</dd>
+    <dt><code>m22</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A second row and second column value.</p>
+</dd>
+    <dt><code>m23</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A second row and third column value.</p>
+</dd>
+    <dt><code>m24</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A second row and fourth column value.</p>
+</dd>
+    <dt><code>m31</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A third row and first column value.</p>
+</dd>
+    <dt><code>m32</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A third row and second column value.</p>
+</dd>
+    <dt><code>m33</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A third row and third column value.</p>
+</dd>
+    <dt><code>m34</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A third row and fourth column value.</p>
+</dd>
+    <dt><code>m41</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A fourth row and first column value.</p>
+</dd>
+    <dt><code>m42</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A fourth row and second column value.</p>
+</dd>
+    <dt><code>m43</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A fourth row and third column value.</p>
+</dd>
+    <dt><code>m44</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>A fourth row and fourth column value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M11" data-uid="Microsoft.Xna.Framework.Matrix.M11">
+  M11
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A first row and first column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M11</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M12" data-uid="Microsoft.Xna.Framework.Matrix.M12">
+  M12
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A first row and second column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M12</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M13" data-uid="Microsoft.Xna.Framework.Matrix.M13">
+  M13
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A first row and third column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M13</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M14" data-uid="Microsoft.Xna.Framework.Matrix.M14">
+  M14
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A first row and fourth column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M14</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M21" data-uid="Microsoft.Xna.Framework.Matrix.M21">
+  M21
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A second row and first column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M21</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M22" data-uid="Microsoft.Xna.Framework.Matrix.M22">
+  M22
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A second row and second column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M22</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M23" data-uid="Microsoft.Xna.Framework.Matrix.M23">
+  M23
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A second row and third column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M23</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M24" data-uid="Microsoft.Xna.Framework.Matrix.M24">
+  M24
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A second row and fourth column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M24</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M31" data-uid="Microsoft.Xna.Framework.Matrix.M31">
+  M31
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A third row and first column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M31</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M32" data-uid="Microsoft.Xna.Framework.Matrix.M32">
+  M32
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A third row and second column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M33" data-uid="Microsoft.Xna.Framework.Matrix.M33">
+  M33
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A third row and third column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M33</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M34" data-uid="Microsoft.Xna.Framework.Matrix.M34">
+  M34
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A third row and fourth column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M34</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M41" data-uid="Microsoft.Xna.Framework.Matrix.M41">
+  M41
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A fourth row and first column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M41</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M42" data-uid="Microsoft.Xna.Framework.Matrix.M42">
+  M42
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A fourth row and second column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M42</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M43" data-uid="Microsoft.Xna.Framework.Matrix.M43">
+  M43
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A fourth row and third column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M43</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_M44" data-uid="Microsoft.Xna.Framework.Matrix.M44">
+  M44
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A fourth row and fourth column value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float M44</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Backward_" data-uid="Microsoft.Xna.Framework.Matrix.Backward*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Backward" data-uid="Microsoft.Xna.Framework.Matrix.Backward">
+  Backward
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The backward vector formed from the third row M31, M32, M33 elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Backward { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Down_" data-uid="Microsoft.Xna.Framework.Matrix.Down*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Down" data-uid="Microsoft.Xna.Framework.Matrix.Down">
+  Down
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The down vector formed from the second row -M21, -M22, -M23 elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Down { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Forward_" data-uid="Microsoft.Xna.Framework.Matrix.Forward*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Forward" data-uid="Microsoft.Xna.Framework.Matrix.Forward">
+  Forward
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The forward vector formed from the third row -M31, -M32, -M33 elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Forward { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Identity_" data-uid="Microsoft.Xna.Framework.Matrix.Identity*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Identity" data-uid="Microsoft.Xna.Framework.Matrix.Identity">
+  Identity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the identity matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Identity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Item_" data-uid="Microsoft.Xna.Framework.Matrix.Item*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Item_System_Int32_" data-uid="Microsoft.Xna.Framework.Matrix.Item(System.Int32)">
+  this[int]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the matrix element at the given index, indexed in row major order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float this[int index] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The linearized, zero-based index of the matrix element.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the index is less than <pre><code class="lang-csharp">0</code></pre> or larger than <pre><code class="lang-csharp">15</code></pre>.
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Item_" data-uid="Microsoft.Xna.Framework.Matrix.Item*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Item_System_Int32_System_Int32_" data-uid="Microsoft.Xna.Framework.Matrix.Item(System.Int32,System.Int32)">
+  this[int, int]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get or set the value at the specified row and column (indices are zero-based).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float this[int row, int column] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>row</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The row of the element.</p>
+</dd>
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The column of the element.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>If the row or column is less than <pre><code class="lang-csharp">0</code></pre> or larger than <pre><code class="lang-csharp">3</code></pre>.
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Left_" data-uid="Microsoft.Xna.Framework.Matrix.Left*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Left" data-uid="Microsoft.Xna.Framework.Matrix.Left">
+  Left
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The left vector formed from the first row -M11, -M12, -M13 elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Left { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Right_" data-uid="Microsoft.Xna.Framework.Matrix.Right*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Right" data-uid="Microsoft.Xna.Framework.Matrix.Right">
+  Right
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The right vector formed from the first row M11, M12, M13 elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Right { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Translation_" data-uid="Microsoft.Xna.Framework.Matrix.Translation*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Translation" data-uid="Microsoft.Xna.Framework.Matrix.Translation">
+  Translation
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position stored in this matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Translation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Up_" data-uid="Microsoft.Xna.Framework.Matrix.Up*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Up" data-uid="Microsoft.Xna.Framework.Matrix.Up">
+  Up
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The upper vector formed from the second row M21, M22, M23 elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Up { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Add_" data-uid="Microsoft.Xna.Framework.Matrix.Add*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Add_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Add(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  Add(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains sum of two matrixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Add(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The first matrix to add.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The second matrix to add.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of the matrix addition.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Add_" data-uid="Microsoft.Xna.Framework.Matrix.Add*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Add_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Add(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@)">
+  Add(ref Matrix, ref Matrix, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains sum of two matrixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Add(ref Matrix matrix1, ref Matrix matrix2, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The first matrix to add.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The second matrix to add.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of the matrix addition as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateBillboard_" data-uid="Microsoft.Xna.Framework.Matrix.CreateBillboard*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateBillboard_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_System_Nullable_Microsoft_Xna_Framework_Vector3__" data-uid="Microsoft.Xna.Framework.Matrix.CreateBillboard(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,System.Nullable{Microsoft.Xna.Framework.Vector3})">
+  CreateBillboard(Vector3, Vector3, Vector3, Vector3?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for spherical billboarding that rotates around specified object position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 cameraUpVector, Vector3? cameraForwardVector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>objectPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Position of billboard object. It will rotate around that vector.</p>
+</dd>
+    <dt><code>cameraPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The camera position.</p>
+</dd>
+    <dt><code>cameraUpVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The camera up vector.</p>
+</dd>
+    <dt><code>cameraForwardVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a>?</dt>
+    <dd><p>Optional camera forward vector.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for spherical billboarding.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateBillboard_" data-uid="Microsoft.Xna.Framework.Matrix.CreateBillboard*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateBillboard_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__System_Nullable_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateBillboard(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,System.Nullable{Microsoft.Xna.Framework.Vector3},Microsoft.Xna.Framework.Matrix@)">
+  CreateBillboard(ref Vector3, ref Vector3, ref Vector3, Vector3?, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for spherical billboarding that rotates around specified object position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateBillboard(ref Vector3 objectPosition, ref Vector3 cameraPosition, ref Vector3 cameraUpVector, Vector3? cameraForwardVector, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>objectPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Position of billboard object. It will rotate around that vector.</p>
+</dd>
+    <dt><code>cameraPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The camera position.</p>
+</dd>
+    <dt><code>cameraUpVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The camera up vector.</p>
+</dd>
+    <dt><code>cameraForwardVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a>?</dt>
+    <dd><p>Optional camera forward vector.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for spherical billboarding as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateConstrainedBillboard_" data-uid="Microsoft.Xna.Framework.Matrix.CreateConstrainedBillboard*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateConstrainedBillboard_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_System_Nullable_Microsoft_Xna_Framework_Vector3__System_Nullable_Microsoft_Xna_Framework_Vector3__" data-uid="Microsoft.Xna.Framework.Matrix.CreateConstrainedBillboard(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,System.Nullable{Microsoft.Xna.Framework.Vector3},System.Nullable{Microsoft.Xna.Framework.Vector3})">
+  CreateConstrainedBillboard(Vector3, Vector3, Vector3, Vector3?, Vector3?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for cylindrical billboarding that rotates around specified axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateConstrainedBillboard(Vector3 objectPosition, Vector3 cameraPosition, Vector3 rotateAxis, Vector3? cameraForwardVector, Vector3? objectForwardVector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>objectPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Object position the billboard will rotate around.</p>
+</dd>
+    <dt><code>cameraPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Camera position.</p>
+</dd>
+    <dt><code>rotateAxis</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Axis of billboard for rotation.</p>
+</dd>
+    <dt><code>cameraForwardVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a>?</dt>
+    <dd><p>Optional camera forward vector.</p>
+</dd>
+    <dt><code>objectForwardVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a>?</dt>
+    <dd><p>Optional object forward vector.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for cylindrical billboarding.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateConstrainedBillboard_" data-uid="Microsoft.Xna.Framework.Matrix.CreateConstrainedBillboard*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateConstrainedBillboard_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__System_Nullable_Microsoft_Xna_Framework_Vector3__System_Nullable_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateConstrainedBillboard(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,System.Nullable{Microsoft.Xna.Framework.Vector3},System.Nullable{Microsoft.Xna.Framework.Vector3},Microsoft.Xna.Framework.Matrix@)">
+  CreateConstrainedBillboard(ref Vector3, ref Vector3, ref Vector3, Vector3?, Vector3?, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for cylindrical billboarding that rotates around specified axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateConstrainedBillboard(ref Vector3 objectPosition, ref Vector3 cameraPosition, ref Vector3 rotateAxis, Vector3? cameraForwardVector, Vector3? objectForwardVector, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>objectPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Object position the billboard will rotate around.</p>
+</dd>
+    <dt><code>cameraPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Camera position.</p>
+</dd>
+    <dt><code>rotateAxis</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Axis of billboard for rotation.</p>
+</dd>
+    <dt><code>cameraForwardVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a>?</dt>
+    <dd><p>Optional camera forward vector.</p>
+</dd>
+    <dt><code>objectForwardVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a>?</dt>
+    <dd><p>Optional object forward vector.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for cylindrical billboarding as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateFromAxisAngle_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromAxisAngle*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateFromAxisAngle_Microsoft_Xna_Framework_Vector3_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromAxisAngle(Microsoft.Xna.Framework.Vector3,System.Single)">
+  CreateFromAxisAngle(Vector3, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains the rotation moment around specified axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateFromAxisAngle(Vector3 axis, float angle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The axis of rotation.</p>
+</dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The angle of rotation in radians.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateFromAxisAngle_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromAxisAngle*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateFromAxisAngle_Microsoft_Xna_Framework_Vector3__System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromAxisAngle(Microsoft.Xna.Framework.Vector3@,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateFromAxisAngle(ref Vector3, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains the rotation moment around specified axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFromAxisAngle(ref Vector3 axis, float angle, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>axis</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The axis of rotation.</p>
+</dd>
+    <dt><code>angle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The angle of rotation in radians.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateFromQuaternion_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromQuaternion*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateFromQuaternion_Microsoft_Xna_Framework_Quaternion_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromQuaternion(Microsoft.Xna.Framework.Quaternion)">
+  CreateFromQuaternion(Quaternion)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> from a <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateFromQuaternion(Quaternion quaternion)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quaternion</code> <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a> of rotation moment.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateFromQuaternion_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromQuaternion*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateFromQuaternion_Microsoft_Xna_Framework_Quaternion__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromQuaternion(Microsoft.Xna.Framework.Quaternion@,Microsoft.Xna.Framework.Matrix@)">
+  CreateFromQuaternion(ref Quaternion, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> from a <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFromQuaternion(ref Quaternion quaternion, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>quaternion</code> <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a> of rotation moment.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateFromYawPitchRoll_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromYawPitchRoll*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateFromYawPitchRoll_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromYawPitchRoll(System.Single,System.Single,System.Single)">
+  CreateFromYawPitchRoll(float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> from the specified yaw, pitch and roll values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateFromYawPitchRoll(float yaw, float pitch, float roll)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>yaw</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The yaw rotation value in radians.</p>
+</dd>
+    <dt><code>pitch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The pitch rotation value in radians.</p>
+</dd>
+    <dt><code>roll</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The roll rotation value in radians.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Matrix_CreateFromYawPitchRoll_System_Single_System_Single_System_Single__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For more information about yaw, pitch and roll visit <a href="http://en.wikipedia.org/wiki/Euler_angles">http://en.wikipedia.org/wiki/Euler_angles</a>.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateFromYawPitchRoll_" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromYawPitchRoll*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateFromYawPitchRoll_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateFromYawPitchRoll(System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateFromYawPitchRoll(float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> from the specified yaw, pitch and roll values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateFromYawPitchRoll(float yaw, float pitch, float roll, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>yaw</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The yaw rotation value in radians.</p>
+</dd>
+    <dt><code>pitch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The pitch rotation value in radians.</p>
+</dd>
+    <dt><code>roll</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The roll rotation value in radians.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Matrix_CreateFromYawPitchRoll_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>For more information about yaw, pitch and roll visit <a href="http://en.wikipedia.org/wiki/Euler_angles">http://en.wikipedia.org/wiki/Euler_angles</a>.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateLookAt_" data-uid="Microsoft.Xna.Framework.Matrix.CreateLookAt*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateLookAt_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Matrix.CreateLookAt(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3)">
+  CreateLookAt(Vector3, Vector3, Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new viewing <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateLookAt(Vector3 cameraPosition, Vector3 cameraTarget, Vector3 cameraUpVector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cameraPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Position of the camera.</p>
+</dd>
+    <dt><code>cameraTarget</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Lookup vector of the camera.</p>
+</dd>
+    <dt><code>cameraUpVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The direction of the upper edge of the camera.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The viewing <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateLookAt_" data-uid="Microsoft.Xna.Framework.Matrix.CreateLookAt*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateLookAt_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateLookAt(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Matrix@)">
+  CreateLookAt(ref Vector3, ref Vector3, ref Vector3, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new viewing <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateLookAt(ref Vector3 cameraPosition, ref Vector3 cameraTarget, ref Vector3 cameraUpVector, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cameraPosition</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Position of the camera.</p>
+</dd>
+    <dt><code>cameraTarget</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Lookup vector of the camera.</p>
+</dd>
+    <dt><code>cameraUpVector</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The direction of the upper edge of the camera.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The viewing <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateOrthographic_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographic*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateOrthographic_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographic(System.Single,System.Single,System.Single,System.Single)">
+  CreateOrthographic(float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for orthographic view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateOrthographic(float width, float height, float zNearPlane, float zFarPlane)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Width of the viewing volume.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Height of the viewing volume.</p>
+</dd>
+    <dt><code>zNearPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the near plane.</p>
+</dd>
+    <dt><code>zFarPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the far plane.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for orthographic view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateOrthographic_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographic*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateOrthographic_System_Single_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographic(System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateOrthographic(float, float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for orthographic view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateOrthographic(float width, float height, float zNearPlane, float zFarPlane, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Width of the viewing volume.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Height of the viewing volume.</p>
+</dd>
+    <dt><code>zNearPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the near plane.</p>
+</dd>
+    <dt><code>zFarPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the far plane.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for orthographic view as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateOrthographicOffCenter_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographicOffCenter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateOrthographicOffCenter_Microsoft_Xna_Framework_Rectangle_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographicOffCenter(Microsoft.Xna.Framework.Rectangle,System.Single,System.Single)">
+  CreateOrthographicOffCenter(Rectangle, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized orthographic view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateOrthographicOffCenter(Rectangle viewingVolume, float zNearPlane, float zFarPlane)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>viewingVolume</code> <a class="xref" href="Microsoft.Xna.Framework.Rectangle.html">Rectangle</a></dt>
+    <dd><p>The viewing volume.</p>
+</dd>
+    <dt><code>zNearPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the near plane.</p>
+</dd>
+    <dt><code>zFarPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the far plane.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized orthographic view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateOrthographicOffCenter_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographicOffCenter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateOrthographicOffCenter_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographicOffCenter(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  CreateOrthographicOffCenter(float, float, float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized orthographic view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateOrthographicOffCenter(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower x-value at the near plane.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper x-value at the near plane.</p>
+</dd>
+    <dt><code>bottom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower y-coordinate at the near plane.</p>
+</dd>
+    <dt><code>top</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper y-value at the near plane.</p>
+</dd>
+    <dt><code>zNearPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the near plane.</p>
+</dd>
+    <dt><code>zFarPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the far plane.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized orthographic view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateOrthographicOffCenter_" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographicOffCenter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateOrthographicOffCenter_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateOrthographicOffCenter(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateOrthographicOffCenter(float, float, float, float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized orthographic view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateOrthographicOffCenter(float left, float right, float bottom, float top, float zNearPlane, float zFarPlane, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower x-value at the near plane.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper x-value at the near plane.</p>
+</dd>
+    <dt><code>bottom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower y-coordinate at the near plane.</p>
+</dd>
+    <dt><code>top</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper y-value at the near plane.</p>
+</dd>
+    <dt><code>zNearPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the near plane.</p>
+</dd>
+    <dt><code>zFarPlane</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Depth of the far plane.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized orthographic view as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreatePerspective_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspective*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreatePerspective_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspective(System.Single,System.Single,System.Single,System.Single)">
+  CreatePerspective(float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreatePerspective(float width, float height, float nearPlaneDistance, float farPlaneDistance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Width of the viewing volume.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Height of the viewing volume.</p>
+</dd>
+    <dt><code>nearPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the near plane.</p>
+</dd>
+    <dt><code>farPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the far plane.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreatePerspective_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspective*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreatePerspective_System_Single_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspective(System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreatePerspective(float, float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreatePerspective(float width, float height, float nearPlaneDistance, float farPlaneDistance, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Width of the viewing volume.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Height of the viewing volume.</p>
+</dd>
+    <dt><code>nearPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the near plane.</p>
+</dd>
+    <dt><code>farPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the far plane, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single.positiveinfinity">PositiveInfinity</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveFieldOfView_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveFieldOfView*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveFieldOfView_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveFieldOfView(System.Single,System.Single,System.Single,System.Single)">
+  CreatePerspectiveFieldOfView(float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view with field of view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreatePerspectiveFieldOfView(float fieldOfView, float aspectRatio, float nearPlaneDistance, float farPlaneDistance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fieldOfView</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Field of view in the y direction in radians.</p>
+</dd>
+    <dt><code>aspectRatio</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Width divided by height of the viewing volume.</p>
+</dd>
+    <dt><code>nearPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the near plane.</p>
+</dd>
+    <dt><code>farPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the far plane, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single.positiveinfinity">PositiveInfinity</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view with FOV.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveFieldOfView_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveFieldOfView*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveFieldOfView_System_Single_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveFieldOfView(System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreatePerspectiveFieldOfView(float, float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view with field of view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreatePerspectiveFieldOfView(float fieldOfView, float aspectRatio, float nearPlaneDistance, float farPlaneDistance, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fieldOfView</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Field of view in the y direction in radians.</p>
+</dd>
+    <dt><code>aspectRatio</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Width divided by height of the viewing volume.</p>
+</dd>
+    <dt><code>nearPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance of the near plane.</p>
+</dd>
+    <dt><code>farPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance of the far plane, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single.positiveinfinity">PositiveInfinity</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for perspective view with FOV as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveOffCenter_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveOffCenter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveOffCenter_Microsoft_Xna_Framework_Rectangle_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveOffCenter(Microsoft.Xna.Framework.Rectangle,System.Single,System.Single)">
+  CreatePerspectiveOffCenter(Rectangle, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized perspective view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreatePerspectiveOffCenter(Rectangle viewingVolume, float nearPlaneDistance, float farPlaneDistance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>viewingVolume</code> <a class="xref" href="Microsoft.Xna.Framework.Rectangle.html">Rectangle</a></dt>
+    <dd><p>The viewing volume.</p>
+</dd>
+    <dt><code>nearPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the near plane.</p>
+</dd>
+    <dt><code>farPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the far plane.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized perspective view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveOffCenter_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveOffCenter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveOffCenter_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveOffCenter(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  CreatePerspectiveOffCenter(float, float, float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized perspective view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreatePerspectiveOffCenter(float left, float right, float bottom, float top, float nearPlaneDistance, float farPlaneDistance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower x-value at the near plane.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper x-value at the near plane.</p>
+</dd>
+    <dt><code>bottom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower y-coordinate at the near plane.</p>
+</dd>
+    <dt><code>top</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper y-value at the near plane.</p>
+</dd>
+    <dt><code>nearPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the near plane.</p>
+</dd>
+    <dt><code>farPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the far plane.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized perspective view.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveOffCenter_" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveOffCenter*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreatePerspectiveOffCenter_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreatePerspectiveOffCenter(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreatePerspectiveOffCenter(float, float, float, float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new projection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized perspective view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreatePerspectiveOffCenter(float left, float right, float bottom, float top, float nearPlaneDistance, float farPlaneDistance, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower x-value at the near plane.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper x-value at the near plane.</p>
+</dd>
+    <dt><code>bottom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Lower y-coordinate at the near plane.</p>
+</dd>
+    <dt><code>top</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Upper y-value at the near plane.</p>
+</dd>
+    <dt><code>nearPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the near plane.</p>
+</dd>
+    <dt><code>farPlaneDistance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Distance to the far plane.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> for customized perspective view as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateReflection_" data-uid="Microsoft.Xna.Framework.Matrix.CreateReflection*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateReflection_Microsoft_Xna_Framework_Plane_" data-uid="Microsoft.Xna.Framework.Matrix.CreateReflection(Microsoft.Xna.Framework.Plane)">
+  CreateReflection(Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new reflection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateReflection(Plane value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The plane that used for reflection calculation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The reflection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateReflection_" data-uid="Microsoft.Xna.Framework.Matrix.CreateReflection*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateReflection_Microsoft_Xna_Framework_Plane__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateReflection(Microsoft.Xna.Framework.Plane@,Microsoft.Xna.Framework.Matrix@)">
+  CreateReflection(ref Plane, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new reflection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateReflection(ref Plane value, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The plane that used for reflection calculation.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The reflection <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateRotationX_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationX*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateRotationX_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationX(System.Single)">
+  CreateRotationX(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around X axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateRotationX(float radians)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radians</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Angle in radians.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around X axis.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateRotationX_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationX*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateRotationX_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationX(System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateRotationX(float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around X axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateRotationX(float radians, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radians</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Angle in radians.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around X axis as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateRotationY_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationY*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateRotationY_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationY(System.Single)">
+  CreateRotationY(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Y axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateRotationY(float radians)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radians</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Angle in radians.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Y axis.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateRotationY_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationY*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateRotationY_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationY(System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateRotationY(float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Y axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateRotationY(float radians, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radians</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Angle in radians.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Y axis as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateRotationZ_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationZ*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateRotationZ_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationZ(System.Single)">
+  CreateRotationZ(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Z axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateRotationZ(float radians)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radians</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Angle in radians.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Z axis.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateRotationZ_" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationZ*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateRotationZ_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateRotationZ(System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateRotationZ(float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Z axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateRotationZ(float radians, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radians</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Angle in radians.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The rotation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> around Z axis as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateScale_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateScale_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale(Microsoft.Xna.Framework.Vector3)">
+  CreateScale(Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateScale(Vector3 scales)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scales</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> representing x,y and z scale values.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateScale_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateScale_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Matrix@)">
+  CreateScale(ref Vector3, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateScale(ref Vector3 scales, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scales</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> representing x,y and z scale values.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateScale_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateScale_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale(System.Single)">
+  CreateScale(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateScale(float scale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for all three axises.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateScale_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateScale_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale(System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateScale(float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateScale(float scale, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for all three axises.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateScale_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateScale_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale(System.Single,System.Single,System.Single)">
+  CreateScale(float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateScale(float xScale, float yScale, float zScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for X axis.</p>
+</dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for Y axis.</p>
+</dd>
+    <dt><code>zScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for Z axis.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateScale_" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateScale_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateScale(System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateScale(float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateScale(float xScale, float yScale, float zScale, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for X axis.</p>
+</dd>
+    <dt><code>yScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for Y axis.</p>
+</dd>
+    <dt><code>zScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scale value for Z axis.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The scaling <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateShadow_" data-uid="Microsoft.Xna.Framework.Matrix.CreateShadow*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateShadow_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Plane_" data-uid="Microsoft.Xna.Framework.Matrix.CreateShadow(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Plane)">
+  CreateShadow(Vector3, Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that flattens geometry into a specified <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> as if casting a shadow from a specified light source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateShadow(Vector3 lightDirection, Plane plane)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lightDirection</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A vector specifying the direction from which the light that will cast the shadow is coming.</p>
+</dd>
+    <dt><code>plane</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The plane onto which the new matrix should flatten geometry so as to cast a shadow.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that can be used to flatten geometry onto the specified plane from the specified direction.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateShadow_" data-uid="Microsoft.Xna.Framework.Matrix.CreateShadow*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateShadow_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Plane__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateShadow(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Plane@,Microsoft.Xna.Framework.Matrix@)">
+  CreateShadow(ref Vector3, ref Plane, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that flattens geometry into a specified <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> as if casting a shadow from a specified light source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateShadow(ref Vector3 lightDirection, ref Plane plane, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lightDirection</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A vector specifying the direction from which the light that will cast the shadow is coming.</p>
+</dd>
+    <dt><code>plane</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The plane onto which the new matrix should flatten geometry so as to cast a shadow.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that can be used to flatten geometry onto the specified plane from the specified direction as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateTranslation_" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateTranslation_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation(Microsoft.Xna.Framework.Vector3)">
+  CreateTranslation(Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateTranslation(Vector3 position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>X,Y and Z coordinates of translation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateTranslation_" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateTranslation_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Matrix@)">
+  CreateTranslation(ref Vector3, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateTranslation(ref Vector3 position, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>X,Y and Z coordinates of translation.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateTranslation_" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateTranslation_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation(System.Single,System.Single,System.Single)">
+  CreateTranslation(float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateTranslation(float xPosition, float yPosition, float zPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>X coordinate of translation.</p>
+</dd>
+    <dt><code>yPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Y coordinate of translation.</p>
+</dd>
+    <dt><code>zPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Z coordinate of translation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateTranslation_" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateTranslation_System_Single_System_Single_System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateTranslation(System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  CreateTranslation(float, float, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateTranslation(float xPosition, float yPosition, float zPosition, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>xPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>X coordinate of translation.</p>
+</dd>
+    <dt><code>yPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Y coordinate of translation.</p>
+</dd>
+    <dt><code>zPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Z coordinate of translation.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The translation <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateWorld_" data-uid="Microsoft.Xna.Framework.Matrix.CreateWorld*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateWorld_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Matrix.CreateWorld(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3)">
+  CreateWorld(Vector3, Vector3, Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new world <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix CreateWorld(Vector3 position, Vector3 forward, Vector3 up)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The position vector.</p>
+</dd>
+    <dt><code>forward</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The forward direction vector.</p>
+</dd>
+    <dt><code>up</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The upward direction vector. Usually <a class="xref" href="Microsoft.Xna.Framework.Vector3.html#Microsoft_Xna_Framework_Vector3_Up">Up</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The world <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_CreateWorld_" data-uid="Microsoft.Xna.Framework.Matrix.CreateWorld*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_CreateWorld_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.CreateWorld(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Matrix@)">
+  CreateWorld(ref Vector3, ref Vector3, ref Vector3, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new world <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateWorld(ref Vector3 position, ref Vector3 forward, ref Vector3 up, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The position vector.</p>
+</dd>
+    <dt><code>forward</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The forward direction vector.</p>
+</dd>
+    <dt><code>up</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The upward direction vector. Usually <a class="xref" href="Microsoft.Xna.Framework.Vector3.html#Microsoft_Xna_Framework_Vector3_Up">Up</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The world <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Decompose_" data-uid="Microsoft.Xna.Framework.Matrix.Decompose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Decompose_Microsoft_Xna_Framework_Vector3__Microsoft_Xna_Framework_Quaternion__Microsoft_Xna_Framework_Vector3__" data-uid="Microsoft.Xna.Framework.Matrix.Decompose(Microsoft.Xna.Framework.Vector3@,Microsoft.Xna.Framework.Quaternion@,Microsoft.Xna.Framework.Vector3@)">
+  Decompose(out Vector3, out Quaternion, out Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Decomposes this matrix to translation, rotation and scale elements. Returns <code>true</code> if matrix can be decomposed; <code>false</code> otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scale</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Scale vector as an output parameter.</p>
+</dd>
+    <dt><code>rotation</code> <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a></dt>
+    <dd><p>Rotation quaternion as an output parameter.</p>
+</dd>
+    <dt><code>translation</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>Translation vector as an output parameter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if matrix can be decomposed; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Determinant_" data-uid="Microsoft.Xna.Framework.Matrix.Determinant*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Determinant" data-uid="Microsoft.Xna.Framework.Matrix.Determinant">
+  Determinant()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a determinant of this <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Determinant()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Determinant of this <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Matrix_Determinant_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>See more about determinant here - <a href="http://en.wikipedia.org/wiki/Determinant">http://en.wikipedia.org/wiki/Determinant</a>.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Divide_" data-uid="Microsoft.Xna.Framework.Matrix.Divide*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Divide_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Divide(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  Divide(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides the elements of a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> by the elements of another matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Divide(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Divisor <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of dividing the matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Divide_" data-uid="Microsoft.Xna.Framework.Matrix.Divide*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Divide_Microsoft_Xna_Framework_Matrix_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.Divide(Microsoft.Xna.Framework.Matrix,System.Single)">
+  Divide(Matrix, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides the elements of a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Divide(Matrix matrix1, float divider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>divider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Divisor scalar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of dividing a matrix by a scalar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Divide_" data-uid="Microsoft.Xna.Framework.Matrix.Divide*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Divide_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Divide(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@)">
+  Divide(ref Matrix, ref Matrix, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides the elements of a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> by the elements of another matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Divide(ref Matrix matrix1, ref Matrix matrix2, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Divisor <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of dividing the matrix as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Divide_" data-uid="Microsoft.Xna.Framework.Matrix.Divide*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Divide_Microsoft_Xna_Framework_Matrix__System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Divide(Microsoft.Xna.Framework.Matrix@,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  Divide(ref Matrix, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides the elements of a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Divide(ref Matrix matrix1, float divider, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>divider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Divisor scalar.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of dividing a matrix by a scalar as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Equals_" data-uid="Microsoft.Xna.Framework.Matrix.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Equals_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Equals(Microsoft.Xna.Framework.Matrix)">
+  Equals(Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether current instance is equal to specified <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> without any tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Matrix other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Equals_" data-uid="Microsoft.Xna.Framework.Matrix.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Equals_System_Object_" data-uid="Microsoft.Xna.Framework.Matrix.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether current instance is equal to specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> without any tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_GetHashCode_" data-uid="Microsoft.Xna.Framework.Matrix.GetHashCode*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_GetHashCode" data-uid="Microsoft.Xna.Framework.Matrix.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the hash code of this <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Hash code of this <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Invert_" data-uid="Microsoft.Xna.Framework.Matrix.Invert*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Invert_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Invert(Microsoft.Xna.Framework.Matrix)">
+  Invert(Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains inversion of the specified matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Invert(Matrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The inverted matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Invert_" data-uid="Microsoft.Xna.Framework.Matrix.Invert*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Invert_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Invert(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@)">
+  Invert(ref Matrix, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains inversion of the specified matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Invert(ref Matrix matrix, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The inverted matrix as output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Lerp_" data-uid="Microsoft.Xna.Framework.Matrix.Lerp*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Lerp_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.Lerp(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix,System.Single)">
+  Lerp(Matrix, Matrix, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains linear interpolation of the values in specified matrixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Lerp(Matrix matrix1, Matrix matrix2, float amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The first <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The second <a class="xref" href="Microsoft.Xna.Framework.Vector2.html">Vector2</a>.</p>
+</dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Weighting value(between 0.0 and 1.0).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><blockquote>
+<p>The result of linear interpolation of the specified matrixes.</p>
+</blockquote>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Lerp_" data-uid="Microsoft.Xna.Framework.Matrix.Lerp*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Lerp_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Lerp(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  Lerp(ref Matrix, ref Matrix, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains linear interpolation of the values in specified matrixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Lerp(ref Matrix matrix1, ref Matrix matrix2, float amount, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The first <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The second <a class="xref" href="Microsoft.Xna.Framework.Vector2.html">Vector2</a>.</p>
+</dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Weighting value(between 0.0 and 1.0).</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of linear interpolation of the specified matrixes as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Multiply_" data-uid="Microsoft.Xna.Framework.Matrix.Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Multiply_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Multiply(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  Multiply(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains a multiplication of two matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Multiply(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix multiplication.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Multiply_" data-uid="Microsoft.Xna.Framework.Matrix.Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Multiply_Microsoft_Xna_Framework_Matrix_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.Multiply(Microsoft.Xna.Framework.Matrix,System.Single)">
+  Multiply(Matrix, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains a multiplication of <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> and a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Multiply(Matrix matrix1, float scaleFactor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>scaleFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scalar value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix multiplication with a scalar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Multiply_" data-uid="Microsoft.Xna.Framework.Matrix.Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Multiply_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Multiply(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@)">
+  Multiply(ref Matrix, ref Matrix, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains a multiplication of two matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Multiply(ref Matrix matrix1, ref Matrix matrix2, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix multiplication as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Multiply_" data-uid="Microsoft.Xna.Framework.Matrix.Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Multiply_Microsoft_Xna_Framework_Matrix__System_Single_Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Multiply(Microsoft.Xna.Framework.Matrix@,System.Single,Microsoft.Xna.Framework.Matrix@)">
+  Multiply(ref Matrix, float, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains a multiplication of <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> and a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Multiply(ref Matrix matrix1, float scaleFactor, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>scaleFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scalar value.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix multiplication with a scalar as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Negate_" data-uid="Microsoft.Xna.Framework.Matrix.Negate*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Negate_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Negate(Microsoft.Xna.Framework.Matrix)">
+  Negate(Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a matrix with the all values negated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Negate(Matrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix negation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Negate_" data-uid="Microsoft.Xna.Framework.Matrix.Negate*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Negate_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Negate(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@)">
+  Negate(ref Matrix, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a matrix with the all values negated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Negate(ref Matrix matrix, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix negation as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Subtract_" data-uid="Microsoft.Xna.Framework.Matrix.Subtract*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Subtract_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Subtract(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  Subtract(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains subtraction of one matrix from another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Subtract(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The first <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The second <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of the matrix subtraction.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Subtract_" data-uid="Microsoft.Xna.Framework.Matrix.Subtract*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Subtract_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Subtract(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@)">
+  Subtract(ref Matrix, ref Matrix, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that contains subtraction of one matrix from another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Subtract(ref Matrix matrix1, ref Matrix matrix2, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The first <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The second <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of the matrix subtraction as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_ToFloatArray_" data-uid="Microsoft.Xna.Framework.Matrix.ToFloatArray*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_ToFloatArray_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.ToFloatArray(Microsoft.Xna.Framework.Matrix)">
+  ToFloatArray(Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copy the values of specified <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> to the float array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float[] ToFloatArray(Matrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
+    <dd><p>The array which matrix values will be stored.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Matrix_ToFloatArray_Microsoft_Xna_Framework_Matrix__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Required for OpenGL 2.0 projection matrix stuff.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_ToNumerics_" data-uid="Microsoft.Xna.Framework.Matrix.ToNumerics*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_ToNumerics" data-uid="Microsoft.Xna.Framework.Matrix.ToNumerics">
+  ToNumerics()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4 ToNumerics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_ToString_" data-uid="Microsoft.Xna.Framework.Matrix.ToString*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_ToString" data-uid="Microsoft.Xna.Framework.Matrix.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of this <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> in the format:
+{M11:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M11">M11</a>] M12:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M12">M12</a>] M13:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M13">M13</a>] M14:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M14">M14</a>]}
+{M21:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M21">M21</a>] M12:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M22">M22</a>] M13:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M23">M23</a>] M14:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M24">M24</a>]}
+{M31:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M31">M31</a>] M32:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M32">M32</a>] M33:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M33">M33</a>] M34:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M34">M34</a>]}
+{M41:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M41">M41</a>] M42:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M42">M42</a>] M43:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M43">M43</a>] M44:[<a class="xref" href="Microsoft.Xna.Framework.Matrix.html#Microsoft_Xna_Framework_Matrix_M44">M44</a>]}</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of this <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Transpose_" data-uid="Microsoft.Xna.Framework.Matrix.Transpose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Transpose_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.Transpose(Microsoft.Xna.Framework.Matrix)">
+  Transpose(Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Swap the matrix rows and columns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix Transpose(Matrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The matrix for transposing operation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains the transposing result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_Transpose_" data-uid="Microsoft.Xna.Framework.Matrix.Transpose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_Transpose_Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Matrix__" data-uid="Microsoft.Xna.Framework.Matrix.Transpose(Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Matrix@)">
+  Transpose(ref Matrix, out Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Swap the matrix rows and columns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Transpose(ref Matrix matrix, out Matrix result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The matrix for transposing operation.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The new <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> which contains the transposing result as an output parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Addition_" data-uid="Microsoft.Xna.Framework.Matrix.op_Addition*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Addition_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.op_Addition(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  operator +(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds two matrixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix operator +(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the add sign.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the right of the add sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Sum of the matrixes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Division_" data-uid="Microsoft.Xna.Framework.Matrix.op_Division*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Division_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.op_Division(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  operator /(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides the elements of a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> by the elements of another <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix operator /(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the div sign.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Divisor <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the right of the div sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of dividing the matrixes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Division_" data-uid="Microsoft.Xna.Framework.Matrix.op_Division*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Division_Microsoft_Xna_Framework_Matrix_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.op_Division(Microsoft.Xna.Framework.Matrix,System.Single)">
+  operator /(Matrix, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Divides the elements of a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix operator /(Matrix matrix, float divider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the div sign.</p>
+</dd>
+    <dt><code>divider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Divisor scalar on the right of the div sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The result of dividing a matrix by a scalar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Equality_" data-uid="Microsoft.Xna.Framework.Matrix.op_Equality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Equality_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.op_Equality(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  operator ==(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether two <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> instances are equal without any tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the equal sign.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the right of the equal sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Implicit_" data-uid="Microsoft.Xna.Framework.Matrix.op_Implicit*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Implicit_System_Numerics_Matrix4x4__Microsoft_Xna_Framework_Matrix" data-uid="Microsoft.Xna.Framework.Matrix.op_Implicit(System.Numerics.Matrix4x4)~Microsoft.Xna.Framework.Matrix">
+  implicit operator Matrix(Matrix4x4)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a> to a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Matrix(Matrix4x4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.matrix4x4">Matrix4x4</a></dt>
+    <dd><p>The converted value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Inequality_" data-uid="Microsoft.Xna.Framework.Matrix.op_Inequality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Inequality_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.op_Inequality(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  operator !=(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether two <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> instances are not equal without any tolerance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the not equal sign.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the right of the not equal sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the instances are not equal; <code>false</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Multiply_" data-uid="Microsoft.Xna.Framework.Matrix.op_Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Multiply_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.op_Multiply(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  operator *(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies two matrixes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix operator *(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the mul sign.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the right of the mul sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix multiplication.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Matrix_op_Multiply_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Using matrix multiplication algorithm - see <a href="http://en.wikipedia.org/wiki/Matrix_multiplication">http://en.wikipedia.org/wiki/Matrix_multiplication</a>.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Multiply_" data-uid="Microsoft.Xna.Framework.Matrix.op_Multiply*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Multiply_Microsoft_Xna_Framework_Matrix_System_Single_" data-uid="Microsoft.Xna.Framework.Matrix.op_Multiply(Microsoft.Xna.Framework.Matrix,System.Single)">
+  operator *(Matrix, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies the elements of matrix by a scalar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix operator *(Matrix matrix, float scaleFactor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the mul sign.</p>
+</dd>
+    <dt><code>scaleFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Scalar value on the right of the mul sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix multiplication with a scalar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_Subtraction_" data-uid="Microsoft.Xna.Framework.Matrix.op_Subtraction*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_Subtraction_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.op_Subtraction(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  operator -(Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts the values of one <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> from another <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix operator -(Matrix matrix1, Matrix matrix2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix1</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the left of the sub sign.</p>
+</dd>
+    <dt><code>matrix2</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the right of the sub sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the matrix subtraction.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Matrix_op_UnaryNegation_" data-uid="Microsoft.Xna.Framework.Matrix.op_UnaryNegation*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Matrix_op_UnaryNegation_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Matrix.op_UnaryNegation(Microsoft.Xna.Framework.Matrix)">
+  operator -(Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inverts values in the specified <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Matrix operator -(Matrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> on the right of the sub sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>Result of the inversion.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

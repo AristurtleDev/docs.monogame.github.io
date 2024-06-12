@@ -1,0 +1,791 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Namespace Microsoft.Xna.Framework.Graphics | MonoGame ">
+
+    <title>Namespace Microsoft.Xna.Framework.Graphics | MonoGame </title>
+
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Namespace Microsoft.Xna.Framework.Graphics | MonoGame ">
+    <meta name="og:description" content="">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.html">
+    <meta name="twitter:title" content="Namespace Microsoft.Xna.Framework.Graphics | MonoGame ">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Graphics">
+
+  <h1 id="Microsoft_Xna_Framework_Graphics" data-uid="Microsoft.Xna.Framework.Graphics" class="text-break">Namespace Microsoft.Xna.Framework.Graphics</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.AlphaTestEffect.html">AlphaTestEffect</a></dt>
+      <dd><p>Built-in effect that supports alpha testing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.BasicEffect.html">BasicEffect</a></dt>
+      <dd><p>Built-in effect that supports optional texturing, vertex coloring, fog, and lighting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.BlendState.html">BlendState</a></dt>
+      <dd><p>Contains blend state for the device.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DefaultColorProcessors.html">DefaultColorProcessors</a></dt>
+      <dd><p>Represents the default processors used in processing color values.
+This class cannot be inherited.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DepthStencilState.html">DepthStencilState</a></dt>
+      <dd><p>Contains depth-stencil state for the device.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DeviceLostException.html">DeviceLostException</a></dt>
+      <dd><p>The exception that is thrown when the device has been lost, but cannot be reset at this time.
+Therefore, rendering is not possible.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DeviceNotResetException.html">DeviceNotResetException</a></dt>
+      <dd><p>The exception that is thrown when the device has been lost, but can be reset at this time.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DirectionalLight.html">DirectionalLight</a></dt>
+      <dd><p>Represents a directional light.
+This class cannot be inherited.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DisplayMode.html">DisplayMode</a></dt>
+      <dd><p>Describes the display mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DisplayModeCollection.html">DisplayModeCollection</a></dt>
+      <dd><p>A collection that manipulates <a class="xref" href="Microsoft.Xna.Framework.Graphics.DisplayMode.html">DisplayMode</a> instances.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DualTextureEffect.html">DualTextureEffect</a></dt>
+      <dd><p>Built-in effect that supports two-layer multitexturing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DynamicIndexBuffer.html">DynamicIndexBuffer</a></dt>
+      <dd><p>Describes the rendering order of the vertices  in a vertex buffer. Use <b>DynamicIndexBuffer</b> for storing
+indices for dynamic vertices and <a class="xref" href="Microsoft.Xna.Framework.Graphics.IndexBuffer.html">IndexBuffer</a> for indices of non-dynamic arrays.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DynamicVertexBuffer.html">DynamicVertexBuffer</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html">Effect</a></dt>
+      <dd><p>Used to set and query shader effects, and to choose techniques.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectAnnotation.html">EffectAnnotation</a></dt>
+      <dd><p>Represents an annotation to an <a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectParameter.html">EffectParameter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectAnnotationCollection.html">EffectAnnotationCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectAnnotation.html">EffectAnnotation</a> objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectMaterial.html">EffectMaterial</a></dt>
+      <dd><p>Contains an effect subclass which is used to load data for an EffectMaterialContent type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectParameter.html">EffectParameter</a></dt>
+      <dd><p>Represents an <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html">Effect</a> parameter.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectParameterCollection.html">EffectParameterCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectParameter.html">EffectParameter</a> objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectPass.html">EffectPass</a></dt>
+      <dd><p>Contains the rendering state for drawing with an effect. <p></p>
+An effect can contain one or more passes.
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectPassCollection.html">EffectPassCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectPass.html">EffectPass</a> objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectTechnique.html">EffectTechnique</a></dt>
+      <dd><p>Represents a technique used in a shader effect.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectTechniqueCollection.html">EffectTechniqueCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectTechnique.html">EffectTechnique</a> objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EnvironmentMapEffect.html">EnvironmentMapEffect</a></dt>
+      <dd><p>Built-in effect that supports environment mapping.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsAdapter.html">GraphicsAdapter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDebug.html">GraphicsDebug</a></dt>
+      <dd><p>Represents a class for debugging graphics.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDebugMessage.html">GraphicsDebugMessage</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+      <dd><p>Performs primitive-based rendering, creates resources,
+handles system-level variables, adjusts gamma ramp levels, and creates shaders.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsResource.html">GraphicsResource</a></dt>
+      <dd><p>Queries and prepares resources.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IndexBuffer.html">IndexBuffer</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Model.html">Model</a></dt>
+      <dd><p>A basic 3D model with per mesh parent bones.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelBone.html">ModelBone</a></dt>
+      <dd><p>Represents bone data for a model.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelBoneCollection.html">ModelBoneCollection</a></dt>
+      <dd><p>Represents a set of bones associated with a model.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelEffectCollection.html">ModelEffectCollection</a></dt>
+      <dd><p>Represents a collection of effects associated with a model.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMesh.html">ModelMesh</a></dt>
+      <dd><p>Represents a mesh that is part of a <a class="xref" href="Microsoft.Xna.Framework.Graphics.Model.html">Model</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMeshCollection.html">ModelMeshCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMesh.html">ModelMesh</a> objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMeshPart.html">ModelMeshPart</a></dt>
+      <dd><p>Represents a batch of geometry information to submit to the graphics device during rendering.
+Each <b>ModelMeshPart</b> is a subdivision of a <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMesh.html">ModelMesh</a> object.
+The <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMesh.html">ModelMesh</a> class is split into multiple <b>ModelMeshPart</b> objects,
+typically based on material information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMeshPartCollection.html">ModelMeshPartCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMeshPart.html">ModelMeshPart</a> objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.NoSuitableGraphicsDeviceException.html">NoSuitableGraphicsDeviceException</a></dt>
+      <dd><p>Thrown when no available graphics device fits the given device preferences.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.OcclusionQuery.html">OcclusionQuery</a></dt>
+      <dd><p>Used to perform an occlusion query against the latest drawn objects.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.PresentationParameters.html">PresentationParameters</a></dt>
+      <dd><p>Contains graphics presentation parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.RasterizerState.html">RasterizerState</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.RenderTarget2D.html">RenderTarget2D</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.RenderTargetCube.html">RenderTargetCube</a></dt>
+      <dd><p>Represents a texture cube that can be used as a render target.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ResourceCreatedEventArgs.html">ResourceCreatedEventArgs</a></dt>
+      <dd><p>Provides data for the <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html#Microsoft_Xna_Framework_Graphics_GraphicsDevice_ResourceCreated">ResourceCreated</a> event. This class cannot be inherited.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ResourceDestroyedEventArgs.html">ResourceDestroyedEventArgs</a></dt>
+      <dd><p>Provides data for the <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html#Microsoft_Xna_Framework_Graphics_GraphicsDevice_ResourceDestroyed">ResourceDestroyed</a> event. This class cannot be inherited.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a></dt>
+      <dd><p>Contains sampler state, which determines how to sample texture data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerStateCollection.html">SamplerStateCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.SamplerState.html">SamplerState</a> objects,</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SkinnedEffect.html">SkinnedEffect</a></dt>
+      <dd><p>Built-in effect for rendering skinned character models.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteBatch.html">SpriteBatch</a></dt>
+      <dd><p>Helper class for drawing text strings and sprites in one or more optimized batches.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteEffect.html">SpriteEffect</a></dt>
+      <dd><p>The default effect used by SpriteBatch.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteFont.html">SpriteFont</a></dt>
+      <dd><p>Represents a font texture.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TargetBlendState.html">TargetBlendState</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture.html">Texture</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture2D.html">Texture2D</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture3D.html">Texture3D</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureCollection.html">TextureCollection</a></dt>
+      <dd><p>Represents a collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture.html">Texture</a> objects. This class cannot be inherited.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureCube.html">TextureCube</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexBuffer.html">VertexBuffer</a></dt>
+      <dd><p>Represents a list of 3D vertices to be streamed to the graphics device.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexDeclaration.html">VertexDeclaration</a></dt>
+      <dd><p>Defines per-vertex data of a vertex buffer.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectPassCollection.Enumerator.html">EffectPassCollection.Enumerator</a></dt>
+      <dd><p>Enumerator to iterate through the <a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectPassCollection.html">EffectPassCollection</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a></dt>
+      <dd><p>A snapshot of rendering statistics from <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html#Microsoft_Xna_Framework_Graphics_GraphicsDevice_Metrics">Metrics</a> to be used for runtime debugging and profiling.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelBoneCollection.Enumerator.html">ModelBoneCollection.Enumerator</a></dt>
+      <dd><p>Provides the ability to iterate through the bones in an ModelBoneCollection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelEffectCollection.Enumerator.html">ModelEffectCollection.Enumerator</a></dt>
+      <dd><p>Enumerator to iterate through the <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelEffectCollection.html">ModelEffectCollection</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMeshCollection.Enumerator.html">ModelMeshCollection.Enumerator</a></dt>
+      <dd><p>Provides the ability to iterate through the bones in an ModelMeshCollection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.RenderTargetBinding.html">RenderTargetBinding</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteFont.Glyph.html">SpriteFont.Glyph</a></dt>
+      <dd><p>Struct that defines the spacing, Kerning, and bounds of a character.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexBufferBinding.html">VertexBufferBinding</a></dt>
+      <dd><p>Defines how a vertex buffer is bound to the graphics device for rendering.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexElement.html">VertexElement</a></dt>
+      <dd><p>Defines a single element in a vertex.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexPosition.html">VertexPosition</a></dt>
+      <dd><p>Describes a custom vertex format structure that contains position.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexPositionColor.html">VertexPositionColor</a></dt>
+      <dd><p>Describes a custom vertex format structure that contains position and color.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexPositionColorNormal.html">VertexPositionColorNormal</a></dt>
+      <dd><p>Describes a custom vertex format structure that contains position,
+color and normal data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexPositionColorNormalTexture.html">VertexPositionColorNormalTexture</a></dt>
+      <dd><p>Describes a custom vertex format structure that contains position,
+color, normal data, and one set of texture coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture.html">VertexPositionColorTexture</a></dt>
+      <dd><p>Describes a custom vertex format structure that contains position,
+color, and one set of texture coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture.html">VertexPositionNormalTexture</a></dt>
+      <dd><p>Describes a custom vertex format structure that contains position,
+normal data, and one set of texture coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexPositionTexture.html">VertexPositionTexture</a></dt>
+      <dd><p>Describes a custom vertex format structure that contains position and one set of texture coordinates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Viewport.html">Viewport</a></dt>
+      <dd><p>Describes the view bounds for render-target surface.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IEffectBones.html">IEffectBones</a></dt>
+      <dd><p>Interface for Effects that support bone transforms.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IEffectFog.html">IEffectFog</a></dt>
+      <dd><p>The common effect fog rendering parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IEffectLights.html">IEffectLights</a></dt>
+      <dd><p>The common effect light rendering parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IEffectMatrices.html">IEffectMatrices</a></dt>
+      <dd><p>Gets or sets transformation matrix parameters for the current effect.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IGraphicsDeviceService.html">IGraphicsDeviceService</a></dt>
+      <dd><p>Provider of a <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IVertexType.html">IVertexType</a></dt>
+      <dd><p>Vertex type interface which is implemented by a custom vertex type structure.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Blend.html">Blend</a></dt>
+      <dd><p>Defines a blend mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.BlendFunction.html">BlendFunction</a></dt>
+      <dd><p>Defines a function for color blending.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.BufferUsage.html">BufferUsage</a></dt>
+      <dd><p>A usage hint for optimizing memory placement of graphics buffers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ClearOptions.html">ClearOptions</a></dt>
+      <dd><p>Defines the buffers for clearing when calling <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html#Microsoft_Xna_Framework_Graphics_GraphicsDevice_Clear_Microsoft_Xna_Framework_Graphics_ClearOptions_Microsoft_Xna_Framework_Color_System_Single_System_Int32_">Clear(ClearOptions, Color, float, int)</a> operation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ColorWriteChannels.html">ColorWriteChannels</a></dt>
+      <dd><p>Defines the color channels for render target blending operations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.CompareFunction.html">CompareFunction</a></dt>
+      <dd><p>The comparison function used for depth, stencil, and alpha tests.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.CubeMapFace.html">CubeMapFace</a></dt>
+      <dd><p>Defines the faces in a cube map for the <a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureCube.html">TextureCube</a> class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.CullMode.html">CullMode</a></dt>
+      <dd><p>Defines a culling mode for faces in rasterization process.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.DepthFormat.html">DepthFormat</a></dt>
+      <dd><p>Defines formats for depth-stencil buffer.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectParameterClass.html">EffectParameterClass</a></dt>
+      <dd><p>Defines classes for effect parameters and shader constants.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.EffectParameterType.html">EffectParameterType</a></dt>
+      <dd><p>Defines types for effect parameters and shader constants.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.FillMode.html">FillMode</a></dt>
+      <dd><p>Defines options for filling the primitive.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsAdapter.DriverType.html">GraphicsAdapter.DriverType</a></dt>
+      <dd><p>Defines the driver type for graphics adapter. Usable only on DirectX platforms for now.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDeviceStatus.html">GraphicsDeviceStatus</a></dt>
+      <dd><p>Describes the status of the <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsProfile.html">GraphicsProfile</a></dt>
+      <dd><p>Defines a set of graphic capabilities.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.IndexElementSize.html">IndexElementSize</a></dt>
+      <dd><p>Defines size for index in <a class="xref" href="Microsoft.Xna.Framework.Graphics.IndexBuffer.html">IndexBuffer</a> and <a class="xref" href="Microsoft.Xna.Framework.Graphics.DynamicIndexBuffer.html">DynamicIndexBuffer</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.PresentInterval.html">PresentInterval</a></dt>
+      <dd><p>Defines how <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html#Microsoft_Xna_Framework_Graphics_GraphicsDevice_Present">Present()</a> updates the game window.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.PrimitiveType.html">PrimitiveType</a></dt>
+      <dd><p>Defines how vertex data is ordered.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.RenderTargetUsage.html">RenderTargetUsage</a></dt>
+      <dd><p>Defines if the previous content in a render target is preserved when it set on the graphics device.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SetDataOptions.html">SetDataOptions</a></dt>
+      <dd><p>Defines how vertex or index buffer data will be flushed during a SetData operation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteEffects.html">SpriteEffects</a></dt>
+      <dd><p>Defines sprite visual options for mirroring.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteSortMode.html">SpriteSortMode</a></dt>
+      <dd><p>Defines sprite sort rendering options.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.StencilOperation.html">StencilOperation</a></dt>
+      <dd><p>Defines stencil buffer operations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.SurfaceFormat.html">SurfaceFormat</a></dt>
+      <dd><p>Defines types of surface formats.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture2D.SurfaceType.html">Texture2D.SurfaceType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureAddressMode.html">TextureAddressMode</a></dt>
+      <dd><p>Defines modes for addressing texels using texture coordinates that are outside of the range of 0.0 to 1.0.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureFilter.html">TextureFilter</a></dt>
+      <dd><p>Defines filtering types for texture sampler.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureFilterMode.html">TextureFilterMode</a></dt>
+      <dd><p>Filtering modes for texture samplers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexElementFormat.html">VertexElementFormat</a></dt>
+      <dd><p>Defines vertex element formats.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.VertexElementUsage.html">VertexElementUsage</a></dt>
+      <dd><p>Defines usage for vertex elements.</p>
+</dd>
+    </dl>
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

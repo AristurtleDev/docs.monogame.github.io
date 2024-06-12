@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="MonoGame Effects Compiler (MGFXC) | MonoGame ">
+
+    <title>MonoGame Effects Compiler (MGFXC) | MonoGame </title>
+<meta name="description" content="Learn about the MonoGame Effects Compiler (MGFXC), the tool used to compile shaders for usage in MonoGame.">
+
+    <meta name="og:url" content="https://monogame.net/articles/tools/mgfxc.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="MonoGame Effects Compiler (MGFXC) | MonoGame ">
+    <meta name="og:description" content="Learn about the MonoGame Effects Compiler (MGFXC), the tool used to compile shaders for usage in MonoGame.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/tools/mgfxc.html">
+    <meta name="twitter:title" content="MonoGame Effects Compiler (MGFXC) | MonoGame ">
+    <meta name="twitter:description" content="Learn about the MonoGame Effects Compiler (MGFXC), the tool used to compile shaders for usage in MonoGame.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../../public/docfx.min.css">
+    <link rel="stylesheet" href="../../public/main.css">
+    <meta name="docfx:navrel" content="../../toc.html">
+    <meta name="docfx:tocrel" content="../toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/tools/mgfxc.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="monogame-effects-compiler-mgfxc">MonoGame Effects Compiler (MGFXC)</h1>
+<p class="text-secondary">Learn about the MonoGame Effects Compiler (MGFXC), the tool used to compile shaders for usage in MonoGame.</p>
+<p>The MGFXC tool is used to compile <a href="https://docs.microsoft.com/en-us/windows/win32/direct3d9/writing-an-effect">DirectX Effect files</a> (shaders) for usage with MonoGame. It will compile shaders into mgfxo files ready to be consumed by the <code>Effect</code> class.</p>
+<p>The MGCB Editor uses MGFXC to compile effects and wrap them into an xnb file, so they can be loaded using the <code>ContentManager</code>.</p>
+<p>If you compile effects directly with MGFXC you can load effects using the <code>Microsoft.Framework.Xna.Graphics.Effect</code> constructor that takes a byte array with the effect code.</p>
+<p>Effects compiled directly are not content files and can not be loaded by the <code>ContentManager</code>.</p>
+<h2 id="installation">Installation</h2>
+<p>MGFXC can be installed as a <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">.NET tool</a>.
+Make sure you have the .NET SDK installed. You can download it <a href="https://dotnet.microsoft.com/download">here</a>.</p>
+<p>In a terminal run <code>dotnet tool install -g dotnet-mgfxc</code> to install MGFXC.</p>
+<h2 id="command-line">Command Line</h2>
+<p>The command line options are:</p>
+<pre><code class="lang-bat">mgfxc &lt;SourceFile&gt; &lt;OutputFile&gt; [/Debug] [/Profile:&lt;DirectX_11,OpenGL,PlayStation4&gt;]
+</code></pre>
+<h3 id="source-file">Source File</h3>
+<p>The input effect file in typical FX format with samplers, techniques, and passes defined.  This parameter is required.</p>
+<h3 id="output-file">Output File</h3>
+<p>The path to write the compiled effect to.  This parameter is required.</p>
+<p>NOTE: The generated file is not an XNB file for use with the ContentManager.</p>
+<p>If the <code>/Debug</code> flag is passed the resulting compiled effect file will contain extra debug information and the fewest possible optimizations.</p>
+<h3 id="platform-profile">Platform Profile</h3>
+<p>The <code>/Profile</code> option defines the platform we're targeting with this effect file.  It can be one of the following:</p>
+<ul>
+<li>DirectX_11</li>
+<li>OpenGL</li>
+<li>PlayStation4</li>
+<li>XboxOne</li>
+<li>Switch</li>
+</ul>
+<p>NOTE: PlayStation 4, Xbox One, and Switch support is only available to licensed console developers.</p>
+<h3 id="help">Help</h3>
+<p>If you use <code>/?</code>, <code>/help</code>, or simply pass no parameters to MGFXC you will get information about these command-line options.</p>
+<h2 id="runtime-use">Runtime Use</h2>
+<p>The resulting compiled effect file can be used from your game code like so:</p>
+<pre><code class="lang-csharp">byte[] bytecode = File.ReadAllBytes(&quot;mycompiled.mgfx&quot;);
+var effect = new Effect(bytecode);
+</code></pre>
+<p>This is how the stock effects (BasicEffect, DualTextureEffect, etc) are compiled and loaded.</p>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/tools/mgfxc.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

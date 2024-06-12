@@ -1,0 +1,1302 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class ContentReader | MonoGame ">
+
+    <title>Class ContentReader | MonoGame </title>
+<meta name="description" content="Defines a worker object that implements most of . A new content reader is constructed for each asset loaded.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.ContentReader.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class ContentReader | MonoGame ">
+    <meta name="og:description" content="Defines a worker object that implements most of . A new content reader is constructed for each asset loaded.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.ContentReader.html">
+    <meta name="twitter:title" content="Class ContentReader | MonoGame ">
+    <meta name="twitter:description" content="Defines a worker object that implements most of . A new content reader is constructed for each asset loaded.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Content.ContentReader">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Content_ContentReader" data-uid="Microsoft.Xna.Framework.Content.ContentReader" class="text-break">
+Class ContentReader  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.html">Content</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines a worker object that implements most of <a class="xref" href="Microsoft.Xna.Framework.Content.ContentManager.html#Microsoft_Xna_Framework_Content_ContentManager_Load__1_System_String_">ContentManger.Load</a>.
+A new content reader is constructed for each asset loaded.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ContentReader : BinaryReader, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader">BinaryReader</a></div>
+      <div><span class="xref">ContentReader</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.close">BinaryReader.Close()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.dispose#system-io-binaryreader-dispose">BinaryReader.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.peekchar">BinaryReader.PeekChar()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.read#system-io-binaryreader-read">BinaryReader.Read()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.read#system-io-binaryreader-read(system-byte()-system-int32-system-int32)">BinaryReader.Read(byte[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.read#system-io-binaryreader-read(system-char()-system-int32-system-int32)">BinaryReader.Read(char[], int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.read#system-io-binaryreader-read(system-span((system-byte)))">BinaryReader.Read(Span&lt;byte&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.read#system-io-binaryreader-read(system-span((system-char)))">BinaryReader.Read(Span&lt;char&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.read7bitencodedint">BinaryReader.Read7BitEncodedInt()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.read7bitencodedint64">BinaryReader.Read7BitEncodedInt64()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readboolean">BinaryReader.ReadBoolean()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readbyte">BinaryReader.ReadByte()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readbytes">BinaryReader.ReadBytes(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readchar">BinaryReader.ReadChar()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readchars">BinaryReader.ReadChars(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readdecimal">BinaryReader.ReadDecimal()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readdouble">BinaryReader.ReadDouble()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readhalf">BinaryReader.ReadHalf()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readint16">BinaryReader.ReadInt16()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readint32">BinaryReader.ReadInt32()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readint64">BinaryReader.ReadInt64()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readsbyte">BinaryReader.ReadSByte()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readsingle">BinaryReader.ReadSingle()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readstring">BinaryReader.ReadString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readuint16">BinaryReader.ReadUInt16()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readuint32">BinaryReader.ReadUInt32()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.readuint64">BinaryReader.ReadUInt64()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.binaryreader.basestream">BinaryReader.BaseStream</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.ContentReaderExtensions.html#Microsoft_Xna_Framework_Content_ContentReaderExtensions_GetGraphicsDevice_Microsoft_Xna_Framework_Content_ContentReader_">ContentReaderExtensions.GetGraphicsDevice(ContentReader)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_AssetName_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.AssetName*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_AssetName" data-uid="Microsoft.Xna.Framework.Content.ContentReader.AssetName">
+  AssetName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the name of the asset currently being read by this content reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AssetName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ContentManager_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ContentManager*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ContentManager" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ContentManager">
+  ContentManager
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a reference to the <a class="xref" href="Microsoft.Xna.Framework.Content.ContentReader.html#Microsoft_Xna_Framework_Content_ContentReader_ContentManager">ContentManager</a> instance that is using this content reader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContentManager ContentManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentManager.html">ContentManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadColor_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadColor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadColor" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadColor">
+  ReadColor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> from the underlying stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color ReadColor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Color.html">Color</a> that was read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadExternalReference_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadExternalReference*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadExternalReference__1" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadExternalReference``1">
+  ReadExternalReference&lt;T&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a relative link to an external file from the underlying stream and returns an asset of type
+<code class="typeparamref">T</code> loaded from the external file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadExternalReference&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The asset of type <code class="typeparamref">T</code> loaded from the external file at the relative link read from
+the underlying stream.  If the relative link read was null or an empty string, then the default
+implementation of type <code class="typeparamref">T</code> is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of asset to expected to be loaded from the external file.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The relative link to the external file read is null or an empty string.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>This was called after the <a class="xref" href="Microsoft.Xna.Framework.Content.ContentReader.html#Microsoft_Xna_Framework_Content_ContentReader_ContentManager">ContentReader.ContentManager</a> was disposed.</p>
+<p>-or</p>
+<p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>The type of asset in the external file does not match the type specified by <code class="typeparamref">T</code>.</p>
+<p>-or-</p>
+<p>A content file matching the relative link to the external file could not be found.</p>
+<p>-or-</p>
+<p>The specified path in the relative link to the external file read is invalid (for example, a directory in
+the path does not exist).</p>
+<p>-or-</p>
+<p>An error occurred while opening the external file.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadMatrix_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadMatrix*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadMatrix" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadMatrix">
+  ReadMatrix()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> value from the underlying stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix ReadMatrix()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a> that was read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject__1" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject``1">
+  ReadObject&lt;T&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the underlying stream as an instance of the specified type. Can be
+called recursively.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadObject&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>The stream is corrupted.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>Type reader index read from stream is out of bounds</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject__1_Microsoft_Xna_Framework_Content_ContentTypeReader_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject``1(Microsoft.Xna.Framework.Content.ContentTypeReader)">
+  ReadObject&lt;T&gt;(ContentTypeReader)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the underlying stream as an instance of the specified type. Can be
+called recursively.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadObject&lt;T&gt;(ContentTypeReader typeReader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>typeReader</code> <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a> to use to read the object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>The stream is corrupted.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>Type reader index read from stream is out of bounds</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject__1_Microsoft_Xna_Framework_Content_ContentTypeReader___0_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject``1(Microsoft.Xna.Framework.Content.ContentTypeReader,``0)">
+  ReadObject&lt;T&gt;(ContentTypeReader, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the underlying stream as an instance of the specified type. Can be
+called recursively.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadObject&lt;T&gt;(ContentTypeReader typeReader, T existingInstance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>typeReader</code> <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a> to use to read the object.</p>
+</dd>
+    <dt><code>existingInstance</code> <span class="xref">T</span></dt>
+    <dd><p>An existing object to write into.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>The stream is corrupted.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>Type reader index read from stream is out of bounds</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadObject__1___0_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadObject``1(``0)">
+  ReadObject&lt;T&gt;(T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the underlying stream as an instance of the specified type. Can be
+called recursively.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadObject&lt;T&gt;(T existingInstance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>existingInstance</code> <span class="xref">T</span></dt>
+    <dd><p>An existing object to write into.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>The stream is corrupted.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>Type reader index read from stream is out of bounds</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadQuaternion_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadQuaternion*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadQuaternion" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadQuaternion">
+  ReadQuaternion()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a> from the underlying stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion ReadQuaternion()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a> that was read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject__1" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject``1">
+  ReadRawObject&lt;T&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the current stream as an instance of the specified type.  If you specify
+a base class of the actual object type, this method reads data only from the base type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadRawObject&lt;T&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject__1_Microsoft_Xna_Framework_Content_ContentTypeReader_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject``1(Microsoft.Xna.Framework.Content.ContentTypeReader)">
+  ReadRawObject&lt;T&gt;(ContentTypeReader)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the current stream as an instance of the specified type.  If you specify
+a base class of the actual object type, this method reads data only from the base type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadRawObject&lt;T&gt;(ContentTypeReader typeReader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>typeReader</code> <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a> to use to read the object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject__1_Microsoft_Xna_Framework_Content_ContentTypeReader___0_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject``1(Microsoft.Xna.Framework.Content.ContentTypeReader,``0)">
+  ReadRawObject&lt;T&gt;(ContentTypeReader, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the current stream as an instance of the specified type.  If you specify
+a base class of the actual object type, this method reads data only from the base type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadRawObject&lt;T&gt;(ContentTypeReader typeReader, T existingInstance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>typeReader</code> <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Content.ContentTypeReader.html">ContentTypeReader</a> to use to read the object.</p>
+</dd>
+    <dt><code>existingInstance</code> <span class="xref">T</span></dt>
+    <dd><p>An existing object to write into.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadRawObject__1___0_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadRawObject``1(``0)">
+  ReadRawObject&lt;T&gt;(T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a single managed object from the current stream as an instance of the specified type.  If you specify
+a base class of the actual object type, this method reads data only from the base type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ReadRawObject&lt;T&gt;(T existingInstance)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>existingInstance</code> <span class="xref">T</span></dt>
+    <dd><p>An existing object to write into.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The object that was read.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object to read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadSharedResource_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadSharedResource*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadSharedResource__1_System_Action___0__" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadSharedResource``1(System.Action{``0})">
+  ReadSharedResource&lt;T&gt;(Action&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a shared resource ID and records it for subsequent fix-up.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReadSharedResource&lt;T&gt;(Action&lt;T&gt; fixup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fixup</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The fix-up action to perform.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the shared resource.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>The stream is corrupted.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>The type of the shared resource read does not match the specified <code class="typeparamref">T</code> type.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadVector2_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadVector2*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadVector2" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadVector2">
+  ReadVector2()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a <a class="xref" href="Microsoft.Xna.Framework.Vector2.html">Vector2</a> from the underlying stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ReadVector2()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector2.html">Vector2</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector2.html">Vector2</a> that was read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadVector3_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadVector3*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadVector3" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadVector3">
+  ReadVector3()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> from the underlying stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 ReadVector3()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> that was read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentReader_ReadVector4_" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadVector4*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentReader_ReadVector4" data-uid="Microsoft.Xna.Framework.Content.ContentReader.ReadVector4">
+  ReadVector4()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> from the underlying stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector4 ReadVector4()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> that was read.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception">EndOfStreamException</a></dt>
+    <dd><p>The end of stream is reached.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>The stream is closed.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>An I/O error occurred.</p>
+</dd>
+  </dl>
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

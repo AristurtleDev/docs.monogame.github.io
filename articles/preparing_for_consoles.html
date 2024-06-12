@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Preparing for consoles | MonoGame ">
+
+    <title>Preparing for consoles | MonoGame </title>
+<meta name="description" content="How to get your game ready to run on consoles.">
+
+    <meta name="og:url" content="https://monogame.net/articles/preparing_for_consoles.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Preparing for consoles | MonoGame ">
+    <meta name="og:description" content="How to get your game ready to run on consoles.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/preparing_for_consoles.html">
+    <meta name="twitter:title" content="Preparing for consoles | MonoGame ">
+    <meta name="twitter:description" content="How to get your game ready to run on consoles.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/preparing_for_consoles.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="preparing-for-consoles">Preparing for consoles</h1>
+<p class="text-secondary">How to get your game ready to run on consoles.</p>
+<p>If you would like to port your game to consoles, there are some best practices to follow if you want to avoid running into issues while porting.</p>
+<p>MonoGame for gaming consoles uses a dedicated .NET runtime that is not maintained by Microsoft. Therefore, a 100% accuracy and reliability is not guaranteed. Moreover, the console runtime makes use of <code>ahead-of-time</code> native compilation (AOT), which means that some .NET features will not, and cannot work on consoles.</p>
+<p>This article explains the most common pitfalls and suggested guidelines to optimize your chances of having a smoother porting experience.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><em>Gaming consoles are restricted to registered developers and are not publicly available nor publicly documented. To get access to those platforms, please contact your console account manager(s). MonoGame documentation for closed platforms is available in their respective repositories.</em></p>
+</div>
+<h2 id="no-use-of-runtime-reflection">No use of runtime reflection</h2>
+<p>The main show stopper when it comes to porting a .NET game to consoles, is the use of runtime <a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/reflection">reflection</a>.</p>
+<p>Reflection is, at large, unsupported in an AOT context. Which means that anywhere you or a third party library uses reflection, your game will crash.</p>
+<p>In order to make sure that your game abides to that rule, you can try to publish an AOT'd version of it for desktop computers and verify how it fares.</p>
+<p>To publish with AOT:</p>
+<ul>
+<li>Add <code>&lt;PublishAot&gt;true&lt;/PublishAot&gt;</code> to your <code>.csproj</code>.</li>
+<li>Then run <code>dotnet publish</code> from the command-line/terminal.</li>
+</ul>
+<p>This will nativily compile your game in a fashion similar to consoles. The output executable will be in your output folder, within a sub-folder nammed <code>publish</code>.</p>
+<p>From there, you can try running this executable. If it does not start or crashes later on, you likely are using reflection or another unsupported feature in a AOT runtime.</p>
+<p>Native executables can debugged by:</p>
+<ul>
+<li>Starting an empty Visual Studio with no code.</li>
+<li>Opening the compiled exe.</li>
+<li>Then hitting &quot;Start debugging&quot;.</li>
+</ul>
+<p>It should show you on which C# lines it crashed.</p>
+<p>It is important to note that you should test every aspect of your game, and not just if it starts.  Run through all the menus/screens, scene transitions and gameplay.</p>
+<p>Another way to make sure that everything is safe is to enable <code>&lt;EnableTrimAnalyzer&gt;true&lt;/EnableTrimAnalyzer&gt;</code> in your <code>.csproj</code>, and then <strong>rebuild</strong> (not just build) your game and check the build output for AOT warnings. Those warnings will tell you which parts of your code might trigger crashes or unexecpted results when running on AOT compilation. You should seek to resolve all of them.</p>
+<h2 id="no-runtime-compilation--il-emit">No runtime compilation / IL emit</h2>
+<p>Generating code at runtime is a scenario that is also not supported in AOT contexts, it is also forbidden by console manufacturers.</p>
+<p>Like reflection, trying to make a <code>PublishAot</code> build is a good way to verify that your game is compliant because any use of IL emit will crash.</p>
+<h2 id="no-use-of-dynamic-assembly-loading">No use of dynamic assembly loading</h2>
+<p>Loading assemblies at runtime with <code>Assembly.Load()</code> is not supported.</p>
+<h2 id="third-party-libraries">Third party libraries</h2>
+<p>Many third party libraries heavily rely on using reflection or IL emit, this is a common practice for JSON or XML parsers for example (and they are the most common source of third party incompatibilities).</p>
+<p>It is advised to choose very carefully the libraries that you are using when porting to consoles. If you do not select them with this in mind, you might run into a situation in which you will have to rewrite entire chunks of data handling.</p>
+<p>The best way to make sure if they will work, is to search if they are <strong>&quot;AOT-compatible&quot;</strong>, or try to compile with the <code>&lt;EnableTrimAnalyzer&gt;true&lt;/EnableTrimAnalyzer&gt;</code> setting in your <code>.csproj</code> and check if there are any warnings related to those libraries.</p>
+<p>For example, here are some parsing libraries known for their compliance with AOT compilation and good handling of memrory:</p>
+<ul>
+<li><a href="https://github.com/xoofx/TurboXml">TurboXML</a></li>
+<li><a href="https://github.com/zanders3/json">TinyJSON</a></li>
+</ul>
+<p>On the contrary, Newtonsoft JSON is known to be unsupported (there are modified forks around, but we overall recommend to not use it for games).</p>
+<h2 id="native-libraries">Native libraries</h2>
+<p>If you are using native libraries, make sure that they provide builds for consoles, or make sure that you can compile and run them on consoles yourself.</p>
+<p>Even though a library might be open-source, it is unlikely they will just compile and run on consoles.</p>
+<p>It is suggested to only use native libraries that have been proven to run on consoles.</p>
+<h2 id="linq">LINQ</h2>
+<p>While LINQ mostly works on consoles, it should be noted that due to AOT compilation, LINQ queries can not be optimized and performance can be very slow.</p>
+<p>Moreover, LINQ is very garbage-prone and if your game has stuttering issues you might want to reduce your usage of LINQ.</p>
+<h2 id="avoiding-garbage-generation">Avoiding garbage generation</h2>
+<p>Even though your game has good performance on PC and does not show stutters, you might want to be very cautious about how your game handles memory.</p>
+<p>The garbage collector is slower on consoles and if your game generates a lot of garbage memory, there will be visible stutters.</p>
+<p>To verify that your game is not too garbage-prone, you can run Visual Studio's Perfomance Profiler (<code>Debug/Performance Profiler...</code>) and check the <strong>&quot;.NET Object Allocation Tracking&quot;</strong> tool.</p>
+<p>From there, you can check which parts of your code generate garbage and you can pinpoint where to optimize.</p>
+<p>In order to avoid garbage, here are some best practices:</p>
+<ul>
+<li>Only use strings as const. Do not use strings dynamically (e.g. string concatenation, patterns...), this is the most common source of garbage.</li>
+<li>Avoid allocating anything with the <code>new</code> keyword during your game loop, e.g. pre-allocate everything ahead of using them during gameplay.</li>
+<li>Pool your dynamic objects, e.g. do not destroy your projectiles or particles, instead place them into another &quot;unused&quot; list and reuse them instead of creating new instances when needed.</li>
+<li>Avoid using LINQ.</li>
+<li>If you are using collections, initialize them with a large enough capacity to avoid their internal data structure being silently recreated.</li>
+<li>Mind your foreach loops, depending on the data you are looping on, the loop might create garbage when duplicating an item.  Or better yet, use a for loop for tigher control.</li>
+</ul>
+<h2 id="do-not-rely-on-system-calls">Do not rely on system calls</h2>
+<p>If your game calls directly to system functions, like kernel, win32 or unix commands, you might want to get rid of them.</p>
+<h2 id="consider-io-to-be-asynchronous">Consider I/O to be asynchronous</h2>
+<p>Saving player data/settings, or unlocking achievements are operations that should be considered asynchronous.</p>
+<p>Most, if not all consoles, consider system accesses to be asynchronous. Even though it is not on PC, you should prepare your game to handle asynchronous operation (e.g. consider saving game data in a thread which will not block the game).</p>
+<p>If you consider all your I/O and system operations as asynchronous, you will likely be spared some headache.</p>
+<h2 id="suggestions">Suggestions</h2>
+<p>If you have other tips or suggestions when building for consoles, then let the MonoGame team know by raising an issue and we will improve this article even further over time.</p>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/preparing_for_consoles.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

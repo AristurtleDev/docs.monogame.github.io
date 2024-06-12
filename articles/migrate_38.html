@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Migrating from 3.8.0 | MonoGame ">
+
+    <title>Migrating from 3.8.0 | MonoGame </title>
+<meta name="description" content="A guide on migrating a MonoGame v3.8.0 project to the current version of MonoGame.">
+
+    <meta name="og:url" content="https://monogame.net/articles/migrate_38.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Migrating from 3.8.0 | MonoGame ">
+    <meta name="og:description" content="A guide on migrating a MonoGame v3.8.0 project to the current version of MonoGame.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/migrate_38.html">
+    <meta name="twitter:title" content="Migrating from 3.8.0 | MonoGame ">
+    <meta name="twitter:description" content="A guide on migrating a MonoGame v3.8.0 project to the current version of MonoGame.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/migrate_38.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="migrating-from-380">Migrating from 3.8.0</h1>
+<p class="text-secondary">A guide on migrating a MonoGame v3.8.0 project to the current version of MonoGame.</p>
+<p>Migrating from 3.8.0 should be straightforward for most platforms.</p>
+<p>The major difference is that 3.8.1 now requires .NET 6 and Visual Studio 2022. You can follow the <a href="getting_started/index.html">environment setup tutorial</a> to make sure that you are not missing any components.</p>
+<p>The MGCB Editor is no longer a global .NET tool and we recommend that you use the new Visual Studio 2022 extension which helps with accessing it without the need of CLI commands.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>It is also recommended that you uninstall the older global versions of the .NET tools as described below.</p>
+</div>
+<h2 id="windowsdx-desktopgl-and-uwp">WindowsDX, DesktopGL, and UWP</h2>
+<p>Upgrading from 3.8.0 should be as straightforward as upgrading your <code>TargetFramework</code> and MonoGame version.</p>
+<p>Edit your csproj file to change your <code>TargetFramework</code>:</p>
+<pre><code class="lang-xml">&lt;TargetFramework&gt;net6.0&lt;/TargetFramework&gt;
+</code></pre>
+<p>Then edit your MonoGame <code>PackageReference</code> to point to 3.8.1:</p>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;MonoGame.Framework.{Platform}&quot; Version=&quot;3.8.1.*&quot; /&gt;
+&lt;PackageReference Include=&quot;MonoGame.Content.Builder.Task&quot; Version=&quot;3.8.1.*&quot; /&gt;
+</code></pre>
+<h3 id="accessing-mgcb-and-mcgb-editor-without-a-global-tool">Accessing MGCB and MCGB Editor without a global tool</h3>
+<p>The MGCB Editor is no longer a .NET global tool, and does not need to be installed or registered. When migrating from 3.8.0, it is recommended that you <strong>uninstall</strong> the global versions of the tools. You can accomplish that with these commands:</p>
+<pre><code>dotnet tool uninstall dotnet-mgcb -g
+dotnet tool uninstall dotnet-2mgfx -g
+dotnet tool uninstall dotnet-mgcb-editor -g
+</code></pre>
+<p>::: tip
+<strong>Do not</strong> run the <code>dotnet tool install</code> on 3.8.1, as it would break 3.8.1.
+:::</p>
+<p>You will also need to setup a dotnet-tools configuration file.</p>
+<ul>
+<li>Next to your <code>.csproj</code>create a folder named <code>.config</code></li>
+<li>Add a file within the folder named <code>dotnet-tools.json</code> with the following content:</li>
+</ul>
+<pre><code class="lang-json">{
+  &quot;version&quot;: 1,
+  &quot;isRoot&quot;: true,
+  &quot;tools&quot;: {
+    &quot;dotnet-mgcb&quot;: {
+      &quot;version&quot;: &quot;3.8.1.303&quot;,
+      &quot;commands&quot;: [
+        &quot;mgcb&quot;
+      ]
+    },
+    &quot;dotnet-mgcb-editor&quot;: {
+      &quot;version&quot;: &quot;3.8.1.303&quot;,
+      &quot;commands&quot;: [
+        &quot;mgcb-editor&quot;
+      ]
+    },
+    &quot;dotnet-mgcb-editor-linux&quot;: {
+      &quot;version&quot;: &quot;3.8.1.303&quot;,
+      &quot;commands&quot;: [
+        &quot;mgcb-editor-linux&quot;
+      ]
+    },
+    &quot;dotnet-mgcb-editor-windows&quot;: {
+      &quot;version&quot;: &quot;3.8.1.303&quot;,
+      &quot;commands&quot;: [
+        &quot;mgcb-editor-windows&quot;
+      ]
+    },
+    &quot;dotnet-mgcb-editor-mac&quot;: {
+      &quot;version&quot;: &quot;3.8.1.303&quot;,
+      &quot;commands&quot;: [
+        &quot;mgcb-editor-mac&quot;
+      ]
+    }
+  }
+}
+</code></pre>
+<p>Please note that you cannot use the <code>3.8.1.*</code> wildcard in the <code>dotnet-tools.json</code> file (tool versions have to be fully qualified). We strongly recommand that the versions match the MonoGame version referenced in your <code>.csproj</code> (if you are using the <code>*</code> wildcard, make sure that they do not end up mismatching if the nugets are updated without you noticing).</p>
+<p>You will also need to add this to your <code>.csproj</code>:</p>
+<pre><code class="lang-xml">  &lt;Target Name=&quot;RestoreDotnetTools&quot; BeforeTargets=&quot;Restore&quot;&gt;
+    &lt;Message Text=&quot;Restoring dotnet tools&quot; Importance=&quot;High&quot; /&gt;
+    &lt;Exec Command=&quot;dotnet tool restore&quot; /&gt;
+  &lt;/Target&gt;
+</code></pre>
+<p>With these changes, .NET will automatically install the MGCB Editor for you when launching Visual Studio 2022 (if you want to install it manually and skip adding the Target, run <code>dotnet tool restore</code> within the project directory).</p>
+<p>Then, if you installed the Visual Studio extension, you should also be able to just double-click an <code>.mgcb</code> file to open the MGCB Editor. You can also open the MGCB Editor with the CLI via <code>dotnet mgcb-editor</code> when executed from within the project directory.</p>
+<p>This new configuration has the advantage of allowing to have per-project versions of MGCB and its Editor (instead of per-machine like a global tool).</p>
+<h2 id="iosipados-and-android">iOS/iPadOS, and Android</h2>
+<p>.NET 6 introduced breaking changes in how csproj are defined for iOS/iPadOS and Android. We recommand that you create new projects using the 3.8.1 templates and that you copy over your project files there.</p>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/migrate_38.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

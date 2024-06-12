@@ -1,0 +1,1547 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Struct Plane | MonoGame ">
+
+    <title>Struct Plane | MonoGame </title>
+<meta name="description" content="A plane in 3d space, represented by its normal away from the origin and its distance from the origin, D.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Plane.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Struct Plane | MonoGame ">
+    <meta name="og:description" content="A plane in 3d space, represented by its normal away from the origin and its distance from the origin, D.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Plane.html">
+    <meta name="twitter:title" content="Struct Plane | MonoGame ">
+    <meta name="twitter:description" content="A plane in 3d space, represented by its normal away from the origin and its distance from the origin, D.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Plane">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Plane" data-uid="Microsoft.Xna.Framework.Plane" class="text-break">
+Struct Plane  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A plane in 3d space, represented by its normal away from the origin and its distance from the origin, D.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public struct Plane : IEquatable&lt;Plane&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Plane__ctor_" data-uid="Microsoft.Xna.Framework.Plane.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane__ctor_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Plane.#ctor(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3)">
+  Plane(Vector3, Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> that contains the specified point and has the specified <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_Normal">Normal</a> vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Plane(Vector3 pointOnPlane, Vector3 normal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pointOnPlane</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A point the created <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> should contain.</p>
+</dd>
+    <dt><code>normal</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The normal of the plane.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane__ctor_" data-uid="Microsoft.Xna.Framework.Plane.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane__ctor_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Plane.#ctor(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3)">
+  Plane(Vector3, Vector3, Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create the <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> that contains the three specified points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Plane(Vector3 a, Vector3 b, Vector3 c)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A point the created <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> should contain.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A point the created <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> should contain.</p>
+</dd>
+    <dt><code>c</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>A point the created <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> should contain.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane__ctor_" data-uid="Microsoft.Xna.Framework.Plane.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane__ctor_Microsoft_Xna_Framework_Vector3_System_Single_" data-uid="Microsoft.Xna.Framework.Plane.#ctor(Microsoft.Xna.Framework.Vector3,System.Single)">
+  Plane(Vector3, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the specified normal and distance to the origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Plane(Vector3 normal, float d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>normal</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The normal of the plane.</p>
+</dd>
+    <dt><code>d</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The distance to the origin.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane__ctor_" data-uid="Microsoft.Xna.Framework.Plane.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane__ctor_Microsoft_Xna_Framework_Vector4_" data-uid="Microsoft.Xna.Framework.Plane.#ctor(Microsoft.Xna.Framework.Vector4)">
+  Plane(Vector4)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the first three components of the specified <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a>
+as the normal and the last component as the distance to the origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Plane(Vector4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>A vector holding the normal and distance to origin.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane__ctor_" data-uid="Microsoft.Xna.Framework.Plane.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Plane.#ctor(System.Single,System.Single,System.Single,System.Single)">
+  Plane(float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the first three values as the X, Y and Z
+components of the normal and the last value as the distance to the origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Plane(float a, float b, float c, float d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The X component of the normal.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The Y component of the normal.</p>
+</dd>
+    <dt><code>c</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The Z component of the normal.</p>
+</dd>
+    <dt><code>d</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The distance to the origin.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Plane_D" data-uid="Microsoft.Xna.Framework.Plane.D">
+  D
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The distance of the <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to the origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public float D</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Normal" data-uid="Microsoft.Xna.Framework.Plane.Normal">
+  Normal
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The normal of the <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public Vector3 Normal</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Deconstruct_" data-uid="Microsoft.Xna.Framework.Plane.Deconstruct*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Deconstruct_Microsoft_Xna_Framework_Vector3__System_Single__" data-uid="Microsoft.Xna.Framework.Plane.Deconstruct(Microsoft.Xna.Framework.Vector3@,System.Single@)">
+  Deconstruct(out Vector3, out float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deconstruction method for <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deconstruct(out Vector3 normal, out float d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>normal</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd></dd>
+    <dt><code>d</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Dot_" data-uid="Microsoft.Xna.Framework.Plane.Dot*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Dot_Microsoft_Xna_Framework_Vector4_" data-uid="Microsoft.Xna.Framework.Plane.Dot(Microsoft.Xna.Framework.Vector4)">
+  Dot(Vector4)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the dot product of a <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> with this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Dot(Vector4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> to calculate the dot product with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The dot product of the specified <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> and this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Dot_" data-uid="Microsoft.Xna.Framework.Plane.Dot*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Dot_Microsoft_Xna_Framework_Vector4__System_Single__" data-uid="Microsoft.Xna.Framework.Plane.Dot(Microsoft.Xna.Framework.Vector4@,System.Single@)">
+  Dot(ref Vector4, out float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the dot product of a <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> with this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dot(ref Vector4 value, out float result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> to calculate the dot product with.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The dot product of the specified <a class="xref" href="Microsoft.Xna.Framework.Vector4.html">Vector4</a> and this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_DotCoordinate_" data-uid="Microsoft.Xna.Framework.Plane.DotCoordinate*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_DotCoordinate_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Plane.DotCoordinate(Microsoft.Xna.Framework.Vector3)">
+  DotCoordinate(Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the dot product of a <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> with
+the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_Normal">Normal</a> vector of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>
+plus the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_D">D</a> value of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DotCoordinate(Vector3 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> to calculate the dot product with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The dot product of the specified <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> and the normal of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>
+plus the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_D">D</a> value of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_DotCoordinate_" data-uid="Microsoft.Xna.Framework.Plane.DotCoordinate*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_DotCoordinate_Microsoft_Xna_Framework_Vector3__System_Single__" data-uid="Microsoft.Xna.Framework.Plane.DotCoordinate(Microsoft.Xna.Framework.Vector3@,System.Single@)">
+  DotCoordinate(ref Vector3, out float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the dot product of a <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> with
+the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_Normal">Normal</a> vector of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>
+plus the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_D">D</a> value of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DotCoordinate(ref Vector3 value, out float result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> to calculate the dot product with.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The dot product of the specified <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> and the normal of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>
+plus the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_D">D</a> value of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_DotNormal_" data-uid="Microsoft.Xna.Framework.Plane.DotNormal*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_DotNormal_Microsoft_Xna_Framework_Vector3_" data-uid="Microsoft.Xna.Framework.Plane.DotNormal(Microsoft.Xna.Framework.Vector3)">
+  DotNormal(Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the dot product of a <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> with
+the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_Normal">Normal</a> vector of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DotNormal(Vector3 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> to calculate the dot product with.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The dot product of the specified <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> and the normal of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_DotNormal_" data-uid="Microsoft.Xna.Framework.Plane.DotNormal*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_DotNormal_Microsoft_Xna_Framework_Vector3__System_Single__" data-uid="Microsoft.Xna.Framework.Plane.DotNormal(Microsoft.Xna.Framework.Vector3@,System.Single@)">
+  DotNormal(ref Vector3, out float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the dot product of a <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> with
+the <a class="xref" href="Microsoft.Xna.Framework.Plane.html#Microsoft_Xna_Framework_Plane_Normal">Normal</a> vector of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DotNormal(ref Vector3 value, out float result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> to calculate the dot product with.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The dot product of the specified <a class="xref" href="Microsoft.Xna.Framework.Vector3.html">Vector3</a> and the normal of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Equals_" data-uid="Microsoft.Xna.Framework.Plane.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Equals_Microsoft_Xna_Framework_Plane_" data-uid="Microsoft.Xna.Framework.Plane.Equals(Microsoft.Xna.Framework.Plane)">
+  Equals(Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> is equal to another <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Plane other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to check for equality with this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code class="lang-csharp">true</code></pre> if the specified <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> is equal to this one,
+<pre><code class="lang-csharp">false</code></pre> if it is not.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Equals_" data-uid="Microsoft.Xna.Framework.Plane.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Equals_System_Object_" data-uid="Microsoft.Xna.Framework.Plane.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> is equal to another <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> to check for equality with this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code class="lang-csharp">true</code></pre> if the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> is equal to this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>,
+<pre><code class="lang-csharp">false</code></pre> if it is not.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_GetHashCode_" data-uid="Microsoft.Xna.Framework.Plane.GetHashCode*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_GetHashCode" data-uid="Microsoft.Xna.Framework.Plane.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a hash code for this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A hash code for this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Intersects_" data-uid="Microsoft.Xna.Framework.Plane.Intersects*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Intersects_Microsoft_Xna_Framework_BoundingBox_" data-uid="Microsoft.Xna.Framework.Plane.Intersects(Microsoft.Xna.Framework.BoundingBox)">
+  Intersects(BoundingBox)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> intersects a <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlaneIntersectionType Intersects(BoundingBox box)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a> to test for intersection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.PlaneIntersectionType.html">PlaneIntersectionType</a></dt>
+    <dd><p>The type of intersection of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the specified <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Intersects_" data-uid="Microsoft.Xna.Framework.Plane.Intersects*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Intersects_Microsoft_Xna_Framework_BoundingBox__Microsoft_Xna_Framework_PlaneIntersectionType__" data-uid="Microsoft.Xna.Framework.Plane.Intersects(Microsoft.Xna.Framework.BoundingBox@,Microsoft.Xna.Framework.PlaneIntersectionType@)">
+  Intersects(ref BoundingBox, out PlaneIntersectionType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> intersects a <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Intersects(ref BoundingBox box, out PlaneIntersectionType result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>box</code> <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a> to test for intersection.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.PlaneIntersectionType.html">PlaneIntersectionType</a></dt>
+    <dd><p>The type of intersection of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the specified <a class="xref" href="Microsoft.Xna.Framework.BoundingBox.html">BoundingBox</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Intersects_" data-uid="Microsoft.Xna.Framework.Plane.Intersects*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Intersects_Microsoft_Xna_Framework_BoundingFrustum_" data-uid="Microsoft.Xna.Framework.Plane.Intersects(Microsoft.Xna.Framework.BoundingFrustum)">
+  Intersects(BoundingFrustum)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> intersects a <a class="xref" href="Microsoft.Xna.Framework.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlaneIntersectionType Intersects(BoundingFrustum frustum)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frustum</code> <a class="xref" href="Microsoft.Xna.Framework.BoundingFrustum.html">BoundingFrustum</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.BoundingFrustum.html">BoundingFrustum</a> to test for intersection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.PlaneIntersectionType.html">PlaneIntersectionType</a></dt>
+    <dd><p>The type of intersection of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the specified <a class="xref" href="Microsoft.Xna.Framework.BoundingFrustum.html">BoundingFrustum</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Intersects_" data-uid="Microsoft.Xna.Framework.Plane.Intersects*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Intersects_Microsoft_Xna_Framework_BoundingSphere_" data-uid="Microsoft.Xna.Framework.Plane.Intersects(Microsoft.Xna.Framework.BoundingSphere)">
+  Intersects(BoundingSphere)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> intersects a <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlaneIntersectionType Intersects(BoundingSphere sphere)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sphere</code> <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a> to test for intersection.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.PlaneIntersectionType.html">PlaneIntersectionType</a></dt>
+    <dd><p>The type of intersection of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the specified <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Intersects_" data-uid="Microsoft.Xna.Framework.Plane.Intersects*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Intersects_Microsoft_Xna_Framework_BoundingSphere__Microsoft_Xna_Framework_PlaneIntersectionType__" data-uid="Microsoft.Xna.Framework.Plane.Intersects(Microsoft.Xna.Framework.BoundingSphere@,Microsoft.Xna.Framework.PlaneIntersectionType@)">
+  Intersects(ref BoundingSphere, out PlaneIntersectionType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> intersects a <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Intersects(ref BoundingSphere sphere, out PlaneIntersectionType result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sphere</code> <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a> to test for intersection.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.PlaneIntersectionType.html">PlaneIntersectionType</a></dt>
+    <dd><p>The type of intersection of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> with the specified <a class="xref" href="Microsoft.Xna.Framework.BoundingSphere.html">BoundingSphere</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Normalize_" data-uid="Microsoft.Xna.Framework.Plane.Normalize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Normalize" data-uid="Microsoft.Xna.Framework.Plane.Normalize">
+  Normalize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Normalize the normal vector of this plane.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Normalize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Normalize_" data-uid="Microsoft.Xna.Framework.Plane.Normalize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Normalize_Microsoft_Xna_Framework_Plane_" data-uid="Microsoft.Xna.Framework.Plane.Normalize(Microsoft.Xna.Framework.Plane)">
+  Normalize(Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a normalized version of the specified plane.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Plane Normalize(Plane value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to normalize.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>A normalized version of the specified <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Normalize_" data-uid="Microsoft.Xna.Framework.Plane.Normalize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Normalize_Microsoft_Xna_Framework_Plane__Microsoft_Xna_Framework_Plane__" data-uid="Microsoft.Xna.Framework.Plane.Normalize(Microsoft.Xna.Framework.Plane@,Microsoft.Xna.Framework.Plane@)">
+  Normalize(ref Plane, out Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a normalized version of the specified plane.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Normalize(ref Plane value, out Plane result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to normalize.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>A normalized version of the specified <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_ToNumerics_" data-uid="Microsoft.Xna.Framework.Plane.ToNumerics*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_ToNumerics" data-uid="Microsoft.Xna.Framework.Plane.ToNumerics">
+  ToNumerics()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.plane">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Plane ToNumerics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.plane">Plane</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_ToString_" data-uid="Microsoft.Xna.Framework.Plane.ToString*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_ToString" data-uid="Microsoft.Xna.Framework.Plane.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representation of this <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Transform_" data-uid="Microsoft.Xna.Framework.Plane.Transform*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Transform_Microsoft_Xna_Framework_Plane_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Plane.Transform(Microsoft.Xna.Framework.Plane,Microsoft.Xna.Framework.Matrix)">
+  Transform(Plane, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transforms a normalized plane by a matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Plane Transform(Plane plane, Matrix matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plane</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The normalized plane to transform.</p>
+</dd>
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The transformation matrix.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The transformed plane.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Transform_" data-uid="Microsoft.Xna.Framework.Plane.Transform*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Transform_Microsoft_Xna_Framework_Plane_Microsoft_Xna_Framework_Quaternion_" data-uid="Microsoft.Xna.Framework.Plane.Transform(Microsoft.Xna.Framework.Plane,Microsoft.Xna.Framework.Quaternion)">
+  Transform(Plane, Quaternion)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transforms a normalized plane by a quaternion rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Plane Transform(Plane plane, Quaternion rotation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plane</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The normalized plane to transform.</p>
+</dd>
+    <dt><code>rotation</code> <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a></dt>
+    <dd><p>The quaternion rotation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The transformed plane.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Transform_" data-uid="Microsoft.Xna.Framework.Plane.Transform*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Transform_Microsoft_Xna_Framework_Plane__Microsoft_Xna_Framework_Matrix__Microsoft_Xna_Framework_Plane__" data-uid="Microsoft.Xna.Framework.Plane.Transform(Microsoft.Xna.Framework.Plane@,Microsoft.Xna.Framework.Matrix@,Microsoft.Xna.Framework.Plane@)">
+  Transform(ref Plane, ref Matrix, out Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transforms a normalized plane by a matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Transform(ref Plane plane, ref Matrix matrix, out Plane result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plane</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The normalized plane to transform.</p>
+</dd>
+    <dt><code>matrix</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The transformation matrix.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The transformed plane.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_Transform_" data-uid="Microsoft.Xna.Framework.Plane.Transform*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_Transform_Microsoft_Xna_Framework_Plane__Microsoft_Xna_Framework_Quaternion__Microsoft_Xna_Framework_Plane__" data-uid="Microsoft.Xna.Framework.Plane.Transform(Microsoft.Xna.Framework.Plane@,Microsoft.Xna.Framework.Quaternion@,Microsoft.Xna.Framework.Plane@)">
+  Transform(ref Plane, ref Quaternion, out Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transforms a normalized plane by a quaternion rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Transform(ref Plane plane, ref Quaternion rotation, out Plane result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plane</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The normalized plane to transform.</p>
+</dd>
+    <dt><code>rotation</code> <a class="xref" href="Microsoft.Xna.Framework.Quaternion.html">Quaternion</a></dt>
+    <dd><p>The quaternion rotation.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>The transformed plane.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Plane_op_Equality_" data-uid="Microsoft.Xna.Framework.Plane.op_Equality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_op_Equality_Microsoft_Xna_Framework_Plane_Microsoft_Xna_Framework_Plane_" data-uid="Microsoft.Xna.Framework.Plane.op_Equality(Microsoft.Xna.Framework.Plane,Microsoft.Xna.Framework.Plane)">
+  operator ==(Plane, Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if two planes are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Plane plane1, Plane plane2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plane1</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to check for equality.</p>
+</dd>
+    <dt><code>plane2</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to check for equality.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code class="lang-csharp">true</code></pre> if the two planes are equal, <pre><code class="lang-csharp">false</code></pre> if they are not.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_op_Implicit_" data-uid="Microsoft.Xna.Framework.Plane.op_Implicit*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_op_Implicit_System_Numerics_Plane__Microsoft_Xna_Framework_Plane" data-uid="Microsoft.Xna.Framework.Plane.op_Implicit(System.Numerics.Plane)~Microsoft.Xna.Framework.Plane">
+  implicit operator Plane(Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.plane">Plane</a> to a <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Plane(Plane value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.plane">Plane</a></dt>
+    <dd><p>The converted value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Plane_op_Inequality_" data-uid="Microsoft.Xna.Framework.Plane.op_Inequality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Plane_op_Inequality_Microsoft_Xna_Framework_Plane_Microsoft_Xna_Framework_Plane_" data-uid="Microsoft.Xna.Framework.Plane.op_Inequality(Microsoft.Xna.Framework.Plane,Microsoft.Xna.Framework.Plane)">
+  operator !=(Plane, Plane)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if two planes are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Plane plane1, Plane plane2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plane1</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to check for inequality.</p>
+</dd>
+    <dt><code>plane2</code> <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a></dt>
+    <dd><p>A <a class="xref" href="Microsoft.Xna.Framework.Plane.html">Plane</a> to check for inequality.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code class="lang-csharp">true</code></pre> if the two planes are not equal, <pre><code class="lang-csharp">false</code></pre> if they are.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

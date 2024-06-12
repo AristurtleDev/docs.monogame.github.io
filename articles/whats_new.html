@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Whats New | MonoGame ">
+
+    <title>Whats New | MonoGame </title>
+<meta name="description" content="Whats new with the release of MonoGame 3.8.1">
+
+    <meta name="og:url" content="https://monogame.net/articles/whats_new.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Whats New | MonoGame ">
+    <meta name="og:description" content="Whats new with the release of MonoGame 3.8.1">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/whats_new.html">
+    <meta name="twitter:title" content="Whats New | MonoGame ">
+    <meta name="twitter:description" content="Whats new with the release of MonoGame 3.8.1">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/whats_new.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="whats-new">Whats New</h1>
+<p class="text-secondary">Whats new with the release of MonoGame 3.8.1</p>
+<p>The MonoGame 3.8.1 release marks some big changes since 3.8.0 in how we build and distribute.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Refer to the <a href="https://github.com/MonoGame/MonoGame/blob/develop/CHANGELOG.md">CHANGELOG</a> for a more complete list of the changes.</p>
+</div>
+<h2 id="net-6-support">.NET 6 Support</h2>
+<p>We now support <a href="https://docs.microsoft.com/en-us/dotnet/core/introduction">.NET 6</a> exclusively.  This brings us up to date with the latest improvements in the .NET ecosystem and allows for exciting new features like <a href="https://github.com/dotnet/runtimelab/tree/feature/NativeAOT">.NET NativeAOT Runtime</a> and much easier distribution of your games for Windows, macOS and Linux.</p>
+<h2 id="visual-studio-2022-extension">Visual Studio 2022 extension</h2>
+<p>MonoGame 3.8.1 now comes with an optional Visual Studio extension which will install all the MonoGame project templates and will allow for quick access to the <a href="tools/mgcb_editor.html">MGCB Editor</a>.</p>
+<p>This extension is available for Visual Studio 2022, and Visual Studio 2022 for Mac.</p>
+<p>If you are migrating from 3.8.0 it is recommended to uninstall the existing global MGCB .NET tools. It would be a good idea to review the <a href="migrate_38.html">Migrating from 3.8.0</a> documentation, as there are changes to how 3.8.1 works with the .NET tools and the new extension.</p>
+<h2 id="visual-studio-2019-and-prior-are-no-longer-supported">Visual Studio 2019 and prior are no longer supported</h2>
+<p>Since .NET 6 is not supported by Visual Studio 2019, starting with MonoGame 3.8.1 it will no longer be possible to build games with it.</p>
+<p>Moving forward, we will only support Visual Studio 2022, and Visual Studio 2022 for Mac.</p>
+<p>If you need to use Visual Studio 2019, we encourage you to stick to MonoGame 3.8.0.</p>
+<p>JetBrains Rider and Visual Studio Code can be used regardless of the version of MonoGame.</p>
+<h2 id="last-version-to-support-32bit-windows">Last version to support 32bit Windows</h2>
+<p>MonoGame 3.8.1 will be the last version to support building and running 32bit games on Windows.</p>
+<p>This is motivated by the fact that 32bit players are nearly extinct (less than 0.24% of the Steam user base). It will also help developers with less complex distribution and less confusing debug/build experiences.</p>
+<h2 id="apple-silicon-m1-support">Apple silicon (M1+) support</h2>
+<p>Games built using the <code>DesktopGL</code> <a href="platforms.html">platform</a> and targeting <code>osx-arm64</code> will now run natively on Apple silicon without Rosetta emulation.</p>
+<p><strong>However</strong>, it is not yet possible to use the <a href="tools/mgcb.html">MGCB</a> or the <a href="tools/mgcb_editor.html">MGCB Editor</a> on Apple silicon, unless you are running the <code>osx-x64</code> variant of the .NET SDK (and therefore using Rosetta emulation). We are working toward resolving this inconvenience.</p>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/whats_new.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

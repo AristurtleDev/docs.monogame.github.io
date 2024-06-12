@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Localization | MonoGame ">
+
+    <title>Localization | MonoGame </title>
+<meta name="description" content="Learn how to add localization to your game to support multiple regions.">
+
+    <meta name="og:url" content="https://monogame.net/articles/content_pipeline/localization.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Localization | MonoGame ">
+    <meta name="og:description" content="Learn how to add localization to your game to support multiple regions.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/content_pipeline/localization.html">
+    <meta name="twitter:title" content="Localization | MonoGame ">
+    <meta name="twitter:description" content="Learn how to add localization to your game to support multiple regions.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../../public/docfx.min.css">
+    <link rel="stylesheet" href="../../public/main.css">
+    <meta name="docfx:navrel" content="../../toc.html">
+    <meta name="docfx:tocrel" content="../toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/content_pipeline/localization.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="localization">Localization</h1>
+<p class="text-secondary">Learn how to add localization to your game to support multiple regions.</p>
+<p>Localization is an important part of any game. While it can be possible to design a game that is region independent, it is quite hard. At some point you will need to produce localized text and graphics.</p>
+<p>MonoGame has a simple localization system built in. If you want to develop your own system you are still able to do so. But the default system should be good enough for
+most use cases.</p>
+<h2 id="creating-resx-files">Creating resx files</h2>
+<p>MonoGame runs on .net/Mono on most platforms. Localization is handled by those platforms
+via the use of resx files. There are walkthroughs on <a href="https://msdn.microsoft.com/en-us/library/aa992030(v=vs.100).aspx">MSDN</a>
+which walk you through the process. A simplified version is presented here.</p>
+<p>Create a .resx file in the IDE e.g Foo.resx and add it to your game project. Note this needs to be added to the main app projects. The Foo.resx file should have an Action of EmbeddedResouce and a Generator value of ResXFileCodeGenerator.</p>
+<p>Here is a snippet from the .csproj:</p>
+<pre><code class="lang-xml">&lt;EmbeddedResource Include=&quot;Foo.resx&quot;&gt;
+  &lt;Generator&gt;ResXFileCodeGenerator&lt;/Generator&gt;
+  &lt;LastGenOutput&gt;Foo.Designer.cs&lt;/LastGenOutput&gt;
+&lt;/EmbeddedResource&gt;
+</code></pre>
+<p>Add any string resources to that file. These are in the form of a Key/Value pair. You can use the built-in editor or manually edit the .resx file by hand. It is an xml file so you can view the contents easily.</p>
+<pre><code class="lang-xml">&lt;data name=&quot;Wall_Style&quot; xml:space=&quot;preserve&quot;&gt;
+  &lt;value&gt;Wall Style : {0}&lt;/value&gt;
+&lt;/data&gt;
+</code></pre>
+<p>When the resx is processed by the generator, it produces a <strong>Foo.Designer.cs</strong> file which is then included in your project. You can then access the &quot;string&quot; value by using code as follows:</p>
+<pre><code class="lang-csharp">var s = MyProject.Foo.Wall_Style;
+</code></pre>
+<blockquote>
+<p>Note in the example we have a place holder ({0}) for additional text. You can still use te property of Foo.Wall_Style with things like string.Format.</p>
+</blockquote>
+<pre><code class="lang-csharp">int i = 1;
+var s = string.Format (MyProject.Foo.Wall_Style, i);
+</code></pre>
+<p>All this means you do not need to hardcode the string directly. When accessing the <strong>MyProject.Foo.Wall_Style</strong> property, the code will look up the value from the embedded resx file automatically.</p>
+<p>You can add support for a new language by adding a new resx file which uses the language/region code as a suffix, e.g Foo.<strong>de-DE</strong>.resx.
+This new file will contain the translations for that language/region. In the above example we are targetting German.</p>
+<h3 id="universal-windows-platform-uwp-considerations">Universal Windows Platform (UWP) considerations</h3>
+<p>Unfortunately UWP does not support resx files any more. They have a new file called a <strong>resw</strong>. The format is similar but incompatible to resx. As a result, you will need to duplicate the data into a set of additional resw files to get the translation to work on UWP.
+The process is like the standard resx process.</p>
+<h2 id="upgrading-your-spritefont-files">Upgrading your SpriteFont files</h2>
+<p>By default, the SpriteFont processor uses a limited set of characters to generate the font. While this is fine for English languages it will probably not include special characters needed for other languages (French, Arabic, Korean etc).</p>
+<p>As a result MonoGame has a <strong>LocalizedFontProcessor</strong> which does something slightly different. The process looks at the resx files you provide it with and generates an optimized <strong>spritefont</strong> which only contains the characters your game uses.</p>
+<p>To make use of this functionality you ned to tell the spritefont which resx files to use. Open the <strong>.spritefont</strong> with a xml/text editor and add lines like this inside the Asset node:</p>
+<pre><code class="lang-xml">&lt;ResourceFiles&gt;
+  &lt;Resx&gt;..\Foo.resx&lt;/Resx&gt;
+  &lt;Resx&gt;..\Foo.de-DE.resx&lt;/Resx&gt;
+&lt;/ResourceFiles&gt;
+</code></pre>
+<blockquote>
+<p>Note the paths are relative to the .spritefont directory. In the example above the resx files are in the directory above the .spritefont.</p>
+</blockquote>
+<p>You should end up with a .spritefont file like this</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;XnaContent xmlns:Graphics=&quot;Microsoft.Xna.Framework.Content.Pipeline.Graphics&quot;&gt;
+  &lt;Asset Type=&quot;Graphics:LocalizedFontDescription&quot;&gt;
+    &lt;FontName&gt;Verdana&lt;/FontName&gt;
+    &lt;Size&gt;14&lt;/Size&gt;
+    &lt;Spacing&gt;1&lt;/Spacing&gt;
+    &lt;Style&gt;Regular&lt;/Style&gt;
+    &lt;CharacterRegions&gt;
+      &lt;CharacterRegion&gt;
+        &lt;Start&gt;&amp;#32;&lt;/Start&gt;
+        &lt;End&gt;&amp;#32;&lt;/End&gt;
+      &lt;/CharacterRegion&gt;
+    &lt;/CharacterRegions&gt;
+    &lt;ResourceFiles&gt;
+      &lt;Resx&gt;..\Foo.resx&lt;/Resx&gt;
+      &lt;Resx&gt;..\Foo.de-DE.resx&lt;/Resx&gt;
+    &lt;/ResourceFiles&gt;
+  &lt;/Asset&gt;
+&lt;/XnaContent&gt;
+</code></pre>
+<p>Once that is done you then need to change the <strong>.mgcb file</strong> so that the <strong>SpriteFontProcessor</strong> is replaced with the <strong>LocalizedFontProcessor</strong>. This can be done by editing the .mgcb file or using the MGCB Editor. After that you can just compile your content as normal. If the processor has any trouble resolving or reading the
+resx files you will get an error.</p>
+<h2 id="loading-the-font">Loading the Font</h2>
+<p>Loading the font can be done in the normal way. The end result of the process is an .xnb file containing a normal SpriteFont.</p>
+<pre><code class="lang-csharp">var font = Content.Load&lt;SpriteFont&gt;(&quot;Foo&quot;);
+</code></pre>
+<h3 id="other-localized-assets">Other Localized assets</h3>
+<p>Not all localized assets will be fonts. In certain situations you might need to swap out an entire textures or spritesheets.
+For these cases a new method has been added to the ContentManager, <strong>LoadLocalized</strong>. The idea behind this method is that it will look for localized files <strong>BEFORE</strong> loading the default one.</p>
+<p>So for example say you have an asset, MyCharacter. You have a MyCharacter.xnb file which contains the data for that item. You can also has a MyCharacter.de-DE.xnb file which contains the German version of that asset. This asset could be a Texture, Audio or any other game asset. You can then use LoadLocalized to load the localized version of the asset.</p>
+<pre><code class="lang-csharp">var myCharacter = Content.LoadLocalized&lt;Texture2D&gt;(&quot;MyCharacter&quot;);
+</code></pre>
+<p>The decision on which localized asset to load is made by looking for a file with the following patterns</p>
+<pre><code class="lang-xml">&lt;AssetName&gt;.&lt;CurrentCulture.Name&gt;
+&lt;AssetName&gt;.&lt;CurrentCulture.TwoLetterISOLanguageName&gt;
+</code></pre>
+<p>These values are retrieved from</p>
+<pre><code class="lang-csharp">CultureInfo.CurrentCulture.Name                         // eg. &quot;en-US&quot;
+CultureInfo.CurrentCulture.TwoLetterISOLanguageName     // eg. &quot;en&quot;
+</code></pre>
+<p>which are part of the <strong>System.Globalization namespace</strong>.</p>
+<blockquote>
+<p>On a side note you can also use the <code>LoadLocalized</code> to load language specific SpriteFonts. They just need to be named in the same way as we have described above.</p>
+</blockquote>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/content_pipeline/localization.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

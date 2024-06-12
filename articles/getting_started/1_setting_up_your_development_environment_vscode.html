@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Setting up your development environment for VSCode | MonoGame ">
+
+    <title>Setting up your development environment for VSCode | MonoGame </title>
+<meta name="description" content="A step-by-step guide for setting up your development environment using VSCode">
+
+    <meta name="og:url" content="https://monogame.net/articles/getting_started/1_setting_up_your_development_environment_vscode.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Setting up your development environment for VSCode | MonoGame ">
+    <meta name="og:description" content="A step-by-step guide for setting up your development environment using VSCode">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/getting_started/1_setting_up_your_development_environment_vscode.html">
+    <meta name="twitter:title" content="Setting up your development environment for VSCode | MonoGame ">
+    <meta name="twitter:description" content="A step-by-step guide for setting up your development environment using VSCode">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../../public/docfx.min.css">
+    <link rel="stylesheet" href="../../public/main.css">
+    <meta name="docfx:navrel" content="../../toc.html">
+    <meta name="docfx:tocrel" content="../toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/getting_started/1_setting_up_your_development_environment_vscode.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="setting-up-your-development-environment-for-vscode">Setting up your development environment for VSCode</h1>
+<p class="text-secondary">A step-by-step guide for setting up your development environment using VSCode</p>
+<p>This section provides a step-by-step guide for setting up your development environment on Windows, macOS, and Linux using VSCode as your editor.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The only development environment that MonoGame officially supports on Linux is <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p><a href="https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-retirement-announcement/">Visual Studio for Mac will be discontinued</a> by Microsoft in August 2024.  At that time, <a href="https://code.visualstudio.com/">Visual Studio Code</a> will be the only development environment supported by MonoGame on macOS.</p>
+</div>
+<h2 id="install-net-8-sdk">Install .NET 8 SDK</h2>
+<p>To develop with C#, you will need to install the .NET SDK.  At the time of this writing, the current version is .NET 8.0.  You can follow the instructions below based your operating system to install the .NET 8.0 SDK</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The current version of MonoGame (3.8.1.303) targets .NET 6.0.  Regardless you can, and it is recommended to, use .NET 8.0.  The only requirement for having .NET 6.0 installed is if you are developing extensions for the MGCB Editor.</p>
+</div>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_windows" role="tab" aria-controls="tabpanel_1_windows" data-tab="windows" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_macos" role="tab" aria-controls="tabpanel_1_macos" data-tab="macos" tabindex="-1">macOS</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_linux" role="tab" aria-controls="tabpanel_1_linux" data-tab="linux" tabindex="-1">Linux</a>
+</li>
+</ul>
+<section id="tabpanel_1_windows" role="tabpanel" data-tab="windows">
+
+<ol>
+<li>Navigate to <a href="https://dotnet.microsoft.com/en-us/download">https://dotnet.microsoft.com/en-us/download</a></li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/windows/download-dotnet.png" alt="Download .NET For Windows"></p>
+<ol start="2">
+<li>Click the <strong>.NET SDK x64</strong> download button to download.  This will take you to the download page where the <strong>dotnet-sdk-8.x.yyy-win-x64.exe</strong> will download.</li>
+<li>When the download completes, run the <strong>dotnet-sdk-8.x.yyy-win-x64.exe</strong> installer and complete the steps to install .NET on your machine.</li>
+<li>When the install completes, open a new <strong>Command Prompt</strong> window and run the command <code>dotnet</code> to verify the installation was successful.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/windows/verify-install.png" alt="Verify Installation"></p>
+</section>
+<section id="tabpanel_1_macos" role="tabpanel" data-tab="macos" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Navigate to <a href="https://dotnet.microsoft.com/en-us/download">https://dotnet.microsoft.com/en-us/download</a></li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/mac/download-dotnet.png" alt="Download .NET For Mac"></p>
+<ol start="2">
+<li>Download the .NET SDK x64-(Intel) Installer</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>For the time being, MonoGame requires that you install the <strong>.NET SDK x64-(Intel)</strong> version of the .NET SDK even if you are running on an Apple Silicon (M1/M2) Mac.  For Apple Silicon Macs, it also requires that <a href="https://support.apple.com/en-us/HT211861">Rosetta</a> is enabled.</p>
+</div>
+<ol start="3">
+<li>Once the installation <strong>.pkg</strong> file finishes downloading, run it and follow the prompts to install the .NET SDK</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/mac/install-dotnet.png" alt="Install .NET For Mac"></p>
+<ol start="4">
+<li>Once the installation is complete, open a new terminal window and run the command <code>dotnet</code> to verify the installation was successful.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/mac/verify-install.png" alt="Verify Installation"></p>
+</section>
+<section id="tabpanel_1_linux" role="tabpanel" data-tab="linux" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Open a new <strong>Terminal</strong> window.</li>
+<li>Enter the following command in the terminal to download the <strong>dotnet-install.sh</strong></li>
+</ol>
+<pre><code class="lang-sh">wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+</code></pre>
+<ol start="3">
+<li>Grant permission for the script to execute by entering the following command in the terminal:</li>
+</ol>
+<pre><code class="lang-sh">chmod +x ./dotnet-install.sh
+</code></pre>
+<ol start="4">
+<li>Run the script to install the .NET 8 SDK by entering the following command in the terminal:</li>
+</ol>
+<pre><code class="lang-sh">./dotnet-install.sh
+</code></pre>
+<p><img src="images/1_setting_up_your_development_environment/vscode/linux/dotnet-install-script.png" alt=".NET Install Script"></p>
+<ol start="5">
+<li>You will now need to setup your environment variables so that the <code>dotnet</code> command is recognized.  To do this, open the file <code>~/.bashrc</code> in a text editor and add the following lines to the end of the file.</li>
+</ol>
+<pre><code class="lang-sh">export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+</code></pre>
+<p><img src="images/1_setting_up_your_development_environment/vscode/linux/add-environment-variables.png" alt="Add Environment Variables"></p>
+<ol start="6">
+<li>Save and close the file, close any open terminal windows, then open a new terminal window so the new environment variables are registered.</li>
+<li>Enter the <code>dotnet</code> command to validate that the .NET 8 SDK is now installed.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/linux/verify-install.png" alt="Verify Installation"></p>
+</section>
+</div>
+
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you intend to target mobile platforms, you will also need to install the corresponding workloads.  Enter the following commands in a command prompt/terminal</p>
+<pre><code class="lang-sh">dotnet workload install ios
+dotnet workload install android
+</code></pre>
+</div>
+<h2 id="install-monogame-templates">Install MonoGame Templates</h2>
+<p>The .NET SDK installation comes with the default C# project templates, but it does not include the MonoGame templates.  These will need to be installed manually.</p>
+<div class="tabGroup" id="tabgroup_2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_2_windows" role="tab" aria-controls="tabpanel_2_windows" data-tab="windows" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_2_macos" role="tab" aria-controls="tabpanel_2_macos" data-tab="macos" tabindex="-1">macOS</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_2_linux" role="tab" aria-controls="tabpanel_2_linux" data-tab="linux" tabindex="-1">Linux</a>
+</li>
+</ul>
+<section id="tabpanel_2_windows" role="tabpanel" data-tab="windows">
+
+<ol>
+<li>Open a new  <strong>Command Prompt</strong> window and run the following command</li>
+</ol>
+<pre><code class="lang-sh">dotnet new install MonoGame.Templates.CSharp
+</code></pre>
+<p><img src="images/1_setting_up_your_development_environment/vscode/windows/install-templates.png" alt="Install MonoGame Templates"></p>
+</section>
+<section id="tabpanel_2_macos" role="tabpanel" data-tab="macos" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Open a new terminal window an run the following command:</li>
+</ol>
+<pre><code class="lang-sh">dotnet new install MonoGame.Templates.CSharp
+</code></pre>
+<p><img src="images/1_setting_up_your_development_environment/vscode/mac/install-templates.png" alt="Install MonoGame Templates"></p>
+</section>
+<section id="tabpanel_2_linux" role="tabpanel" data-tab="linux" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Open a new terminal window and run the following command</li>
+</ol>
+<pre><code class="lang-sh">dotnet new install MonoGame.Templates.CSharp
+</code></pre>
+<p><img src="images/1_setting_up_your_development_environment/vscode/linux/install-templates.png" alt="Install MonoGame Templates"></p>
+</section>
+</div>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>When installing the templates, you will see an error about the UWP template failing to install.  You can ignore this error, the UWP templates are deprecated and will be removed in a future MonoGame release.</p>
+</div>
+<h2 id="install-visual-studio-code">Install Visual Studio Code</h2>
+<div class="tabGroup" id="tabgroup_3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_3_windows" role="tab" aria-controls="tabpanel_3_windows" data-tab="windows" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_3_macos" role="tab" aria-controls="tabpanel_3_macos" data-tab="macos" tabindex="-1">macOS</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_3_linux" role="tab" aria-controls="tabpanel_3_linux" data-tab="linux" tabindex="-1">Linux</a>
+</li>
+</ul>
+<section id="tabpanel_3_windows" role="tabpanel" data-tab="windows">
+
+<ol>
+<li>Open your web browser and navigate to <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/windows/download-vscode.png" alt="Download VSCode"></p>
+<ol start="2">
+<li>Click the <strong>Download for Windows</strong> button.  This will redirect you to the download page where the installer will automatically download.</li>
+<li>When the download completes, run the installer and complete the steps to install Visual Studio Code.</li>
+</ol>
+</section>
+<section id="tabpanel_3_macos" role="tabpanel" data-tab="macos" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Open your web browser and navigate to <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/windows/download-vscode.png" alt="Download VSCode"></p>
+<ol start="2">
+<li>Click the <strong>Download Mac Universal</strong> button.  This will redirect you to the page where the application archive (.zip) file will begin downloading.</li>
+<li>Extract the contents of the VSCode archive that downloaded by double-clicking it inside a Finder window.  This will extract the <strong>Visual Studio Code.app</strong> file.</li>
+<li>Drag the <strong>Visual Studio Code.app</strong> file into the <strong>Applications</strong> folder, making it available in the macOS Launchpad.</li>
+</ol>
+</section>
+<section id="tabpanel_3_linux" role="tabpanel" data-tab="linux" aria-hidden="true" hidden="hidden">
+
+<p>The recommended method for installing Visual Studio Code in Linux is to use Snap. This is supported by most Linux distributions.</p>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/setup/linux#_snap">Snap Package</a></li>
+</ul>
+<p>There are also individual guides below based on your Linux distribution if you do not want to use Snap:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/setup/linux#_debian-and-ubuntu-based-distributions">Debian and Ubuntu base distributions</a></li>
+<li><a href="https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions">RHEL, Fedora, and CentOS based distributions</a></li>
+<li><a href="https://code.visualstudio.com/docs/setup/linux#_opensuse-and-slebased-distributions">openSUSE and SLE-based distributions</a></li>
+<li><a href="https://code.visualstudio.com/docs/setup/linux#_aur-package-for-arch-linux">AUR package for Arch Linux</a></li>
+<li><a href="https://code.visualstudio.com/docs/setup/linux#_installing-rpm-package-manually">Installing .rpm package manually</a></li>
+</ul>
+</section>
+</div>
+<h2 id="install-visual-studio-code-c-extensions">Install Visual Studio Code C# Extensions</h2>
+<p>Visual Studio Code by itself is just a text editor.  In order to code and build C# projects, you will need to install the Visual Studio Code C# extension.  This extension will provide syntax highlighting, code analysis, intellisense, and other quality of life features when developing with C# in Visual Studio Code.</p>
+<div class="tabGroup" id="tabgroup_4">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_4_windows" role="tab" aria-controls="tabpanel_4_windows" data-tab="windows" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_4_macos" role="tab" aria-controls="tabpanel_4_macos" data-tab="macos" tabindex="-1">macOS</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_4_linux" role="tab" aria-controls="tabpanel_4_linux" data-tab="linux" tabindex="-1">Linux</a>
+</li>
+</ul>
+<section id="tabpanel_4_windows" role="tabpanel" data-tab="windows">
+
+<ol>
+<li>Open Visual Studio Code.</li>
+<li>Click the <strong>Extensions</strong> icon in the <strong>Activity Bar</strong> on the left.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/windows/click-extensions.png" alt="Click Extensions"></p>
+<ol start="3">
+<li>In the <strong>Search Box</strong> type <code>C#</code>.</li>
+<li>Click <strong>Install</strong> for the <strong>C# Dev Kit</strong> extension.  Installing this will also install the base <strong>C#</strong> extension.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/windows/install-devkit.png" alt="Install C# DevKit Extension"></p>
+</section>
+<section id="tabpanel_4_macos" role="tabpanel" data-tab="macos" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Open Visual Studio Code</li>
+<li>Click the <strong>Extensions</strong> icon in the <strong>Activity Bar</strong> on the left.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/mac/click-extensions.png" alt="Click Extensions"></p>
+<ol start="3">
+<li>In the <strong>Search Box</strong> type <code>C#</code></li>
+<li>Click <strong>Install</strong> for the <strong>C# Dev Kit</strong> extension.  Installing this will also install the base <strong>C#</strong> extension.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/mac/install-devkit.png" alt="Install C# DevKit Extension"></p>
+</section>
+<section id="tabpanel_4_linux" role="tabpanel" data-tab="linux" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Open Visual Studio Code.</li>
+<li>Click the <strong>Extensions</strong> icon in the <strong>Activity Bar</strong> on the left.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/linux/click-extensions.png" alt="Click Extensions"></p>
+<ol start="3">
+<li>In the <strong>Search Box</strong> type <code>C#</code>.</li>
+<li>Click the <strong>Install</strong> button for the <strong>C# Dev Kit</strong> extension.  Installing this will also install the base <strong>C#</strong> extension.</li>
+</ol>
+<p><img src="images/1_setting_up_your_development_environment/vscode/linux/install-devkit.png" alt="Install C# DevKit Extension"></p>
+</section>
+</div>
+<h2 id="setup-wine-for-effect-compilation">Setup Wine For Effect Compilation</h2>
+<p>Effect (shader) compilation requires access to DirectX.  This means it will not work natively on macOS and Linux systems, but it can be used through <a href="https://www.winehq.org/">Wine</a>.</p>
+<div class="tabGroup" id="tabgroup_5">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_5_windows" role="tab" aria-controls="tabpanel_5_windows" data-tab="windows" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_5_macos" role="tab" aria-controls="tabpanel_5_macos" data-tab="macos" tabindex="-1">macOS</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_5_linux" role="tab" aria-controls="tabpanel_5_linux" data-tab="linux" tabindex="-1">Linux</a>
+</li>
+</ul>
+<section id="tabpanel_5_windows" role="tabpanel" data-tab="windows">
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Windows users do not require an additional setup for effect compilation and can skip this section.</p>
+</div>
+</section>
+<section id="tabpanel_5_macos" role="tabpanel" data-tab="macos" aria-hidden="true" hidden="hidden">
+
+<p>MonoGame
+MonoGame provides a setup script that can be executed to setup the Wine environment for Effect (shader) compilation.  However, this script has the following prerequisites that must first be setup</p>
+<ul>
+<li><strong>curl</strong> must be installed</li>
+<li><strong>p7zip</strong> must be installed</li>
+<li><strong>wine-stable</strong> must be installed.</li>
+</ul>
+<p>These can be installed using <strong>brew</strong>.</p>
+<ol>
+<li>Open a terminal window.</li>
+<li>Enter the following command:</li>
+</ol>
+<pre><code class="lang-sh">brew install p7zip curl
+brew install --cask wine-stable
+</code></pre>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>It is recommended that you use <code>wine-stable</code> and not <code>wine-staging</code>.</p>
+</div>
+<ol start="3">
+<li>Now that the prerequisites are installed, download the <a href="https://raw.githubusercontent.com/MonoGame/MonoGame/master/Tools/MonoGame.Effect.Compiler/mgfxc_wine_setup.sh">mgfxc_wine_setup.sh</a> script and execute it by entering the following command in the terminal:</li>
+</ol>
+<pre><code class="lang-sh">wget -qO- https://monogame.net/downloads/net6_mgfxc_wine_setup.sh | bash
+</code></pre>
+<p>This will create new directory called <code>.winemonogame</code> in your home directory.  If you ever wish to undo the setup this script performed, just simply delete that directory.</p>
+</section>
+<section id="tabpanel_5_linux" role="tabpanel" data-tab="linux" aria-hidden="true" hidden="hidden">
+
+<p>MonoGame provides a setup script that can be executed to setup the Wine environment for Effect (shader) compilation.  However, this script has the following prerequisites that must first be setup</p>
+<ul>
+<li><strong>curl</strong> must be installed</li>
+<li><strong>p7zip</strong> must be installed</li>
+<li><strong>wine64</strong> must be installed.</li>
+</ul>
+<p>For Debian-based distributions like Ubuntu, you can perform the following:</p>
+<ol>
+<li>Open a terminal window</li>
+<li>Enter the following command</li>
+</ol>
+<pre><code class="lang-sh">sudo apt install curl p7zip-full wine64
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you receive an error stating that either of the packages do not have an install candidate, you may need to enable the universe apt repository.  To do this, enter the following commands in the terminal</p>
+<pre><code class="lang-sh">sudo add-apt-repository universe
+sudo apt update
+</code></pre>
+<p>Then try installing the packages again.</p>
+</div>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>If you plan to install Wine using the <code>winehq-*</code> package instead, it is recommended that you use the <code>winehq-stable</code> package and not <code>-staging</code>.</p>
+</div>
+<ol start="3">
+<li>Now that the prerequisites are installed, download the <a href="https://raw.githubusercontent.com/MonoGame/MonoGame/master/Tools/MonoGame.Effect.Compiler/mgfxc_wine_setup.sh">mgfxc_wine_setup.sh</a> script and execute it by entering the following command in the terminal:</li>
+</ol>
+<pre><code class="lang-sh">wget -qO- https://monogame.net/downloads/net6_mgfxc_wine_setup.sh | bash
+</code></pre>
+<p>This will create new directory called <code>.winemonogame</code> in your home directory.  If you ever wish to undo the setup this script performed, just simply delete that directory.</p>
+</section>
+</div>
+<h2 id="apple-silicon-known-issues">Apple Silicon Known Issues</h2>
+<p>There is currently a two known issue when building content on an Apple Silicon (M1/M2) Mac:</p>
+<ol>
+<li><strong>Building Textures</strong>: An exception occurs stating that the <strong>freeimage</strong> lib could not be found.</li>
+<li><strong>Building SpriteFonts</strong>: An exception occurs stating that the <strong>freetype</strong> lib could not be found.</li>
+</ol>
+<p>These issue occur due to needing compiled versions of these libs for the M1/M2 architecture.  <a href="https://github.com/MonoGame/MonoGame/issues/8124">There is currently work being done to resolve this</a>, however in the meantime you can use the following workaround that has been provided by community members.</p>
+<ol>
+<li>Open a terminal and install <strong>freeimage</strong> and <strong>freetype</strong> using <strong>brew</strong></li>
+</ol>
+<pre><code class="lang-sh">brew install freeimage freetype
+</code></pre>
+<ol start="2">
+<li>(Optional) Create the <code>/usr/local/lib/</code> directory if it does not exist</li>
+</ol>
+<pre><code class="lang-sh">mkdir /usr/local/lib/
+</code></pre>
+<ol start="3">
+<li>Symlink both <strong>freeimage</strong> and <strong>freetype</strong> to the <code>/usr/local/lib/</code> directory</li>
+</ol>
+<pre><code class="lang-sh">sudo ln -s /opt/homebrew/lib/libfreetype.6.dylib /usr/local/lib/libfreetype.6.dylib
+sudo ln -s /opt/homebrew/lib/libfreeimage.3.18.0.dylib /usr/local/lib/libfreeimage.dylib
+</code></pre>
+<h2 id="next-up">Next Up</h2>
+<p>Visual Studio Code does not have an option within the UI to create a new MonoGame project like you would have in Visual Studio.  In the <a href="2_creating_a_new_project_netcore.html">Creating a New Project With VSCode</a>, we'll go over the steps to create a new MonoGame project when using Visual Studio Code.</p>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/getting_started/1_setting_up_your_development_environment_vscode.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

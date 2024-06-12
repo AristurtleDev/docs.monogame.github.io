@@ -1,0 +1,1013 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class SoundEffect | MonoGame ">
+
+    <title>Class SoundEffect | MonoGame </title>
+<meta name="description" content="Represents a loaded sound resource.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Audio.SoundEffect.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class SoundEffect | MonoGame ">
+    <meta name="og:description" content="Represents a loaded sound resource.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Audio.SoundEffect.html">
+    <meta name="twitter:title" content="Class SoundEffect | MonoGame ">
+    <meta name="twitter:description" content="Represents a loaded sound resource.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Audio.SoundEffect">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Audio_SoundEffect" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect" class="text-break">
+Class SoundEffect  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Audio.html">Audio</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a loaded sound resource.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SoundEffect : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SoundEffect</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Microsoft_Xna_Framework_Audio_SoundEffect_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>A SoundEffect represents the buffer used to hold audio data and metadata. SoundEffectInstances are used to play from SoundEffects. Multiple SoundEffectInstance objects can be created and played from the same SoundEffect object.</p>
+<p>The only limit on the number of loaded SoundEffects is restricted by available memory. When a SoundEffect is disposed, all SoundEffectInstances created from it will become invalid.</p>
+<p>SoundEffect.Play() can be used for 'fire and forget' sounds. If advanced playback controls like volume or pitch is required, use SoundEffect.CreateInstance().</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect__ctor_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect__ctor_System_Byte___System_Int32_Microsoft_Xna_Framework_Audio_AudioChannels_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.#ctor(System.Byte[],System.Int32,Microsoft.Xna.Framework.Audio.AudioChannels)">
+  SoundEffect(byte[], int, AudioChannels)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a sound effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SoundEffect(byte[] buffer, int sampleRate, AudioChannels channels)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The buffer with the sound data.</p>
+</dd>
+    <dt><code>sampleRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sound data sample rate in hertz.</p>
+</dd>
+    <dt><code>channels</code> <a class="xref" href="Microsoft.Xna.Framework.Audio.AudioChannels.html">AudioChannels</a></dt>
+    <dd><p>The number of channels in the sound data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect__ctor_System_Byte___System_Int32_Microsoft_Xna_Framework_Audio_AudioChannels__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This only supports uncompressed 16bit PCM wav data.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect__ctor_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect__ctor_System_Byte___System_Int32_System_Int32_System_Int32_Microsoft_Xna_Framework_Audio_AudioChannels_System_Int32_System_Int32_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Audio.AudioChannels,System.Int32,System.Int32)">
+  SoundEffect(byte[], int, int, int, AudioChannels, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a sound effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SoundEffect(byte[] buffer, int offset, int count, int sampleRate, AudioChannels channels, int loopStart, int loopLength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>buffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The buffer with the sound data.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The offset to the start of the sound data in bytes.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The length of the sound data in bytes.</p>
+</dd>
+    <dt><code>sampleRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sound data sample rate in hertz.</p>
+</dd>
+    <dt><code>channels</code> <a class="xref" href="Microsoft.Xna.Framework.Audio.AudioChannels.html">AudioChannels</a></dt>
+    <dd><p>The number of channels in the sound data.</p>
+</dd>
+    <dt><code>loopStart</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The position where the sound should begin looping in samples.</p>
+</dd>
+    <dt><code>loopLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The duration of the sound data loop in samples.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect__ctor_System_Byte___System_Int32_System_Int32_System_Int32_Microsoft_Xna_Framework_Audio_AudioChannels_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This only supports uncompressed 16bit PCM wav data.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_DistanceScale_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.DistanceScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_DistanceScale" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.DistanceScale">
+  DistanceScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the scale of distance calculations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float DistanceScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_DistanceScale_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>DistanceScale defaults to 1.0 and must be greater than 0.0.</p>
+<p>Higher values reduce the rate of falloff between the sound and listener.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_DopplerScale_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.DopplerScale*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_DopplerScale" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.DopplerScale">
+  DopplerScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the scale of Doppler calculations applied to sounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float DopplerScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_DopplerScale_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>DopplerScale defaults to 1.0 and must be greater or equal to 0.0</p>
+<p>Affects the relative velocity of emitters and listeners.</p>
+<p>Higher values more dramatically shift the pitch for the given relative velocity of the emitter and listener.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_Duration_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Duration*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_Duration" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Duration">
+  Duration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the duration of the SoundEffect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TimeSpan Duration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_IsDisposed_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.IsDisposed*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_IsDisposed" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.IsDisposed">
+  IsDisposed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the object is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisposed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_MasterVolume_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.MasterVolume*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_MasterVolume" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.MasterVolume">
+  MasterVolume
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the master volume scale applied to all SoundEffectInstances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float MasterVolume { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_MasterVolume_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Each SoundEffectInstance has its own Volume property that is independent to SoundEffect.MasterVolume. During playback SoundEffectInstance.Volume is multiplied by SoundEffect.MasterVolume.</p>
+<p>This property is used to adjust the volume on all current and newly created SoundEffectInstances. The volume of an individual SoundEffectInstance can be adjusted on its own.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_Name_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Name*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_Name" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the asset name of the SoundEffect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_SpeedOfSound_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.SpeedOfSound*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_SpeedOfSound" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.SpeedOfSound">
+  SpeedOfSound
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the speed of sound used when calculating the Doppler effect..</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float SpeedOfSound { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_SpeedOfSound_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Defaults to 343.5. Value is measured in meters per second.</p>
+<p>Has no effect on distance attenuation.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_CreateInstance_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.CreateInstance*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_CreateInstance" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.CreateInstance">
+  CreateInstance()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new SoundEffectInstance for this SoundEffect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SoundEffectInstance CreateInstance()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffectInstance.html">SoundEffectInstance</a></dt>
+    <dd><p>A new SoundEffectInstance for this SoundEffect.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_CreateInstance_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Creating a SoundEffectInstance before calling SoundEffectInstance.Play() allows you to access advanced playback features, such as volume, pitch, and 3D positioning.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_Dispose_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_Dispose" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases the resources held by this <a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_Finalize_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Finalize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_Finalize" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Finalize">
+  ~SoundEffect()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases unmanaged resources and performs other cleanup operations before the
+<a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a> is reclaimed by garbage collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~SoundEffect()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_FromFile_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.FromFile*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_FromFile_System_String_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.FromFile(System.String)">
+  FromFile(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new SoundEffect object based on the specified data stream.
+This internally calls <a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html#Microsoft_Xna_Framework_Audio_SoundEffect_FromStream_System_IO_Stream_">FromStream(Stream)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SoundEffect FromFile(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the audio file.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a></dt>
+    <dd><p>The <a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a> loaded from the given file.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_FromFile_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The stream must point to the head of a valid wave file in the RIFF bitstream format.  The formats supported are:
+<ul><li>8-bit unsigned PCM16-bit signed PCM24-bit signed PCM32-bit IEEE float PCMMS-ADPCM 4-bit compressedIMA/ADPCM (IMA4) 4-bit compressed</li></ul>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_FromStream_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.FromStream*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_FromStream_System_IO_Stream_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.FromStream(System.IO.Stream)">
+  FromStream(Stream)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new SoundEffect object based on the specified data stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SoundEffect FromStream(Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>A stream containing the wave data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a></dt>
+    <dd><p>A new SoundEffect object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_FromStream_System_IO_Stream__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The stream must point to the head of a valid wave file in the RIFF bitstream format.  The formats supported are:
+<ul><li>8-bit unsigned PCM16-bit signed PCM24-bit signed PCM32-bit IEEE float PCMMS-ADPCM 4-bit compressedIMA/ADPCM (IMA4) 4-bit compressed</li></ul>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_GetSampleDuration_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.GetSampleDuration*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_GetSampleDuration_System_Int32_System_Int32_Microsoft_Xna_Framework_Audio_AudioChannels_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.GetSampleDuration(System.Int32,System.Int32,Microsoft.Xna.Framework.Audio.AudioChannels)">
+  GetSampleDuration(int, int, AudioChannels)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the duration for 16-bit PCM audio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimeSpan GetSampleDuration(int sizeInBytes, int sampleRate, AudioChannels channels)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sizeInBytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The length of the audio data in bytes.</p>
+</dd>
+    <dt><code>sampleRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Sample rate, in Hertz (Hz). Must be between 8000 Hz and 48000 Hz</p>
+</dd>
+    <dt><code>channels</code> <a class="xref" href="Microsoft.Xna.Framework.Audio.AudioChannels.html">AudioChannels</a></dt>
+    <dd><p>Number of channels in the audio data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The duration of the audio data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_GetSampleSizeInBytes_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.GetSampleSizeInBytes*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_GetSampleSizeInBytes_System_TimeSpan_System_Int32_Microsoft_Xna_Framework_Audio_AudioChannels_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.GetSampleSizeInBytes(System.TimeSpan,System.Int32,Microsoft.Xna.Framework.Audio.AudioChannels)">
+  GetSampleSizeInBytes(TimeSpan, int, AudioChannels)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the data size in bytes for 16bit PCM audio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetSampleSizeInBytes(TimeSpan duration, int sampleRate, AudioChannels channels)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd><p>The total duration of the audio data.</p>
+</dd>
+    <dt><code>sampleRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Sample rate, in Hertz (Hz), of audio data. Must be between 8,000 and 48,000 Hz.</p>
+</dd>
+    <dt><code>channels</code> <a class="xref" href="Microsoft.Xna.Framework.Audio.AudioChannels.html">AudioChannels</a></dt>
+    <dd><p>Number of channels in the audio data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size in bytes of a single sample of audio data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_Initialize_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Initialize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_Initialize" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Initialize">
+  Initialize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the sound system for SoundEffect support.
+This method is automatically called when a SoundEffect is loaded, a DynamicSoundEffectInstance is created, or Microphone.All is queried.
+You can however call this method manually (preferably in, or before the Game constructor) to catch any Exception that may occur during the sound system initialization (and act accordingly).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Initialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_Play_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Play*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_Play" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Play">
+  Play()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an internal SoundEffectInstance and plays it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Play()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if a SoundEffectInstance was successfully played, false if not.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_Play_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Play returns false if more SoundEffectInstances are currently playing then the platform allows.</p>
+<p>To loop a sound or apply 3D effects, call SoundEffect.CreateInstance() and SoundEffectInstance.Play() instead.</p>
+<p>SoundEffectInstances used by SoundEffect.Play() are pooled internally.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Audio_SoundEffect_Play_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Play*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Audio_SoundEffect_Play_System_Single_System_Single_System_Single_" data-uid="Microsoft.Xna.Framework.Audio.SoundEffect.Play(System.Single,System.Single,System.Single)">
+  Play(float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an internal SoundEffectInstance and plays it with the specified volume, pitch, and panning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Play(float volume, float pitch, float pan)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>volume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Volume, ranging from 0.0 (silence) to 1.0 (full volume). Volume during playback is scaled by SoundEffect.MasterVolume.</p>
+</dd>
+    <dt><code>pitch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Pitch adjustment, ranging from -1.0 (down an octave) to 0.0 (no change) to 1.0 (up an octave).</p>
+</dd>
+    <dt><code>pan</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Panning, ranging from -1.0 (left speaker) to 0.0 (centered), 1.0 (right speaker).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if a SoundEffectInstance was successfully created and played, false if not.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Audio_SoundEffect_Play_System_Single_System_Single_System_Single__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Play returns false if more SoundEffectInstances are currently playing then the platform allows.</p>
+<p>To apply looping or simulate 3D audio, call SoundEffect.CreateInstance() and SoundEffectInstance.Play() instead.</p>
+<p>SoundEffectInstances used by SoundEffect.Play() are pooled internally.</p>
+</div>
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

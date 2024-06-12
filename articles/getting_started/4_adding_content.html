@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Adding Content | MonoGame ">
+
+    <title>Adding Content | MonoGame </title>
+<meta name="description" content="Learn how to add content such as images or sounds to your game.">
+
+    <meta name="og:url" content="https://monogame.net/articles/getting_started/4_adding_content.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Adding Content | MonoGame ">
+    <meta name="og:description" content="Learn how to add content such as images or sounds to your game.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/getting_started/4_adding_content.html">
+    <meta name="twitter:title" content="Adding Content | MonoGame ">
+    <meta name="twitter:description" content="Learn how to add content such as images or sounds to your game.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../../public/docfx.min.css">
+    <link rel="stylesheet" href="../../public/main.css">
+    <meta name="docfx:navrel" content="../../toc.html">
+    <meta name="docfx:tocrel" content="../toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/getting_started/4_adding_content.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="adding-content">Adding Content</h1>
+<p class="text-secondary">Learn how to add content such as images or sounds to your game.</p>
+<p>This tutorial will go over adding content such as images or sounds to your game.</p>
+<blockquote>
+<p>For help with creating a project, please look at the <a href="index.html">Creating a New Project</a> section of the Getting Started guide.</p>
+</blockquote>
+<h2 id="monogame-content-builder-tool-mgcb-editor">MonoGame Content Builder Tool (MGCB Editor)</h2>
+<p>This tutorial assumes that you are using Visual Studio 2022 with its MonoGame extension installed. If you are not using the extension, you will need to manually install and use the <a href="../tools/mgcb_editor.html">MGCB Editor</a>.</p>
+<blockquote>
+<p>This is technically optional, since you can edit the .mgcb files manually if you wish, but the editor is highly recommended for ease of use.</p>
+</blockquote>
+<h2 id="adding-content-1">Adding content</h2>
+<p>First, you will need some content for your game. For this tutorial, use the following image of a ball:</p>
+<p><img src="images/ball.png" alt="Open Content"></p>
+<p>Copy the image to your machine by using <strong>right-click &gt; Save Image As</strong> and save it somewhere locally with the name “ball.png”.</p>
+<p>Now open up your game project and look at the Solution Explorer window. Expand the <strong>Content</strong> folder and open up <strong>Content.mgcb</strong> file by double-clicking on it.</p>
+<p><img src="images/3_open_content.png" alt="Open Content"></p>
+<p>You should now see the MGCB Editor window open up. If a text file opens instead, then right-click on <strong>Content.mgcb</strong> and select <strong>Open With</strong>, then select <strong>MGCB Editor</strong> in the list, click <strong>Set as Default</strong> and then click <strong>OK</strong>, then try again.</p>
+<blockquote>
+<p>If you do not see the <strong>MGCB Editor</strong> option when you right-click and select <strong>Open With</strong>, then please review the <a href="../tools/index.html">Tools documentation</a> for installing the MGCB Editor tool for your operating system.</p>
+</blockquote>
+<p><img src="images/3_mgcb_editor_tool.png" alt="MGCB Editor"></p>
+<p>Your game content is managed from this external tool. You can add content to your game in one of the following ways:</p>
+<ul>
+<li><strong>Add Existing Item</strong> toolbar button</li>
+<li><strong>Edit &gt; Add &gt; Existing Item...</strong> menu button</li>
+<li><strong>right-click &gt; Add &gt; Existing Item...</strong> context menu</li>
+</ul>
+<p>Make sure the &quot;Content&quot; MGCB file is selected to the left, then click the <strong>Add Existing Item</strong> toolbar button.</p>
+<p><img src="images/3_add_content.png" alt="Add Content"></p>
+<p>You should now be prompted to select a file. Select the “<strong>ball.png</strong>” image that you downloaded a moment ago. Once you have confirmed your selection, you will be asked whether to copy the file, add a link to it, or skip it. Make sure &quot;<strong>Copy the file to the directory</strong>&quot; option is selected and click <strong>Add</strong>.</p>
+<p><img src="images/3_copy_content.png" alt="Copy Content"></p>
+<p>Now click the <strong>Save</strong> toolbar button and close the MGCB Editor tool.</p>
+<p><img src="images/3_save_content.png" alt="Save Content"></p>
+<hr>
+<h2 id="adding-the-content-in-your-game">Adding the content in your game</h2>
+<p>Now that you have added the asset to the Content project, it is time to load it into your game. First, open up the <strong>Game1.cs</strong> class file and declare a new <strong>ballTexture</strong> variable of type <strong>Texture2D</strong> in the <strong>Game1</strong> class, so you can store the ball image into memory.</p>
+<pre><code class="lang-csharp">public class Game1 : Game
+{
+    Texture2D ballTexture;
+
+    private GraphicsDeviceManager _graphics;
+    private SpriteBatch _spriteBatch;
+</code></pre>
+<p>Next, find the <strong>LoadContent</strong> method. Here, use <strong>Content.Load()</strong> function to load the &quot;ball&quot; sprite and store it in the <strong>ballTexture</strong> parameter. <strong>Content.Load()</strong> requires you to specify what type of content you are trying to load, in this case it is a <strong>Texture2D</strong>.</p>
+<pre><code class="lang-csharp">protected override void LoadContent()
+{
+    // Create a new SpriteBatch, which can be used to draw textures.
+    _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+    // TODO: use this.Content to load your game content here
+    ballTexture = Content.Load&lt;Texture2D&gt;(&quot;ball&quot;);
+}
+</code></pre>
+<p>Finally, find the Draw method to draw the ball onto the screen. This is done by:</p>
+<ul>
+<li><p>Opening a SpriteBatch (an image drawing collection function).</p>
+</li>
+<li><p>Adding the images you want to draw and specifying where you want to draw them.</p>
+</li>
+<li><p>Then finally closing the SpriteBatch to commit the textures you want drawn to the screen.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: if you add multiple images, they will be drawn in the order you place them from back to front (each drawn on top of each other).</p>
+</blockquote>
+<p>As shown below:</p>
+<pre><code class="lang-csharp">protected override void Draw(GameTime gameTime)
+{
+    graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+
+    // TODO: Add your drawing code here
+    _spriteBatch.Begin();
+    _spriteBatch.Draw(ballTexture, new Vector2(0, 0), Color.White);
+    _spriteBatch.End();
+
+    base.Draw(gameTime);
+}
+</code></pre>
+<p>Now run the game. You should get the following:</p>
+<p><img src="images/3_game.png" alt="Game"></p>
+<p><strong>Next up:</strong> <a href="5_adding_basic_code.html">Adding Basic Code</a></p>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/getting_started/4_adding_content.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

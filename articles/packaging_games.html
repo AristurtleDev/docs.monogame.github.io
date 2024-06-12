@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Package games for distribution | MonoGame ">
+
+    <title>Package games for distribution | MonoGame </title>
+<meta name="description" content="How to package your game for distribution.">
+
+    <meta name="og:url" content="https://monogame.net/articles/packaging_games.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Package games for distribution | MonoGame ">
+    <meta name="og:description" content="How to package your game for distribution.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/packaging_games.html">
+    <meta name="twitter:title" content="Package games for distribution | MonoGame ">
+    <meta name="twitter:description" content="How to package your game for distribution.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/packaging_games.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="package-games-for-distribution">Package games for distribution</h1>
+<p class="text-secondary">How to package your game for distribution.</p>
+<p>Once your game is ready to be published, it is recommended that you package it properly for consumption by players.</p>
+<h2 id="desktop-games">Desktop games</h2>
+<p>To publish desktop games, it is recommended that you build your project as a <a href="https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained">self-contained</a> .NET application. As such, your game will require absolutely no external dependencies and should run out-of-the-box as-is.</p>
+<h3 id="building-and-packaging-for-windows">Building and packaging for Windows</h3>
+<p>From the .NET CLI:</p>
+<p><code>dotnet publish -c Release -r win-x64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained</code></p>
+<p>You can then zip the content of the publish folder and distribute the archive as-is.</p>
+<p>If you are targeting WindowsDX, note that players will need <a href="https://www.microsoft.com/en-us/download/details.aspx?id=8109">the DirectX June 2010 runtime</a> to be installed on their machine for audio and gamepads to work properly.</p>
+<h3 id="building-and-packaging-for-linux">Building and packaging for Linux</h3>
+<p>From the .NET CLI:</p>
+<p><code>dotnet publish -c Release -r linux-x64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained</code></p>
+<p>You can then archive the content of the publish folder and distribute the archive as-is.</p>
+<p>We recommend using the .tar.gz archiving format to preserve the execution permissions.</p>
+<h3 id="build-and-packaging-for-macos">Build and packaging for macOS</h3>
+<p>From the .NET CLI:</p>
+<pre><code>dotnet publish -c Release -r osx-x64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained
+dotnet publish -c Release -r osx-arm64 /p:PublishReadyToRun=false /p:TieredCompilation=false --self-contained
+</code></pre>
+<p>We recommend that you distribute your game as an <a href="https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html">application bundle</a>. Application bundles are directories with the following file structure:</p>
+<pre><code>YourGame.app                    (this is your root folder)
+    - Contents
+        - Resources
+            - Content           (this is where all your content and XNB's should go)
+            - YourGame.icns     (this is your app icon, in ICNS format)
+        - MacOS
+            - amd64             (this is where your game executable for amd64 belongs, place files from the osx-x64/publish directory here)
+            - arm64             (this is where your game executable for arm64 belongs, place files from the osx-arm64/publish directory here)
+            - YourGame          (the entry point script of your app, see bellow for contents)
+        - Info.plist            (the metadata of your app, see bellow for contents)
+</code></pre>
+<p>The contents of the entry point script:</p>
+<pre><code class="lang-sh">#!/bin/bash
+
+cd &quot;$(dirname $BASH_SOURCE)/../Resources&quot;
+if [[ $(uname -p) == 'arm' ]]; then
+  ./../MacOS/arm64/YourGame
+else
+  ./../MacOS/amd64/YourGame
+fi
+</code></pre>
+<p>The Info.plist file is a standard macOS file containing metadata about your game. Here's an example file with required and recommended values set:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;CFBundleDevelopmentRegion&lt;/key&gt;
+    &lt;string&gt;en&lt;/string&gt;
+    &lt;key&gt;CFBundleExecutable&lt;/key&gt;
+    &lt;string&gt;YourGame&lt;/string&gt;
+    &lt;key&gt;CFBundleIconFile&lt;/key&gt;
+    &lt;string&gt;YourGame&lt;/string&gt;
+    &lt;key&gt;CFBundleIdentifier&lt;/key&gt;
+    &lt;string&gt;com.your-domain.YourGame&lt;/string&gt;
+    &lt;key&gt;CFBundleInfoDictionaryVersion&lt;/key&gt;
+    &lt;string&gt;6.0&lt;/string&gt;
+    &lt;key&gt;CFBundleName&lt;/key&gt;
+    &lt;string&gt;YourGame&lt;/string&gt;
+    &lt;key&gt;CFBundlePackageType&lt;/key&gt;
+    &lt;string&gt;APPL&lt;/string&gt;
+    &lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
+    &lt;string&gt;1.0&lt;/string&gt;
+    &lt;key&gt;CFBundleSignature&lt;/key&gt;
+    &lt;string&gt;FONV&lt;/string&gt;
+    &lt;key&gt;CFBundleVersion&lt;/key&gt;
+    &lt;string&gt;1&lt;/string&gt;
+    &lt;key&gt;LSApplicationCategoryType&lt;/key&gt;
+    &lt;string&gt;public.app-category.games&lt;/string&gt;
+    &lt;key&gt;LSMinimumSystemVersion&lt;/key&gt;
+    &lt;string&gt;10.15&lt;/string&gt;
+    &lt;key&gt;NSHumanReadableCopyright&lt;/key&gt;
+    &lt;string&gt;Copyright © 2022&lt;/string&gt;
+    &lt;key&gt;NSPrincipalClass&lt;/key&gt;
+    &lt;string&gt;NSApplication&lt;/string&gt;
+    &lt;key&gt;LSRequiresNativeExecution&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;LSArchitecturePriority&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;arm64&lt;/string&gt;
+    &lt;/array&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+<p>For more information about Info.plist files, see the <a href="https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html">documentation</a>.</p>
+<p>After completing these steps, your .app folder should appear as an executable application on macOS.</p>
+<p>For archiving, we recommend using the .tar.gz format to preserve the execution permissions (you will likely run into permission issues if you use .zip at any point).</p>
+<h2 id="special-notes-about-net-parameters">Special notes about .NET parameters</h2>
+<p>.NET proposes several parameters when publishing apps that may sound helpful, but have many issues when it comes to games (because they were never meant for games in the first place, but for small lightweight applications).</p>
+<h3 id="readytorun-r2r">ReadyToRun (R2R)</h3>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#readytorun-images">ReadyToRun</a> is advertised as improving application startup time, but slightly increasing binary size. We recommend not using it for games, because it produces micro stutters when your game is running.</p>
+<p>Ready2Run code is of low quality and makes the Just-In-Time compiler (JIT) to trigger regularly to promote the code to a higher quality. Whenever the JIT runs, it produces potentially very visible stutters.</p>
+<p>Disabling ReadyToRun solves this issue (at the cost of a slightly longer startup time, but typically very negligible).</p>
+<p>ReadyToRun is disabled by default. You can configure it by setting the <code>PublishReadyToRun</code> property in your csproj file.</p>
+<p>MonoGame templates for .NET projects explicitly set this to <code>false</code>.</p>
+<h3 id="tiered-compilation">Tiered compilation</h3>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#tiered-compilation">Tiered compilation</a> is a companion system to ReadyToRun and works on the same principle to enhance startup time. We suggest disabling it to avoid any stutter while your game is running.</p>
+<p>Tiered compilation is <strong>enabled by default</strong>. To disable it set the <code>TieredCompilation</code> property to <code>false</code> in your csproj.
+MonoGame templates for .NET projects explicitly set this to <code>false</code>.</p>
+<h3 id="singlefilepublish">SingleFilePublish</h3>
+<p>SingleFilePublish packages your game into a single executable file with all dependencies and content integrated.</p>
+<p>While it sounds very convenient, be aware that it's not magical and is in fact a hidden self-extracting zip archive. As such, it may make app startup take <strong>a lot</strong> longer if your game is large, and may fail to launch on systems where user permissions don't allow extracting files (or if there is not enough storage space available).</p>
+<p>We highly recommend not using it for better compatibility across systems.</p>
+<h2 id="windows-store-games">Windows Store games</h2>
+<p>Please refer to the <a href="https://docs.microsoft.com/en-us/windows/uwp/publish/">Windows Store documentation</a>.</p>
+<h2 id="mobile-games">Mobile games</h2>
+<p>Please refer to the Xamarin documentation:</p>
+<ul>
+<li><p><a href="https://docs.microsoft.com/en-us/xamarin/android/deploy-test/publishing/">Android</a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store?tabs=windows">iOS</a></p>
+</li>
+</ul>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/packaging_games.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

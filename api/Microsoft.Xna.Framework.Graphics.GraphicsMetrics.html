@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Struct GraphicsMetrics | MonoGame ">
+
+    <title>Struct GraphicsMetrics | MonoGame </title>
+<meta name="description" content="A snapshot of rendering statistics from  to be used for runtime debugging and profiling.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Struct GraphicsMetrics | MonoGame ">
+    <meta name="og:description" content="A snapshot of rendering statistics from  to be used for runtime debugging and profiling.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">
+    <meta name="twitter:title" content="Struct GraphicsMetrics | MonoGame ">
+    <meta name="twitter:description" content="A snapshot of rendering statistics from  to be used for runtime debugging and profiling.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics" class="text-break">
+Struct GraphicsMetrics  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A snapshot of rendering statistics from <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html#Microsoft_Xna_Framework_Graphics_GraphicsDevice_Metrics">Metrics</a> to be used for runtime debugging and profiling.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct GraphicsMetrics</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_ClearCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.ClearCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_ClearCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.ClearCount">
+  ClearCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of times Clear was called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long ClearCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_DrawCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.DrawCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_DrawCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.DrawCount">
+  DrawCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of times Draw was called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long DrawCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_PixelShaderCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.PixelShaderCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_PixelShaderCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.PixelShaderCount">
+  PixelShaderCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of times the pixel shader was changed on the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long PixelShaderCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_PrimitiveCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.PrimitiveCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_PrimitiveCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.PrimitiveCount">
+  PrimitiveCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of rendered primitives.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long PrimitiveCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_SpriteCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.SpriteCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_SpriteCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.SpriteCount">
+  SpriteCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of sprites and text characters rendered via <a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteBatch.html">SpriteBatch</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SpriteCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_TargetCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.TargetCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_TargetCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.TargetCount">
+  TargetCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of times a target was changed on the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long TargetCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_TextureCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.TextureCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_TextureCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.TextureCount">
+  TextureCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of times a texture was changed on the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long TextureCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_VertexShaderCount_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.VertexShaderCount*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_VertexShaderCount" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.VertexShaderCount">
+  VertexShaderCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of times the vertex shader was changed on the GPU.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long VertexShaderCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_op_Addition_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.op_Addition*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_op_Addition_Microsoft_Xna_Framework_Graphics_GraphicsMetrics_Microsoft_Xna_Framework_Graphics_GraphicsMetrics_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.op_Addition(Microsoft.Xna.Framework.Graphics.GraphicsMetrics,Microsoft.Xna.Framework.Graphics.GraphicsMetrics)">
+  operator +(GraphicsMetrics, GraphicsMetrics)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the combination of two sets of metrics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsMetrics operator +(GraphicsMetrics value1, GraphicsMetrics value2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value1</code> <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a> on the left of the add sign.</p>
+</dd>
+    <dt><code>value2</code> <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a> on the right of the add sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a></dt>
+    <dd><p>Combination of two sets of metrics.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_op_Subtraction_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.op_Subtraction*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_GraphicsMetrics_op_Subtraction_Microsoft_Xna_Framework_Graphics_GraphicsMetrics_Microsoft_Xna_Framework_Graphics_GraphicsMetrics_" data-uid="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.op_Subtraction(Microsoft.Xna.Framework.Graphics.GraphicsMetrics,Microsoft.Xna.Framework.Graphics.GraphicsMetrics)">
+  operator -(GraphicsMetrics, GraphicsMetrics)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the difference between two sets of metrics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsMetrics operator -(GraphicsMetrics value1, GraphicsMetrics value2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value1</code> <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a> on the left of the sub sign.</p>
+</dd>
+    <dt><code>value2</code> <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a></dt>
+    <dd><p>Source <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a> on the right of the sub sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsMetrics.html">GraphicsMetrics</a></dt>
+    <dd><p>Difference between two sets of metrics.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

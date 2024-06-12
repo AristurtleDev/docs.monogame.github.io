@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class VertexChannel&lt;T&gt; | MonoGame ">
+
+    <title>Class VertexChannel&lt;T&gt; | MonoGame </title>
+<meta name="description" content="Provides methods and properties for maintaining a vertex channel. This is a generic implementation of VertexChannel and, therefore, can handle strongly typed content data.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel-1.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class VertexChannel&lt;T&gt; | MonoGame ">
+    <meta name="og:description" content="Provides methods and properties for maintaining a vertex channel. This is a generic implementation of VertexChannel and, therefore, can handle strongly typed content data.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel-1.html">
+    <meta name="twitter:title" content="Class VertexChannel&lt;T&gt; | MonoGame ">
+    <meta name="twitter:description" content="Provides methods and properties for maintaining a vertex channel. This is a generic implementation of VertexChannel and, therefore, can handle strongly typed content data.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1" class="text-break">
+Class VertexChannel&lt;T&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.html">Content</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.html">Pipeline</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.Content.Pipeline.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides methods and properties for maintaining a vertex channel.
+This is a generic implementation of VertexChannel and, therefore, can handle strongly typed content data.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class VertexChannel&lt;T&gt; : VertexChannel, IList, ICollection, IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd>Provides methods and properties for maintaining a vertex channel. This is a generic implementation of VertexChannel and, therefore, can handle strongly typed content data.</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel.html">VertexChannel</a></div>
+      <div><span class="xref">VertexChannel&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel.html#Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_Count">VertexChannel.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel.html#Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_Name">VertexChannel.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel.html#Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_Contains_System_Object_">VertexChannel.Contains(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel.html#Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_CopyTo_System_Array_System_Int32_">VertexChannel.CopyTo(Array, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel.html#Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_IndexOf_System_Object_">VertexChannel.IndexOf(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_ElementType_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.ElementType*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_ElementType" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.ElementType">
+  ElementType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type of data contained in this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Type ElementType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_Item_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.Item*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_Item_System_Int32_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.Item(System.Int32)">
+  this[int]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the element at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int index] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_Contains_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.Contains*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_Contains__0_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.Contains(`0)">
+  Contains(T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified element is in the channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>Element being searched for.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the element is present; false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_CopyTo_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.CopyTo*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_CopyTo__0___System_Int32_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.CopyTo(`0[],System.Int32)">
+  CopyTo(T[], int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the elements of the channel to an array, starting at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(T[] array, int arrayIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> T[]</dt>
+    <dd><p>Array that will receive the copied channel elements.</p>
+</dd>
+    <dt><code>arrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Starting index for copy operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_GetEnumerator_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.GetEnumerator*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_GetEnumerator" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.GetEnumerator">
+  GetEnumerator()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an enumerator interface for reading channel content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;T&gt;</dt>
+    <dd><p>Enumeration of the channel content.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_IndexOf_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.IndexOf*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_IndexOf__0_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.IndexOf(`0)">
+  IndexOf(T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the index of the specified item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>Item whose index is to be retrieved.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Index of specified item.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_ReadConvertedContent_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.ReadConvertedContent*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_Graphics_VertexChannel_1_ReadConvertedContent__1" data-uid="Microsoft.Xna.Framework.Content.Pipeline.Graphics.VertexChannel`1.ReadConvertedContent``1">
+  ReadConvertedContent&lt;TargetType&gt;()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads channel content and automatically converts it to the specified vector format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;TargetType&gt; ReadConvertedContent&lt;TargetType&gt;()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TargetType&gt;</dt>
+    <dd><p>The converted channel data.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TargetType</code></dt>
+    <dd><p>Target vector format for the converted channel data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

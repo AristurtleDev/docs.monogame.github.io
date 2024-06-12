@@ -1,0 +1,621 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class Model | MonoGame ">
+
+    <title>Class Model | MonoGame </title>
+<meta name="description" content="A basic 3D model with per mesh parent bones.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.Model.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class Model | MonoGame ">
+    <meta name="og:description" content="A basic 3D model with per mesh parent bones.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Graphics.Model.html">
+    <meta name="twitter:title" content="Class Model | MonoGame ">
+    <meta name="twitter:description" content="A basic 3D model with per mesh parent bones.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Graphics.Model">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Graphics_Model" data-uid="Microsoft.Xna.Framework.Graphics.Model" class="text-break">
+Class Model  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A basic 3D model with per mesh parent bones.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Model</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Model</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model__ctor_" data-uid="Microsoft.Xna.Framework.Graphics.Model.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_System_Collections_Generic_List_Microsoft_Xna_Framework_Graphics_ModelBone__System_Collections_Generic_List_Microsoft_Xna_Framework_Graphics_ModelMesh__" data-uid="Microsoft.Xna.Framework.Graphics.Model.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice,System.Collections.Generic.List{Microsoft.Xna.Framework.Graphics.ModelBone},System.Collections.Generic.List{Microsoft.Xna.Framework.Graphics.ModelMesh})">
+  Model(GraphicsDevice, List&lt;ModelBone&gt;, List&lt;ModelMesh&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Model(GraphicsDevice graphicsDevice, List&lt;ModelBone&gt; bones, List&lt;ModelMesh&gt; meshes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>graphicsDevice</code> <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd><p>A valid reference to <a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a>.</p>
+</dd>
+    <dt><code>bones</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelBone.html">ModelBone</a>&gt;</dt>
+    <dd><p>The collection of bones.</p>
+</dd>
+    <dt><code>meshes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMesh.html">ModelMesh</a>&gt;</dt>
+    <dd><p>The collection of meshes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">graphicsDevice</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">bones</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">meshes</code> is null.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_Bones_" data-uid="Microsoft.Xna.Framework.Graphics.Model.Bones*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_Bones" data-uid="Microsoft.Xna.Framework.Graphics.Model.Bones">
+  Bones
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelBone.html">ModelBone</a> objects which describe how each mesh in the
+mesh collection for this model relates to its parent mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModelBoneCollection Bones { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelBoneCollection.html">ModelBoneCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_Meshes_" data-uid="Microsoft.Xna.Framework.Graphics.Model.Meshes*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_Meshes" data-uid="Microsoft.Xna.Framework.Graphics.Model.Meshes">
+  Meshes
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>A collection of <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMesh.html">ModelMesh</a> objects which compose the model. Each <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMesh.html">ModelMesh</a>
+in a model may be moved independently and may be composed of multiple materials
+identified as <a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMeshPart.html">ModelMeshPart</a> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModelMeshCollection Meshes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelMeshCollection.html">ModelMeshCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_Root_" data-uid="Microsoft.Xna.Framework.Graphics.Model.Root*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_Root" data-uid="Microsoft.Xna.Framework.Graphics.Model.Root">
+  Root
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Root bone for this model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ModelBone Root { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.ModelBone.html">ModelBone</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_Tag_" data-uid="Microsoft.Xna.Framework.Graphics.Model.Tag*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_Tag" data-uid="Microsoft.Xna.Framework.Graphics.Model.Tag">
+  Tag
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Custom attached object.
+<remarks>
+Skinning data is example of attached object for model.
+</remarks></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Tag { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_CopyAbsoluteBoneTransformsTo_" data-uid="Microsoft.Xna.Framework.Graphics.Model.CopyAbsoluteBoneTransformsTo*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_CopyAbsoluteBoneTransformsTo_Microsoft_Xna_Framework_Matrix___" data-uid="Microsoft.Xna.Framework.Graphics.Model.CopyAbsoluteBoneTransformsTo(Microsoft.Xna.Framework.Matrix[])">
+  CopyAbsoluteBoneTransformsTo(Matrix[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bone transforms relative to all parent bones of the each bone from this model to a given array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyAbsoluteBoneTransformsTo(Matrix[] destinationBoneTransforms)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destinationBoneTransforms</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>[]</dt>
+    <dd><p>The array receiving the transformed bones.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_CopyBoneTransformsFrom_" data-uid="Microsoft.Xna.Framework.Graphics.Model.CopyBoneTransformsFrom*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_CopyBoneTransformsFrom_Microsoft_Xna_Framework_Matrix___" data-uid="Microsoft.Xna.Framework.Graphics.Model.CopyBoneTransformsFrom(Microsoft.Xna.Framework.Matrix[])">
+  CopyBoneTransformsFrom(Matrix[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bone transforms relative to <a class="xref" href="Microsoft.Xna.Framework.Graphics.Model.html#Microsoft_Xna_Framework_Graphics_Model_Root">Root</a> bone from a given array to this model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyBoneTransformsFrom(Matrix[] sourceBoneTransforms)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sourceBoneTransforms</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>[]</dt>
+    <dd><p>The array of prepared bone transform data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">sourceBoneTransforms</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">sourceBoneTransforms</code> is invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_CopyBoneTransformsTo_" data-uid="Microsoft.Xna.Framework.Graphics.Model.CopyBoneTransformsTo*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_CopyBoneTransformsTo_Microsoft_Xna_Framework_Matrix___" data-uid="Microsoft.Xna.Framework.Graphics.Model.CopyBoneTransformsTo(Microsoft.Xna.Framework.Matrix[])">
+  CopyBoneTransformsTo(Matrix[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies bone transforms relative to <a class="xref" href="Microsoft.Xna.Framework.Graphics.Model.html#Microsoft_Xna_Framework_Graphics_Model_Root">Root</a> bone from this model to a given array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyBoneTransformsTo(Matrix[] destinationBoneTransforms)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destinationBoneTransforms</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a>[]</dt>
+    <dd><p>The array receiving the transformed bones.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p><code class="paramref">destinationBoneTransforms</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">destinationBoneTransforms</code> is invalid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Graphics_Model_Draw_" data-uid="Microsoft.Xna.Framework.Graphics.Model.Draw*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Graphics_Model_Draw_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_Microsoft_Xna_Framework_Matrix_" data-uid="Microsoft.Xna.Framework.Graphics.Model.Draw(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
+  Draw(Matrix, Matrix, Matrix)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the model meshes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Draw(Matrix world, Matrix view, Matrix projection)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The world transform.</p>
+</dd>
+    <dt><code>view</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The view transform.</p>
+</dd>
+    <dt><code>projection</code> <a class="xref" href="Microsoft.Xna.Framework.Matrix.html">Matrix</a></dt>
+    <dd><p>The projection transform.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

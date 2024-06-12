@@ -1,0 +1,909 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class MediaPlayer | MonoGame ">
+
+    <title>Class MediaPlayer | MonoGame </title>
+<meta name="description" content="Provides methods and properties to play, pause, resume, and stop songs. MediaPlayer also exposes shuffle, repeat, volume, play position, and visualization capabilities.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Media.MediaPlayer.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class MediaPlayer | MonoGame ">
+    <meta name="og:description" content="Provides methods and properties to play, pause, resume, and stop songs. MediaPlayer also exposes shuffle, repeat, volume, play position, and visualization capabilities.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Media.MediaPlayer.html">
+    <meta name="twitter:title" content="Class MediaPlayer | MonoGame ">
+    <meta name="twitter:description" content="Provides methods and properties to play, pause, resume, and stop songs. MediaPlayer also exposes shuffle, repeat, volume, play position, and visualization capabilities.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Media.MediaPlayer">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Media_MediaPlayer" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer" class="text-break">
+Class MediaPlayer  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Media.html">Media</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides methods and properties to play, pause, resume, and stop songs.
+MediaPlayer also exposes shuffle, repeat, volume, play position, and visualization capabilities.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class MediaPlayer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MediaPlayer</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_GameHasControl_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.GameHasControl*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_GameHasControl" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.GameHasControl">
+  GameHasControl
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the game has control of the background music.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GameHasControl { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Media_MediaPlayer_GameHasControl_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If a gamer is currently playing their own music as the background to your game,
+calls to <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_Play_Microsoft_Xna_Framework_Media_Song_">Play(Song)</a>, <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_Stop">Stop()</a>, <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_Pause">Pause()</a>,
+<a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_Resume">Resume()</a>, <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_MoveNext">MoveNext()</a>, and <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_MovePrevious">MovePrevious()</a>
+might have no effect, depending on the platform.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_IsMuted_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsMuted*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_IsMuted" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsMuted">
+  IsMuted
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or set the muted setting for the media player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMuted { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_IsRepeating_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsRepeating*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_IsRepeating" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsRepeating">
+  IsRepeating
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the repeat setting for the media player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRepeating { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Media_MediaPlayer_IsRepeating_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the playback queue will begin
+playing again after all songs in the queue have been played.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_IsShuffled_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsShuffled*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_IsShuffled" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsShuffled">
+  IsShuffled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the shuffle setting for the media player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsShuffled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Media_MediaPlayer_IsShuffled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>When set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, songs in the playback queue are
+played in random order rather than from first to last.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_IsVisualizationEnabled_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsVisualizationEnabled*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_IsVisualizationEnabled" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.IsVisualizationEnabled">
+  IsVisualizationEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the visualization enabled setting for the media player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsVisualizationEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Media_MediaPlayer_IsVisualizationEnabled_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Always returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_PlayPosition_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.PlayPosition*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_PlayPosition" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.PlayPosition">
+  PlayPosition
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the play position within the currently playing song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TimeSpan PlayPosition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Queue_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Queue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Queue" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Queue">
+  Queue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the media playback queue, <a class="xref" href="Microsoft.Xna.Framework.Media.MediaQueue.html">MediaQueue</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaQueue Queue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Media.MediaQueue.html">MediaQueue</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_State_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.State*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_State" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.State">
+  State
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the media playback state, <a class="xref" href="Microsoft.Xna.Framework.Media.MediaState.html">MediaState</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MediaState State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Media.MediaState.html">MediaState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Volume_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Volume*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Volume" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Volume">
+  Volume
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the media player volume</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Volume { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Media player volume, from 0.0f (silence) to 1.0f (full volume relative to the current device volume)</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Media_MediaPlayer_Volume_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+Volume adjustment is based on a decibel, not multiplicative, scale.
+Setting <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_Volume">Volume</a> to 0.0 subtracts 96 dB from the volume.
+Setting <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_Volume">Volume</a> to 1.0 subtracts 0 dB from the volume.
+Values in between 0.0f and 1.0f subtract dB from the volume proportionally.
+</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_MoveNext_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.MoveNext*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_MoveNext" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.MoveNext">
+  MoveNext()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops currently playing song, moves to the next song in the queue of playing songs and plays it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void MoveNext()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Media_MediaPlayer_MoveNext_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the current song is the last song in the queue, <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_MoveNext">MoveNext()</a> will stay on current song
+</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_MovePrevious_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.MovePrevious*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_MovePrevious" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.MovePrevious">
+  MovePrevious()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops currently playing song, moves to the previous song in the queue of playing songs and plays it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void MovePrevious()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Media_MediaPlayer_MovePrevious_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+If the current song is the first song in the queue, <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_MovePrevious">MovePrevious()</a> will stay on current song
+</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Pause_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Pause*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Pause" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Pause">
+  Pause()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pauses the currently playing song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Pause()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Play_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Play*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Play_Microsoft_Xna_Framework_Media_Song_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Play(Microsoft.Xna.Framework.Media.Song)">
+  Play(Song)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Play clears the current playback queue, and then queues up the specified song for playback.
+Playback starts immediately at the beginning of the song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Play(Song song)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>song</code> <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Play_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Play*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Play_Microsoft_Xna_Framework_Media_Song_System_Nullable_System_TimeSpan__" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Play(Microsoft.Xna.Framework.Media.Song,System.Nullable{System.TimeSpan})">
+  Play(Song, TimeSpan?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Play clears the current playback queue, and then queues up the specified song for playback.
+Playback starts immediately at the given position of the song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Play(Song song, TimeSpan? startPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>song</code> <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a></dt>
+    <dd></dd>
+    <dt><code>startPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Play_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Play*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Play_Microsoft_Xna_Framework_Media_SongCollection_System_Int32_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Play(Microsoft.Xna.Framework.Media.SongCollection,System.Int32)">
+  Play(SongCollection, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Play clears the current playback queue, and then queues up the specified song collection for playback.
+Playback starts immediately at the beginning of the song, specified by song collection index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Play(SongCollection collection, int index = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>collection</code> <a class="xref" href="Microsoft.Xna.Framework.Media.SongCollection.html">SongCollection</a></dt>
+    <dd></dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Resume_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Resume*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Resume" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Resume">
+  Resume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resumes a paused song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Resume()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Media_MediaPlayer_Stop_" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Stop*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_Stop" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.Stop">
+  Stop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops playing a song.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_ActiveSongChanged" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.ActiveSongChanged">
+  ActiveSongChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when the active song changes due to active playback or due to explicit calls to the
+<a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_MoveNext">MoveNext()</a> or <a class="xref" href="Microsoft.Xna.Framework.Media.MediaPlayer.html#Microsoft_Xna_Framework_Media_MediaPlayer_MovePrevious">MovePrevious()</a> methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;EventArgs&gt; ActiveSongChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_Media_MediaPlayer_MediaStateChanged" data-uid="Microsoft.Xna.Framework.Media.MediaPlayer.MediaStateChanged">
+  MediaStateChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when the media player play state changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event EventHandler&lt;EventArgs&gt; MediaStateChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

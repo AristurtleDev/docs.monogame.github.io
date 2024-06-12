@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="MonoGame Content Builder (MGCB) | MonoGame ">
+
+    <title>MonoGame Content Builder (MGCB) | MonoGame </title>
+<meta name="description" content="Learn about the MonoGame Content Builder (MGCB), the command line tool for building XNB content on Windows, Mac, and Linux desktop.">
+
+    <meta name="og:url" content="https://monogame.net/articles/tools/mgcb.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="MonoGame Content Builder (MGCB) | MonoGame ">
+    <meta name="og:description" content="Learn about the MonoGame Content Builder (MGCB), the command line tool for building XNB content on Windows, Mac, and Linux desktop.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/articles/tools/mgcb.html">
+    <meta name="twitter:title" content="MonoGame Content Builder (MGCB) | MonoGame ">
+    <meta name="twitter:description" content="Learn about the MonoGame Content Builder (MGCB), the command line tool for building XNB content on Windows, Mac, and Linux desktop.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../../public/docfx.min.css">
+    <link rel="stylesheet" href="../../public/main.css">
+    <meta name="docfx:navrel" content="../../toc.html">
+    <meta name="docfx:tocrel" content="../toc.html">
+
+
+
+
+<meta name="docfx:docurl" content="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/tools/mgcb.md/#L1">
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="monogame-content-builder-mgcb">MonoGame Content Builder (MGCB)</h1>
+<p class="text-secondary">Learn about the MonoGame Content Builder (MGCB), the command line tool for building XNB content on Windows, Mac, and Linux desktop.</p>
+<p>The MonoGame Content Builder is a command line tool for building XNB content on Windows, Mac, and Linux desktop systems.</p>
+<p>Typically, it is executed by the <a href="mgcb_editor.html">MGCB Editor</a> when editing content or by <code>MonoGame.Content.Builder.Task</code> during the build process
+of a MonoGame project. Alternatively you can use it yourself from the command line for specialized build pipelines or for debugging content processing.</p>
+<h2 id="installation">Installation</h2>
+<p>MGCB can be installed as a <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools">.NET tool</a>.
+Make sure you have the .NET SDK installed. You can download it <a href="https://dotnet.microsoft.com/download">here</a>.</p>
+<p>In a terminal run <code>dotnet tool install -g dotnet-mgcb</code> to install MGCB. Then you can execute MGCB by simply running <code>mgcb</code>.</p>
+<h2 id="command-line-options">Command Line Options</h2>
+<p>The options are processed “left to right”. When an option is repeated, it is overwritten.</p>
+<h3 id="output-directory">Output Directory</h3>
+<pre><code>/outputDir:&lt;directory_path&gt;
+</code></pre>
+<p>Specifies the directory where all content is written. Defaults to the current working directory.</p>
+<h3 id="intermediate-directory">Intermediate Directory</h3>
+<pre><code>/intermediateDir:&lt;directory_path&gt;
+</code></pre>
+<p>Specifies the directory where all intermediate files are written. Defaults to the current working directory.</p>
+<h3 id="rebuild-content">Rebuild Content</h3>
+<pre><code>/rebuild
+</code></pre>
+<p>Force a full rebuild of all content.</p>
+<h3 id="clean-content">Clean Content</h3>
+<pre><code>/clean
+</code></pre>
+<p>Delete all previously built content and intermediate files. Only the <code>/intermediateDir</code> and <code>/outputDir</code> need to be defined for clean to do its job.</p>
+<h3 id="incremental-build">Incremental Build</h3>
+<pre><code>/incremental
+</code></pre>
+<p>Only build content that changed since the last build.</p>
+<h3 id="assembly-reference">Assembly Reference</h3>
+<pre><code>/reference:&lt;assembly_path&gt;
+</code></pre>
+<p>An optional parameter which adds an assembly reference which contains importers, processors, or writers needed during content building.</p>
+<h3 id="target-platform">Target Platform</h3>
+<pre><code>/platform:&lt;target_Platform&gt;
+</code></pre>
+<p>Set the target platform for this build. It must be a member of the <a class="xref" href="../../api/Microsoft.Xna.Framework.Content.Pipeline.TargetPlatform.html">TargetPlatform</a> enum:</p>
+<ul>
+<li>Windows</li>
+<li>iOS</li>
+<li>Android</li>
+<li>DesktopGL</li>
+<li>WindowsStoreApp</li>
+<li>PlayStation4</li>
+<li>PlayStation5</li>
+<li>XboxOne</li>
+<li>Switch</li>
+<li>Stadia</li>
+</ul>
+<p>If not set, it will default to Windows.</p>
+<p>NOTE: PlayStation 4, PlayStation 5, Xbox One, Stadia, and Switch support is only available to licensed console developers.</p>
+<h3 id="target-graphics-profile">Target Graphics Profile</h3>
+<pre><code>/profile:&lt;graphics_Profile&gt;
+</code></pre>
+<p>Set the target graphics profile for this build. It must be a member of the <a class="xref" href="../../api/Microsoft.Xna.Framework.Graphics.GraphicsProfile.html">GraphicsProfile</a> enum:</p>
+<ul>
+<li>HiDef</li>
+<li>Reach</li>
+</ul>
+<p>If not set, it will default to HiDef.</p>
+<h3 id="target-build-configuration">Target Build Configuration</h3>
+<pre><code>/config:&lt;build_config&gt;
+</code></pre>
+<p>The optional build configuration name from the build system. This is sometimes used as a hint in content processors.</p>
+<h3 id="content-compression">Content Compression</h3>
+<pre><code>/compress
+</code></pre>
+<p>Uses LZ4 compression to compress the contents of the XNB files. Content build times will increase with this option enabled. Compression is not recommended for Android as the app package is already compressed. This is not compatible with LZX compression used in XNA content.</p>
+<h3 id="content-importer-name">Content Importer Name</h3>
+<pre><code>/importer:&lt;class_name&gt;
+</code></pre>
+<p>An optional parameter which defines the class name of the content importer for reading source content. If the option is omitted or used without a class name the default content importer for the source type is used.</p>
+<h3 id="content-processor-name">Content Processor Name</h3>
+<pre><code>/processor:&lt;class_name&gt;
+</code></pre>
+<p>An optional parameter which defines the class name of the content processor for processing imported content. If the option is omitted used without a class name the default content processor for the imported content is used.</p>
+<p>Note that when you change the processor all previously defined <code>/processorParam</code> are cleared.</p>
+<h3 id="content-processor-parameter">Content Processor Parameter</h3>
+<pre><code>/processorParam:&lt;name&gt;=&lt;value&gt;
+</code></pre>
+<p>An optional parameter which defines a parameter name and value to set on a content processor.</p>
+<p>Note all defined processor parameters are cleared when the <code>/processor</code> is set.</p>
+<h3 id="build-content-file">Build Content File</h3>
+<pre><code>/build:&lt;content_filepath&gt;
+/build:&lt;content_filepath&gt;;&lt;destination_filepath&gt;
+</code></pre>
+<p>Instructs the content builder to build the specified content file using the previously set switches and options. Optional destination path may be specified if you want to change the output file path.</p>
+<h3 id="launch-debugger">Launch Debugger</h3>
+<pre><code>/launchdebugger
+</code></pre>
+<p>Allows a debugger to attach to the MGCB executable before content is built.</p>
+<h3 id="response-file">Response File</h3>
+<pre><code>/@:&lt;response_filepath&gt;
+</code></pre>
+<p>This defines a text response file (sometimes called a command file) that contains the same options and switches you would normally find on the command line.</p>
+<p>Each switch is specified on a new line. Comment lines are prefixed with #. These lines are ignored. You can specify multiple response files or mix normal command line switches with response files.</p>
+<p>An example response file could look like this:</p>
+<pre><code># Directories
+/outputDir:bin/foo
+/intermediateDir:obj/foo
+
+/rebuild
+
+# Build a texture
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyEnabled=false
+/build:Textures\wood.png
+/build:Textures\metal.png
+/build:Textures\plastic.png
+</code></pre>
+<h4 id="preprocessor-macros">Preprocessor Macros</h4>
+<p>Response files support preprocessor macros to allow conditionals within a response file.</p>
+<pre><code>$if &lt;name&gt;=&lt;value&gt;
+$endif
+</code></pre>
+<p>Preprocessor symbols can be defined from the command line with the <code>define</code> option or in a response file with the <code>$set</code> directive.</p>
+<pre><code>&lt;example command line&gt;
+MGCB.exe /define:BuildEffects=No /@:example.mgcb
+
+&lt;example.mgcb file&gt;
+$if BuildEffects=Yes
+   /importer:EffectImporter
+   /processor:EffectProcessor
+   /build:Effects\custom.fx
+   # all other effects here....
+$endif
+</code></pre>
+<pre><code>$set BuildEffects=Yes
+
+$if BuildEffects=Yes
+    # ...
+    # This is executed
+$endif
+</code></pre>
+<p>For booleans you can omit a value to set a symbol and to check if it is set:</p>
+<pre><code>$set BuildEffects
+
+$if BuildEffects
+    # ...
+    # This is executed
+$endif
+</code></pre>
+<h3 id="customizing-your-build-process">Customizing your Build Process</h3>
+<p>When building content from your project with <code>MonoGame.Content.Builder.Task</code>, there are a few ways to hook into the build process. <code>MonoGame.Content.Builder.Task</code> runs a target called
+<code>RunContentBuilder</code> just before your project builds. If you want to do any processing before or after this process you can use the <code>BeforeTargets</code> and <code>AfterTargets</code> mechanism provided
+by <code>msbuild</code> to run your own targets.</p>
+<pre><code>&lt;Target Name=&quot;MyBeforeTarget&quot; BeforeTargets=&quot;RunContentBuilder&quot;&gt;
+   &lt;Message Text=&quot;MyBeforeTarget Ran&quot;/&gt;
+&lt;/Target&gt;
+&lt;Target Name=&quot;MyAfterTarget&quot; AfterTargets=&quot;RunContentBuilder&quot;&gt;
+   &lt;Message Text=&quot;MyAfterTarget Ran&quot;/&gt;
+&lt;/Target&gt;
+</code></pre>
+<p>If you want to customize the arguments sent to the <code>MGCB.exe</code> as part of the build process you can use the <code>&lt;MonoGameMGCBAdditionalArguments&gt;</code> property to define those.
+For example to pass in the current project configuration you could include the following code in a PropertyGroup in your .csproj file.</p>
+<pre><code>&lt;MonoGameMGCBAdditionalArguments&gt;-config:$(Configuration)&lt;/MonoGameMGCBAdditionalArguments&gt;
+</code></pre>
+
+        </article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AristurtleDev/docs.monogame.github.io/blob/docs/vs-code-setup/articles/tools/mgcb.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

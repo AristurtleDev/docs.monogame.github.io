@@ -1,0 +1,851 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class NamedValueDictionary&lt;T&gt; | MonoGame ">
+
+    <title>Class NamedValueDictionary&lt;T&gt; | MonoGame </title>
+
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary-1.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class NamedValueDictionary&lt;T&gt; | MonoGame ">
+    <meta name="og:description" content="">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary-1.html">
+    <meta name="twitter:title" content="Class NamedValueDictionary&lt;T&gt; | MonoGame ">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1" class="text-break">
+Class NamedValueDictionary&lt;T&gt;  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.html">Content</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.html">Pipeline</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.Content.Pipeline.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NamedValueDictionary&lt;T&gt; : IDictionary&lt;string, T&gt;, ICollection&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;string, T&gt;&gt;, IEnumerable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NamedValueDictionary&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, T&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, T&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationChannelDictionary.html">AnimationChannelDictionary</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.AnimationContentDictionary.html">AnimationContentDictionary</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.Graphics.TextureReferenceDictionary.html">TextureReferenceDictionary</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.Pipeline.OpaqueDataDictionary.html">OpaqueDataDictionary</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1__ctor_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1__ctor" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.#ctor">
+  NamedValueDictionary()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes an instance of NamedValueDictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NamedValueDictionary()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Count_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Count*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Count" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Count">
+  Count
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of items in the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_DefaultSerializerType_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.DefaultSerializerType*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_DefaultSerializerType" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.DefaultSerializerType">
+  DefaultSerializerType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specifies the type hint for the intermediate serializer. Values of this type do not store an explicit type attribute in the related XML source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Type DefaultSerializerType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Item_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Item*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Item_System_String_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Item(System.String)">
+  this[string]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the specified item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[string key] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of a key.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Keys_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Keys*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Keys" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Keys">
+  Keys
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all keys contained in the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;string&gt; Keys { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Values_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Values*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Values" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Values">
+  Values
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all values contained in the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollection&lt;T&gt; Values { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Add_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Add*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Add_System_String__0_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Add(System.String,`0)">
+  Add(string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds the specified key and value to the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(string key, T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of the key of the new data pair.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The value of the new data pair.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_AddItem_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.AddItem*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_AddItem_System_String__0_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.AddItem(System.String,`0)">
+  AddItem(string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an element to the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddItem(string key, T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of the key of the new element.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The value of the new element.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Clear_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Clear*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Clear" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Clear">
+  Clear()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all keys and values from the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_ClearItems_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.ClearItems*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_ClearItems" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.ClearItems">
+  ClearItems()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all elements from the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ClearItems()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_ContainsKey_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.ContainsKey*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_ContainsKey_System_String_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.ContainsKey(System.String)">
+  ContainsKey(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified key is present in the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsKey(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of a key.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_GetEnumerator_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.GetEnumerator*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_GetEnumerator" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.GetEnumerator">
+  GetEnumerator()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an enumerator that iterates through items in a dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;string, T&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, T&gt;&gt;</dt>
+    <dd><p>Enumerator for iterating through the dictionary.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Remove_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Remove*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_Remove_System_String_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.Remove(System.String)">
+  Remove(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified key and value from the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of the key to be removed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the value is present; false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_RemoveItem_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.RemoveItem*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_RemoveItem_System_String_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.RemoveItem(System.String)">
+  RemoveItem(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the specified element from the dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool RemoveItem(string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of the key of the data pair to be removed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the value is present; false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_SetItem_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.SetItem*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_SetItem_System_String__0_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.SetItem(System.String,`0)">
+  SetItem(string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modifies the value of an existing element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetItem(string key, T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of the element to be modified.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The value to be set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_TryGetValue_" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.TryGetValue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_Pipeline_NamedValueDictionary_1_TryGetValue_System_String__0__" data-uid="Microsoft.Xna.Framework.Content.Pipeline.NamedValueDictionary`1.TryGetValue(System.String,`0@)">
+  TryGetValue(string, out T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the value associated with the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue(string key, out T value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Identity of the key of the element whose value is to be retrieved.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd><p>The current value of the element.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the value is present; false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

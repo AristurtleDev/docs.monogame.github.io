@@ -1,0 +1,745 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class DrawableGameComponent | MonoGame ">
+
+    <title>Class DrawableGameComponent | MonoGame </title>
+<meta name="description" content="A drawable object that, when added to the  collection of a  instance, will have it&#39;s  method called when  is called.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.DrawableGameComponent.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class DrawableGameComponent | MonoGame ">
+    <meta name="og:description" content="A drawable object that, when added to the  collection of a  instance, will have it&#39;s  method called when  is called.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.DrawableGameComponent.html">
+    <meta name="twitter:title" content="Class DrawableGameComponent | MonoGame ">
+    <meta name="twitter:description" content="A drawable object that, when added to the  collection of a  instance, will have it&#39;s  method called when  is called.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.DrawableGameComponent">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_DrawableGameComponent" data-uid="Microsoft.Xna.Framework.DrawableGameComponent" class="text-break">
+Class DrawableGameComponent  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A drawable object that, when added to the <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Components">Game.Components</a> collection of a
+<a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a> instance, will have it's <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a> method called when
+<a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Draw_Microsoft_Xna_Framework_GameTime_">Game.Draw(GameTime)</a> is called.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DrawableGameComponent : GameComponent, IGameComponent, IUpdateable, IDisposable, IDrawable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.GameComponent.html">GameComponent</a></div>
+      <div><span class="xref">DrawableGameComponent</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Microsoft.Xna.Framework.IGameComponent.html">IGameComponent</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.IUpdateable.html">IUpdateable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="Microsoft.Xna.Framework.IDrawable.html">IDrawable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_Game">GameComponent.Game</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_Enabled">GameComponent.Enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_UpdateOrder">GameComponent.UpdateOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_EnabledChanged">GameComponent.EnabledChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_UpdateOrderChanged">GameComponent.UpdateOrderChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_Update_Microsoft_Xna_Framework_GameTime_">GameComponent.Update(GameTime)</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_OnUpdateOrderChanged_System_Object_System_EventArgs_">GameComponent.OnUpdateOrderChanged(object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_OnEnabledChanged_System_Object_System_EventArgs_">GameComponent.OnEnabledChanged(object, EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_Dispose">GameComponent.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Microsoft_Xna_Framework_DrawableGameComponent_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This inherits from <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html">GameComponent</a> so it's <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html#Microsoft_Xna_Framework_GameComponent_Update_Microsoft_Xna_Framework_GameTime_">Update(GameTime)</a>
+method will also be called when <a class="xref" href="Microsoft.Xna.Framework.Game.html#Microsoft_Xna_Framework_Game_Update_Microsoft_Xna_Framework_GameTime_">Game.Update(GameTime)</a> is called.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent__ctor_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent__ctor_Microsoft_Xna_Framework_Game_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.#ctor(Microsoft.Xna.Framework.Game)">
+  DrawableGameComponent(Game)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html">DrawableGameComponent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DrawableGameComponent(Game game)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>game</code> <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a></dt>
+    <dd><p>The game that this component will belong to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_DrawOrder_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.DrawOrder*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_DrawOrder" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.DrawOrder">
+  DrawOrder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the order in which this component should be drawn, relative to other components that are in the
+same <a class="xref" href="Microsoft.Xna.Framework.GameComponentCollection.html">GameComponentCollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DrawOrder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_DrawableGameComponent_DrawOrder_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This value can be any integer.  Components in the <a class="xref" href="Microsoft.Xna.Framework.GameComponentCollection.html">GameComponentCollection</a> are drawn in
+ascending order based on their <b>DrawOrder</b>.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_GraphicsDevice_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.GraphicsDevice*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_GraphicsDevice" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.GraphicsDevice">
+  GraphicsDevice
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_GraphicsDevice">GraphicsDevice</a> that this <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html">DrawableGameComponent</a> uses for drawing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDevice GraphicsDevice { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Graphics.GraphicsDevice.html">GraphicsDevice</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_Visible_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Visible*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_Visible" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Visible">
+  Visible
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or Sets a value that indicates whether the <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a> method of this component
+should be called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Visible { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_Dispose_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_Dispose_System_Boolean_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Dispose(System.Boolean)">
+  Dispose(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shuts down the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_Draw_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Draw*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_Draw_Microsoft_Xna_Framework_GameTime_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Draw(Microsoft.Xna.Framework.GameTime)">
+  Draw(GameTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draw this component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Draw(GameTime gameTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameTime</code> <a class="xref" href="Microsoft.Xna.Framework.GameTime.html">GameTime</a></dt>
+    <dd><p>The time elapsed since the last call to <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_Draw_Microsoft_Xna_Framework_GameTime_">Draw(GameTime)</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_Initialize_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Initialize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_Initialize" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.Initialize">
+  Initialize()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the <a class="xref" href="Microsoft.Xna.Framework.GameComponent.html">GameComponent</a> needs to be initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_LoadContent_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.LoadContent*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_LoadContent" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.LoadContent">
+  LoadContent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load graphical resources needed by this component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void LoadContent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_OnDrawOrderChanged_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.OnDrawOrderChanged*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_OnDrawOrderChanged_System_Object_System_EventArgs_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.OnDrawOrderChanged(System.Object,System.EventArgs)">
+  OnDrawOrderChanged(object, EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_DrawOrder">DrawOrder</a> changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDrawOrderChanged(object sender, EventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>This <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html">DrawableGameComponent</a>.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd><p>Arguments to the <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_DrawOrderChanged">DrawOrderChanged</a> event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_OnVisibleChanged_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.OnVisibleChanged*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_OnVisibleChanged_System_Object_System_EventArgs_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.OnVisibleChanged(System.Object,System.EventArgs)">
+  OnVisibleChanged(object, EventArgs)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_Visible">Visible</a> changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnVisibleChanged(object sender, EventArgs args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>This <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html">DrawableGameComponent</a>.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd><p>Arguments to the <a class="xref" href="Microsoft.Xna.Framework.DrawableGameComponent.html#Microsoft_Xna_Framework_DrawableGameComponent_VisibleChanged">VisibleChanged</a> event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_DrawableGameComponent_UnloadContent_" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.UnloadContent*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_UnloadContent" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.UnloadContent">
+  UnloadContent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unload graphical resources needed by this component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UnloadContent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_DrawOrderChanged" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.DrawOrderChanged">
+  DrawOrderChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when <a class="xref" href="Microsoft.Xna.Framework.IDrawable.html#Microsoft_Xna_Framework_IDrawable_DrawOrder">DrawOrder</a> changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; DrawOrderChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Microsoft_Xna_Framework_DrawableGameComponent_VisibleChanged" data-uid="Microsoft.Xna.Framework.DrawableGameComponent.VisibleChanged">
+  VisibleChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Raised when <a class="xref" href="Microsoft.Xna.Framework.IDrawable.html#Microsoft_Xna_Framework_IDrawable_Visible">Visible</a> changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;EventArgs&gt; VisibleChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

@@ -1,0 +1,1017 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Class ContentManager | MonoGame ">
+
+    <title>Class ContentManager | MonoGame </title>
+<meta name="description" content="The ContentManager is a run-time component which loads managed objects from .xnb binary files produced by the design time MonoGame Content Builder.  It also manages the lifespan of the loaded objects, disposing the content manager will also dispose any assets which are themselves .">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.ContentManager.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Class ContentManager | MonoGame ">
+    <meta name="og:description" content="The ContentManager is a run-time component which loads managed objects from .xnb binary files produced by the design time MonoGame Content Builder.  It also manages the lifespan of the loaded objects, disposing the content manager will also dispose any assets which are themselves .">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Content.ContentManager.html">
+    <meta name="twitter:title" content="Class ContentManager | MonoGame ">
+    <meta name="twitter:description" content="The ContentManager is a run-time component which loads managed objects from .xnb binary files produced by the design time MonoGame Content Builder.  It also manages the lifespan of the loaded objects, disposing the content manager will also dispose any assets which are themselves .">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Content.ContentManager">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Content_ContentManager" data-uid="Microsoft.Xna.Framework.Content.ContentManager" class="text-break">
+Class ContentManager  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Content.html">Content</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The ContentManager is a run-time component which loads managed objects from .xnb binary files produced by the
+design time MonoGame Content Builder.  It also manages the lifespan of the loaded objects, disposing the
+content manager will also dispose any assets which are themselves <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ContentManager : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ContentManager</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Microsoft.Xna.Framework.Content.ResourceContentManager.html">ResourceContentManager</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager__ctor_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager__ctor_System_IServiceProvider_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.#ctor(System.IServiceProvider)">
+  ContentManager(IServiceProvider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the ContentMangaer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContentManager(IServiceProvider serviceProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The service provider that the ContentManager should use to locate services.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_ContentManager__ctor_System_IServiceProvider__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+    By default, the ContentMangaer searches for content in the directory where the executable is located.
+</p>
+<p>
+    When creating a new ContentManager, if no instance of <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a> is otherwise required by
+    the application, it is often better to create a new class that implements the
+    <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a> interface rather than creating an instance of <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a> just
+    to create a new instance of <a class="xref" href="Microsoft.Xna.Framework.GraphicsDeviceManager.html">GraphicsDeviceManager</a>.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <code class="paramref">serviceProvider</code> parameter is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager__ctor_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager__ctor_System_IServiceProvider_System_String_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.#ctor(System.IServiceProvider,System.String)">
+  ContentManager(IServiceProvider, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the ContentMangaer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContentManager(IServiceProvider serviceProvider, string rootDirectory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd><p>The service provider that the ContentManager should use to locate services.</p>
+</dd>
+    <dt><code>rootDirectory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The root directory the ContentManager will search for content in.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_ContentManager__ctor_System_IServiceProvider_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+            By default, the ContentMangaer searches for content in the directory where the executable is located.
+        </p>
+<p>
+            When creating a new ContentManager, if no instance of <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a> is otherwise required by
+            the application, it is often better to create a new class that implements the
+            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a> interface rather than creating an instance of <a class="xref" href="Microsoft.Xna.Framework.Game.html">Game</a> just
+            to create a new instance of <a class="xref" href="Microsoft.Xna.Framework.GraphicsDeviceManager.html">GraphicsDeviceManager</a>.
+        </p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <code class="paramref">serviceProvider</code> parameter is null.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_LoadedAssets_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.LoadedAssets*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_LoadedAssets" data-uid="Microsoft.Xna.Framework.Content.ContentManager.LoadedAssets">
+  LoadedAssets
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Dictionary&lt;string, object&gt; LoadedAssets { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_RootDirectory_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.RootDirectory*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_RootDirectory" data-uid="Microsoft.Xna.Framework.Content.ContentManager.RootDirectory">
+  RootDirectory
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or Sets the root directory that this ContentManager will search for assets in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RootDirectory { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_ServiceProvider_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ServiceProvider*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_ServiceProvider" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ServiceProvider">
+  ServiceProvider
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the service provider instance used by this ContentManager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IServiceProvider ServiceProvider { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_Dispose_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_Dispose" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_Dispose_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Dispose*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_Dispose_System_Boolean_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Dispose(System.Boolean)">
+  Dispose(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true to release both managed and unmanaged resources; false to release only unmanaged resources.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_Finalize_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Finalize*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_Finalize" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Finalize">
+  ~ContentManager()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~ContentManager()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_LoadLocalized_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.LoadLocalized*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_LoadLocalized__1_System_String_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.LoadLocalized``1(System.String)">
+  LoadLocalized&lt;T&gt;(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads an asset that has been processed by the Content Pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual T LoadLocalized&lt;T&gt;(string assetName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The asset name, relative to the <a class="xref" href="Microsoft.Xna.Framework.Content.ContentManager.html#Microsoft_Xna_Framework_Content_ContentManager_RootDirectory">ContentManager.RootDirectory</a>, and not
+including the .xnb extension.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The loaded asset. Repeated calls to load the same asset will return the same object instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>
+    The type of asset to load.
+</p>
+<p>
+    <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html">Effect</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.Model.html">Model</a>, <a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a>,
+    <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteFont.html">SpriteFont</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture.html">Texture</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture2D.html">Texture2D</a>,
+    and <a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureCube.html">TextureCube</a> are all supported by default by the standard Content Pipeline
+    processor, but additional types may be loaded by extending the processor.
+</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_ContentManager_LoadLocalized__1_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+    This method attempts to load the asset based on the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.currentculture">CurrentCulture</a>
+    searching for the asset by name and appending it with with the culture name (e.g. "assetName.en-US")
+    or two letter ISO language name (e.g. "assetName.en"). If unsuccessful in finding the asset with
+    the culture information appended, it will fall back to loading the default asset.
+</p>
+<p>
+    Before a ContentManager can load an asset, you need to add the asset to your game project using
+    the steps described in
+    <a href="https://docs.monogame.net/articles/content_pipeline/index.html">Adding Content - MonoGame</a>.
+</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <code class="paramref">assetName</code> parameter is null or an empty string.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>This was called after the ContentManger was disposed.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>The type of the <code class="paramref">assetName</code> in the file does not match the type of asset requested as
+specified by <code class="typeparamref">T</code>.</p>
+<p>-or-</p>
+<p>A content file matching the <code class="paramref">assetName</code> parameter could not be found.</p>
+<p>-or-</p>
+<p>The specified path in the <code class="paramref">assetName</code> parameter is invalid (for example, a
+directory in the path does not exist).</p>
+<p>-or-</p>
+<p>An error occurred while opening the content file.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_Load_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Load*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_Load__1_System_String_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Load``1(System.String)">
+  Load&lt;T&gt;(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads an asset that has been processed by the Content Pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual T Load&lt;T&gt;(string assetName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The asset name, relative to the <a class="xref" href="Microsoft.Xna.Framework.Content.ContentManager.html#Microsoft_Xna_Framework_Content_ContentManager_RootDirectory">ContentManager.RootDirectory</a>, and not
+including the .xnb extension.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The loaded asset. Repeated calls to load the same asset will return the same object instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>
+    The type of asset to load.
+</p>
+<p>
+    <a class="xref" href="Microsoft.Xna.Framework.Graphics.Effect.html">Effect</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.Model.html">Model</a>, <a class="xref" href="Microsoft.Xna.Framework.Audio.SoundEffect.html">SoundEffect</a>,
+    <a class="xref" href="Microsoft.Xna.Framework.Media.Song.html">Song</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.SpriteFont.html">SpriteFont</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture.html">Texture</a>, <a class="xref" href="Microsoft.Xna.Framework.Graphics.Texture2D.html">Texture2D</a>,
+    and <a class="xref" href="Microsoft.Xna.Framework.Graphics.TextureCube.html">TextureCube</a> are all supported by default by the standard Content Pipeline
+    processor, but additional types may be loaded by extending the processor.
+</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_ContentManager_Load__1_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Before a ContentManager can load an asset, you need to add the asset to your game project using
+the steps described in
+<a href="https://docs.monogame.net/articles/content_pipeline/index.html">Adding Content - MonoGame</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <code class="paramref">assetName</code> parameter is null or an empty string.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>This was called after the ContentManger was disposed.</p>
+</dd>
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Content.ContentLoadException.html">ContentLoadException</a></dt>
+    <dd><p>The type of the <code class="paramref">assetName</code> in the file does not match the type of asset requested as
+specified by <code class="typeparamref">T</code>.</p>
+<p>-or-</p>
+<p>A content file matching the <code class="paramref">assetName</code> parameter could not be found.</p>
+<p>-or-</p>
+<p>The specified path in the <code class="paramref">assetName</code> parameter is invalid (for example, a
+directory in the path does not exist).</p>
+<p>-or-</p>
+<p>An error occurred while opening the content file.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_OpenStream_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.OpenStream*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_OpenStream_System_String_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.OpenStream(System.String)">
+  OpenStream(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Stream OpenStream(string assetName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_ReadAsset_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ReadAsset*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_ReadAsset__1_System_String_System_Action_System_IDisposable__" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ReadAsset``1(System.String,System.Action{System.IDisposable})">
+  ReadAsset&lt;T&gt;(string, Action&lt;IDisposable&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected T ReadAsset&lt;T&gt;(string assetName, Action&lt;IDisposable&gt; recordDisposableObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>recordDisposableObject</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_ReloadAsset_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ReloadAsset*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_ReloadAsset__1_System_String___0_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ReloadAsset``1(System.String,``0)">
+  ReloadAsset&lt;T&gt;(string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ReloadAsset&lt;T&gt;(string originalAssetName, T currentAsset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>originalAssetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>currentAsset</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_ReloadGraphicsAssets_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ReloadGraphicsAssets*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_ReloadGraphicsAssets" data-uid="Microsoft.Xna.Framework.Content.ContentManager.ReloadGraphicsAssets">
+  ReloadGraphicsAssets()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ReloadGraphicsAssets()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_Unload_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Unload*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_Unload" data-uid="Microsoft.Xna.Framework.Content.ContentManager.Unload">
+  Unload()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads all assets that were loaded by this ContentManger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Unload()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_ContentManager_Unload_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If an asset being unloaded implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> interface, then the
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose</a> method will be called before unloading.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_UnloadAsset_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.UnloadAsset*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_UnloadAsset_System_String_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.UnloadAsset(System.String)">
+  UnloadAsset(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads a single asset that was loaded by this ContentManager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UnloadAsset(string assetName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The asset name, relative to the <a class="xref" href="Microsoft.Xna.Framework.Content.ContentManager.html#Microsoft_Xna_Framework_Content_ContentManager_RootDirectory">ContentManager.RootDirectory</a>, and not
+including the .xnb extension.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_ContentManager_UnloadAsset_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the asset being unloaded implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> interface, then the
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose </a> method will be called before unloading.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>The <code class="paramref">assetName</code> parameter is null or an empty string.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>This was called after the ContentManger was disposed.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Microsoft_Xna_Framework_Content_ContentManager_UnloadAssets_" data-uid="Microsoft.Xna.Framework.Content.ContentManager.UnloadAssets*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Content_ContentManager_UnloadAssets_System_Collections_Generic_IList_System_String__" data-uid="Microsoft.Xna.Framework.Content.ContentManager.UnloadAssets(System.Collections.Generic.IList{System.String})">
+  UnloadAssets(IList&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads a set of assets loaded by this ContentManager where each element in the provided collection
+represents the name of an asset to unload.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UnloadAssets(IList&lt;string&gt; assetNames)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The collection containing the names of assets to unload.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Content_ContentManager_UnloadAssets_System_Collections_Generic_IList_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the asset being unloaded implements the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a> interface, then the
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose </a> method will be called before unloading.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>If the <code class="paramref">assetNames</code> parameter is null.</p>
+<p>-or-</p>
+<p>If an element in the collection null or an empty string.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>This was called after the ContentManger was disposed.</p>
+</dd>
+  </dl>
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>

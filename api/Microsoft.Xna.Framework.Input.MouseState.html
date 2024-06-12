@@ -1,0 +1,892 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Struct MouseState | MonoGame ">
+
+    <title>Struct MouseState | MonoGame </title>
+<meta name="description" content="Represents a mouse state with cursor position and button press information.">
+
+    <meta name="og:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Input.MouseState.html"><meta name="og:type" content="website">
+    <meta name="og:title" content="Struct MouseState | MonoGame ">
+    <meta name="og:description" content="Represents a mouse state with cursor position and button press information.">
+    <meta name="og:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="monogame.net">
+    <meta property="twitter:url" content="https://monogame.net/api/Microsoft.Xna.Framework.Input.MouseState.html">
+    <meta name="twitter:title" content="Struct MouseState | MonoGame ">
+    <meta name="twitter:description" content="Represents a mouse state with cursor position and button press information.">
+    <meta name="twitter:image" content="https://monogame.net/images/social_embed_image.png">
+
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="../public/docfx.min.css">
+    <link rel="stylesheet" href="../public/main.css">
+    <meta name="docfx:navrel" content="../toc.html">
+    <meta name="docfx:tocrel" content="toc.html">
+
+
+
+
+
+    <meta name="loc:inThisArticle" content="In this article">
+    <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+    <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+    <meta name="loc:tocFilter" content="Filter by title">
+    <meta name="loc:nextArticle" content="Next">
+    <meta name="loc:prevArticle" content="Previous">
+    <meta name="loc:themeLight" content="Light">
+    <meta name="loc:themeDark" content="Dark">
+    <meta name="loc:themeAuto" content="Auto">
+    <meta name="loc:changeTheme" content="Change theme">
+    <meta name="loc:copy" content="Copy">    
+
+  </head>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+  <script>
+      const theme = localStorage.getItem('theme') || 'auto'
+      document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+        <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+            <div class="container-xxl mx-auto flex-nowrap">
+                <a class="navbar-brand" href="https://monogame.net">
+                <img id="logo" class="mg-logo svg" style="height: 36px; display: inline-block;" alt="">
+            
+                </a>
+                <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navpanel">
+                <div id="navbar">
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Microsoft.Xna.Framework.Input.MouseState">
+
+
+
+  <h1 id="Microsoft_Xna_Framework_Input_MouseState" data-uid="Microsoft.Xna.Framework.Input.MouseState" class="text-break">
+Struct MouseState  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Microsoft.html">Microsoft</a>.<a class="xref" href="Microsoft.Xna.html">Xna</a>.<a class="xref" href="Microsoft.Xna.Framework.html">Framework</a>.<a class="xref" href="Microsoft.Xna.Framework.Input.html">Input</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MonoGame.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a mouse state with cursor position and button press information.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct MouseState</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState__ctor_" data-uid="Microsoft.Xna.Framework.Input.MouseState.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState__ctor_System_Int32_System_Int32_System_Int32_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_" data-uid="Microsoft.Xna.Framework.Input.MouseState.#ctor(System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState)">
+  MouseState(int, int, int, ButtonState, ButtonState, ButtonState, ButtonState, ButtonState)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the MouseState.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MouseState(int x, int y, int scrollWheel, ButtonState leftButton, ButtonState middleButton, ButtonState rightButton, ButtonState xButton1, ButtonState xButton2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Horizontal position of the mouse in relation to the window.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Vertical position of the mouse in relation to the window.</p>
+</dd>
+    <dt><code>scrollWheel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Mouse scroll wheel's value.</p>
+</dd>
+    <dt><code>leftButton</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>Left mouse button's state.</p>
+</dd>
+    <dt><code>middleButton</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>Middle mouse button's state.</p>
+</dd>
+    <dt><code>rightButton</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>Right mouse button's state.</p>
+</dd>
+    <dt><code>xButton1</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>XBUTTON1's state.</p>
+</dd>
+    <dt><code>xButton2</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>XBUTTON2's state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Input_MouseState__ctor_System_Int32_System_Int32_System_Int32_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Normally <a class="xref" href="Microsoft.Xna.Framework.Input.Mouse.html#Microsoft_Xna_Framework_Input_Mouse_GetState">GetState()</a> should be used to get mouse current state. The constructor is provided for simulating mouse input.</p>
+</div>
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState__ctor_" data-uid="Microsoft.Xna.Framework.Input.MouseState.#ctor*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState__ctor_System_Int32_System_Int32_System_Int32_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_System_Int32_" data-uid="Microsoft.Xna.Framework.Input.MouseState.#ctor(System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState,Microsoft.Xna.Framework.Input.ButtonState,System.Int32)">
+  MouseState(int, int, int, ButtonState, ButtonState, ButtonState, ButtonState, ButtonState, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the MouseState.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MouseState(int x, int y, int scrollWheel, ButtonState leftButton, ButtonState middleButton, ButtonState rightButton, ButtonState xButton1, ButtonState xButton2, int horizontalScrollWheel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Horizontal position of the mouse in relation to the window.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Vertical position of the mouse in relation to the window.</p>
+</dd>
+    <dt><code>scrollWheel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Mouse scroll wheel's value.</p>
+</dd>
+    <dt><code>leftButton</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>Left mouse button's state.</p>
+</dd>
+    <dt><code>middleButton</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>Middle mouse button's state.</p>
+</dd>
+    <dt><code>rightButton</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>Right mouse button's state.</p>
+</dd>
+    <dt><code>xButton1</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>XBUTTON1's state.</p>
+</dd>
+    <dt><code>xButton2</code> <a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd><p>XBUTTON2's state.</p>
+</dd>
+    <dt><code>horizontalScrollWheel</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Mouse horizontal scroll wheel's value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Microsoft_Xna_Framework_Input_MouseState__ctor_System_Int32_System_Int32_System_Int32_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_Microsoft_Xna_Framework_Input_ButtonState_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Normally <a class="xref" href="Microsoft.Xna.Framework.Input.Mouse.html#Microsoft_Xna_Framework_Input_Mouse_GetState">GetState()</a> should be used to get mouse current state. The constructor is provided for simulating mouse input.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_HorizontalScrollWheelValue_" data-uid="Microsoft.Xna.Framework.Input.MouseState.HorizontalScrollWheelValue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_HorizontalScrollWheelValue" data-uid="Microsoft.Xna.Framework.Input.MouseState.HorizontalScrollWheelValue">
+  HorizontalScrollWheelValue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the cumulative horizontal scroll wheel value since the game start</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int HorizontalScrollWheelValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_LeftButton_" data-uid="Microsoft.Xna.Framework.Input.MouseState.LeftButton*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_LeftButton" data-uid="Microsoft.Xna.Framework.Input.MouseState.LeftButton">
+  LeftButton
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets state of the left mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ButtonState LeftButton { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_MiddleButton_" data-uid="Microsoft.Xna.Framework.Input.MouseState.MiddleButton*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_MiddleButton" data-uid="Microsoft.Xna.Framework.Input.MouseState.MiddleButton">
+  MiddleButton
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets state of the middle mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ButtonState MiddleButton { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_Position_" data-uid="Microsoft.Xna.Framework.Input.MouseState.Position*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_Position" data-uid="Microsoft.Xna.Framework.Input.MouseState.Position">
+  Position
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets cursor position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Point Position { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Point.html">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_RightButton_" data-uid="Microsoft.Xna.Framework.Input.MouseState.RightButton*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_RightButton" data-uid="Microsoft.Xna.Framework.Input.MouseState.RightButton">
+  RightButton
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets state of the right mouse button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ButtonState RightButton { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_ScrollWheelValue_" data-uid="Microsoft.Xna.Framework.Input.MouseState.ScrollWheelValue*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_ScrollWheelValue" data-uid="Microsoft.Xna.Framework.Input.MouseState.ScrollWheelValue">
+  ScrollWheelValue
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns cumulative scroll wheel value since the game start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ScrollWheelValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_X_" data-uid="Microsoft.Xna.Framework.Input.MouseState.X*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_X" data-uid="Microsoft.Xna.Framework.Input.MouseState.X">
+  X
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets horizontal position of the cursor in relation to the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int X { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_XButton1_" data-uid="Microsoft.Xna.Framework.Input.MouseState.XButton1*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_XButton1" data-uid="Microsoft.Xna.Framework.Input.MouseState.XButton1">
+  XButton1
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets state of the XButton1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ButtonState XButton1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_XButton2_" data-uid="Microsoft.Xna.Framework.Input.MouseState.XButton2*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_XButton2" data-uid="Microsoft.Xna.Framework.Input.MouseState.XButton2">
+  XButton2
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets state of the XButton2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ButtonState XButton2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Microsoft.Xna.Framework.Input.ButtonState.html">ButtonState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_Y_" data-uid="Microsoft.Xna.Framework.Input.MouseState.Y*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_Y" data-uid="Microsoft.Xna.Framework.Input.MouseState.Y">
+  Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets vertical position of the cursor in relation to the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Y { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_Equals_" data-uid="Microsoft.Xna.Framework.Input.MouseState.Equals*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_Equals_System_Object_" data-uid="Microsoft.Xna.Framework.Input.MouseState.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether current instance is equal to specified object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The MouseState to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_GetHashCode_" data-uid="Microsoft.Xna.Framework.Input.MouseState.GetHashCode*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_GetHashCode" data-uid="Microsoft.Xna.Framework.Input.MouseState.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the hash code for MouseState instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Hash code of the object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_ToString_" data-uid="Microsoft.Xna.Framework.Input.MouseState.ToString*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_ToString" data-uid="Microsoft.Xna.Framework.Input.MouseState.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string describing the mouse state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_op_Equality_" data-uid="Microsoft.Xna.Framework.Input.MouseState.op_Equality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_op_Equality_Microsoft_Xna_Framework_Input_MouseState_Microsoft_Xna_Framework_Input_MouseState_" data-uid="Microsoft.Xna.Framework.Input.MouseState.op_Equality(Microsoft.Xna.Framework.Input.MouseState,Microsoft.Xna.Framework.Input.MouseState)">
+  operator ==(MouseState, MouseState)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether two MouseState instances are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(MouseState left, MouseState right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Microsoft.Xna.Framework.Input.MouseState.html">MouseState</a></dt>
+    <dd><p>MouseState instance on the left of the equal sign.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Microsoft.Xna.Framework.Input.MouseState.html">MouseState</a></dt>
+    <dd><p>MouseState instance  on the right of the equal sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the instances are equal; false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Microsoft_Xna_Framework_Input_MouseState_op_Inequality_" data-uid="Microsoft.Xna.Framework.Input.MouseState.op_Inequality*"></a>
+
+  <h3 id="Microsoft_Xna_Framework_Input_MouseState_op_Inequality_Microsoft_Xna_Framework_Input_MouseState_Microsoft_Xna_Framework_Input_MouseState_" data-uid="Microsoft.Xna.Framework.Input.MouseState.op_Inequality(Microsoft.Xna.Framework.Input.MouseState,Microsoft.Xna.Framework.Input.MouseState)">
+  operator !=(MouseState, MouseState)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares whether two MouseState instances are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(MouseState left, MouseState right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Microsoft.Xna.Framework.Input.MouseState.html">MouseState</a></dt>
+    <dd><p>MouseState instance on the left of the equal sign.</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Microsoft.Xna.Framework.Input.MouseState.html">MouseState</a></dt>
+    <dd><p>MouseState instance  on the right of the equal sign.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the objects are not equal; false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+      <section class="container-xxl">
+          <footer class="border-top my-5 pt-5">
+              <div class="row justify-content-between">
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>MonoGame</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="/articles/" class="p-0">Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/api/" class="p-0">API Reference</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/showcase/" class="p-0">Showcase</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/about/" class="p-0">About</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/foundation/" class="p-0">Foundation Bylaws</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Get Involved</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame" class="p-0">Source Code</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="/articles/contributing" class="p-0">Contributing Documentation</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://github.com/MonoGame/MonoGame/issues/new/choose" class="p-0">Report
+                                  Issues</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://www.patreon.com/MonoGame" class="p-0">Patreon</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h5>Public Relations</h5>
+                      <ul class="nav flex-column">
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/blog/" class="p-0">Blog</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://community.monogame.net" class="p-0">Community</a>
+                          </li>
+                          <li class="nav-item mb-2">
+                              <a href="https://monogame.net/presskit/" class="p-0">Press Kit</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-3">
+                      <h3 class="fw-bold"><a href="https://monogame.net/about/#contact-us">Contact Us</a>
+                  </h3></div>
+              </div>
+
+              <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 py-4 my-4">
+                  <div>
+                      Copyright © 2009-2024 MonoGame Foundation, Inc. <br> Designed with
+                      <span class="text-danger">❤</span>
+                      by
+                      <a href="https://github.com/MonoGame/monogame.github.io/graphs/contributors">MonoGame Community</a>
+                  </div>
+                  <div class="d-flex justify-content-between gap-3">
+                      <a class="mg-social-link hide-external-icon" href="https://github.com/monogame/monogame" title="GitHub">
+                          <i class="bi bi-github"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.patreon.com/MonoGame" title="Patreon">
+                          <i class="bi bi-p-circle-fill"></i>
+                      </a>                    
+                      <a class="mg-social-link hide-external-icon" href="https://discord.gg/monogame" title="Discord">
+                          <i class="bi bi-discord"></i>
+                      </a>    
+                      <a class="mg-social-link hide-external-icon" href="https://www.youtube.com/MonoGame" title="YouTube">
+                          <i class="bi bi-youtube"></i>
+                      </a>  
+                      <a class="mg-social-link hide-external-icon" href="https://www.reddit.com/r/monogame/" title="Reddit">
+                          <i class="bi bi-reddit"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://www.facebook.com/monogamecommunity" title="Facebook">
+                          <i class="bi bi-facebook"></i>
+                      </a>
+                      <a class="mg-social-link hide-external-icon" href="https://twitter.com/MonoGameTeam" title="Twitter">
+                          <i class="bi bi-twitter"></i>
+                      </a>     
+                      <a class="mg-social-link hide-external-icon" href="https://monogame.net/blog/feed.xml" title="MonoGame Blog">
+                          <i class="bi bi-rss-fill"></i>
+                      </a>                                                   
+                  </div>
+              </div>
+          </footer>
+      </section>
+  </body>
+</html>
