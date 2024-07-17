@@ -3,14 +3,12 @@ title: Getting Started
 description: Get started creating games with MonoGame.
 ---
 
-# Getting Started
+This article is to walk you through the basics of MonoGame, from setting up your development environment, creating a new project, and understanding the code, to creating your first game.
 
-This section walks you through the basics of MonoGame, and helps you to create your first game.
+## 1. Setting Up Your Development Environment
+The first step is to setup your development environment.  Games can be developed with MonoGame on Windows, macOS, or Linux using different IDEs and code editors such as Visual Studio or Visual Studio Code.
 
-First, select the operating system and toolset you will be working with to create your first MonoGame project, then continue reading to understand the basic layout of a MonoGame project.
-
-By the end of this tutorial set, you will have a working project to build for your target platform and will be ready to tackle your next steps.
-
+Visual Studio is the recommended IDE for development; however Visual Studio is Windows only.  
 ## 1. Setting up your development environment
 
 - [Windows](1_setting_up_your_development_environment_windows.md)
