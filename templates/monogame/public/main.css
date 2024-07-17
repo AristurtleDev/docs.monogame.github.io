@@ -22,6 +22,10 @@
   --bs-link-hover-color-rgb: var(--mg-orange-light-rgb);
 }
 
+[data-bs-theme="light"] .dark-mode-only {
+  display: none;
+}
+
 [data-bs-theme="dark"] {
   --mg-orange-primary: var(--mg-orange-light);
   --mg-orange-secondary: var(--mg-orange-dark);
@@ -29,6 +33,10 @@
 
   --bs-link-color-rgb: var(--mg-orange-light-rgb);
   --bs-link-hover-color-rgb: var(--mg-orange-dark-rgb);
+}
+
+[data-bs-theme="dark"] .light-mode-only {
+  display: none;
 }
 
 /*******************************************************************************

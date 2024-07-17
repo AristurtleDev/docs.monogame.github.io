@@ -5,9 +5,8 @@
 - name: What's New
   href: whats_new.md
 - name: Getting Started
+  href: getting_started/index.md
   items:
-  - name: Introduction
-    href: getting_started/index.md
   - name: 1. Setting up your development environment
     items:
     - name: Windows
