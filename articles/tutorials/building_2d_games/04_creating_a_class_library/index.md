@@ -113,61 +113,7 @@ Let's validate our class library setup by creating a simple component that count
 
 Create a new file called *FramesPerSecondCounter.cs* in the root of the *MonoGameLibrary* project and add the following code:
 
-```cs
-using System;
-using Microsoft.Xna.Framework;
-
-namespace MonoGameLibrary;
-
-/// <summary>
-/// Tracks and calculates the number of frames rendered per second.
-/// </summary>
-public class FramesPerSecondCounter
-{
-    /// A static TimeSpan representing one second, used for FPS calculation intervals.
-    private static readonly TimeSpan s_oneSecond = TimeSpan.FromSeconds(1);
-
-    /// Tracks the number of frames rendered in the current second.
-    private int _frameCounter;
-
-    /// Tracks the elapsed time since the last FPS calculation.
-    private TimeSpan _elapsedTime;
-
-    /// <summary>
-    /// Gets the current frames per second calculation.
-    /// </summary>
-    public float FramesPerSecond { get; private set; }
-
-    /// <summary>
-    /// Creates a new FramesPerSecondCounter.
-    /// </summary>
-    public FramesPerSecondCounter() { }
-
-    /// <summary>
-    /// Updates the FPS calculation based on elapsed game time.
-    /// </summary>
-    /// <param name="gameTime">A snapshot of the game's timing values.</param>
-    public void Update(GameTime gameTime)
-    {
-        _elapsedTime += gameTime.ElapsedGameTime;
-
-        if (_elapsedTime > s_oneSecond)
-        {
-            FramesPerSecond = _frameCounter;
-            _frameCounter = 0;
-            _elapsedTime -= s_oneSecond;
-        }
-    }
-
-    /// <summary>
-    /// Increments the frame counter. Should be called once per frame during the game's Draw method.
-    /// </summary>
-    public void UpdateCounter()
-    {
-        _frameCounter++;
-    }
-}
-```
+[!code-csharp[](./files/FramesPerSecondCounter.cs)]
 
 This class:
 
@@ -175,38 +121,29 @@ This class:
 - Updates the FPS calculation based on elapsed time.
 - Provides the current FPS through a property.
 
-Now let's use this counter in our game. Open *Game1.cs* and make the following changes:
+Next, open the *Game1.cs* file and make the following changes:
 
-1. Add the using directive for our library at the top:
+1. Add the `using MonoGameLibrary;` using directive to the top to to access the `FramesPerSecondCounter` class we created in our library:
 
-    ```cs
-    using MonoGameLibrary;
-    ```
+    [!code-csharp[](./files/Game1.cs?start=0&end=4&highlight=4)]
 
-2. Add a field for the FPS counter:
+2. Add the private field `_fpsCounter` to store the counter we create in:
 
-    ```cs
-    private FramesPerSecondCounter _fpsCounter;
-    ```
+    [!code-csharp[](./files/Game1.cs?start=6&end=12&highlight=6-7)]
 
-3. In the constructor, create a new instance:
+3. In the constructor, create a new `FramesPerSecondCounter` instance and assign it to the `_fpsCounter` field:
 
-    ```cs
-    _fpsCounter = new FramesPerSecondCounter();
-    ```
+    [!code-csharp[](./files/Game1.cs?start=14&end=22&highlight=7-8)]
 
-4. In Update, add:
+4. In Update, call `_fpsCounter.Update` with the current game time to track elapsed time between frames:
 
-    ```cs
-    _fpsCounter.Update(gameTime);
-    ```
+    [!code-csharp[](./files/Game1.cs?start=24&end=33&highlight=6-7)]
 
-5. In Draw, just before `base.Draw()`, add:
+5. In Draw:
+    - Call `_fpsCounter.UpdateCounter` to increment the frame counter.
+    - Update the window title using the frames per second value from the counter.
 
-    ```cs
-    _fpsCounter.UpdateCounter();
-    Window.Title = $"FPS: {_fpsCounter.FramesPerSecond}";
-    ```
+    [!code-csharp[](./files/Game1.cs?start=35&end=46&highlight=5-9)]
 
 When you run the game now, you'll see the current FPS displayed in the window title bar. This confirms that:
 
