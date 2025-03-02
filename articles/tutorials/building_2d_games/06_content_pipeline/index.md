@@ -154,12 +154,38 @@ The folder structure you create in the MGCB Editor affects how you'll access you
 
 To load assets that have been processed through the content pipeline, we can use the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) class in code.
 
-[!code-csharp[](./snippets/contentmanager.cs)]
+### ContentManager Properties
+
+The [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) offers the following properties:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| [**RootDirectory**](xref:Microsoft.Xna.Framework.Content.ContentManager.RootDirectory) | `string` | The root directory the content manager searches for assets. |
+| [**ServiceProvider**](xref:Microsoft.Xna.Framework.Content.ContentManager.ServiceProvider) | `IServiceProvider` | The service provider used by the content manager. |
+
+### ContentManager Methods
+
+The [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) offers the following methods:
+
+| Method | Returns | Description |
+| --- | --- | --- |
+| [**Load&lt;T&gt;(string)**](xref:Microsoft.Xna.Framework.Content.ContentManager.Load``1(System.String)) | `T` | Loads the assets of type `T` that has been processed by the content pipeline. |
+| [**LoadLocalized&lt;T&gt;(string)**](xref:Microsoft.Xna.Framework.Content.ContentManager.LoadLocalized``1(System.String)) | `T` | Loads the asset of type `T` that has been processed by the content pipeline using prepending the [**CultureInfo.CurrentCulture**](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture?view=net-9.0) value to the end of the asset name. (e.g. "assetname.en-US") |
+| [**Unload**](xref:Microsoft.Xna.Framework.Content.ContentManager.Unload) | `void` | Unloads all assets that have been loaded by that content manager instance. |
+| [**UnloadAsset(string)**](xref:Microsoft.Xna.Framework.Content.ContentManager.UnloadAsset(System.String)) | `void` | Unloads the asset with the specified name that has been loaded by that content manager instance. |
+| [**UnloadAssets(IList&lt;string&gt;)**](xref:Microsoft.Xna.Framework.Content.ContentManager.UnloadAssets(System.Collections.Generic.IList{System.String})) | `void` | Unloads the assets that have been loaded by that content manager with the names specified in the list provided. |
+| [**Dispose**](xref:Microsoft.Xna.Framework.Content.ContentManager.Dispose(System.Boolean)) | `void` | Unloads all assets from the content manager and disposes of the content manager instance. |
+
+> [!NOTE]
+> The [**Game**](xref:Microsoft.Xna.Framework.Game) class provides the [**Content**](xref:Microsoft.Xna.Framework.Game.Content) property which is ready to use instance of the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager).
 
 > [!TIP]
-> The [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) not only loads the asset for us, but als provides methods of managing the asset once loaded.  For instance, when an asset is loaded the first time, the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) internally caches the loaded asset.  Loading that same asset later will return the cached asset instead of having to perform another disk read to load the asset again.
+> When an asset is loaded for the first time, the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) will internally cache the loaded asset.  Loading that same asset later will return the cached asset instead of having to perform another disk read to load the asset again.
 
-The [**Game**](xref:Microsoft.Xna.Framework.Game) class provides the [**Content**](xref:Microsoft.Xna.Framework.Game.Content) property which is ready to use instance of the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager).  We can use this to load content using the [**ContentManager.Load&lt;T&gt;**](xref:Microsoft.Xna.Framework.Content.ContentManager.Load``1(System.String)) method.  This method takes two parts:
+> [!TIP]
+> When an asset is unloaded, if the asset type implements the `IDisposable` interface, the `Dispose` method will automatically be called on the asset during hte unload process.
+
+When loading an asset, the load methods require two parts:
 
 1. `T` Type Reference: The content type we are loading.
 2. `assetName` Parameter: A string path that matches the content path of the asset to load.
