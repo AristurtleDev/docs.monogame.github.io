@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameLibrary.Graphics;
 
-namespace MonoGameSnake;
+namespace DungeonSlime;
 
 public class Game1 : Game
 {

@@ -30,7 +30,7 @@ To use the template to add the class library, perform the following:
 
 To add the class library using the MonoGame Game Library project template in Visual Studio Code, perform the following:
 
-1. In the *Solution Explorer* panel, right-click the *MonoGameSnake* solution.
+1. In the *Solution Explorer* panel, right-click the *DungeonSlime* solution.
 2. Chose *New Project* from the context menu.
 3. Enter "Monogame Game Library" and select it as the template to use.
 4. Name the project "MonoGameLibrary".
@@ -41,7 +41,7 @@ To add the class library using the MonoGame Game Library project template in Vis
 
 To add the class library using the MonoGame Game Library project template in Visual Studio 2022, perform the following:
 
-1. Right-click the *MonoGameSnake* solution in the Solution Explorer panel.
+1. Right-click the *DungeonSlime* solution in the Solution Explorer panel.
 2. Choose Add > New Project from the context menu.
 3. Enter "MonoGame Game Library" in the search box, select that template, then click Next.
 4. Name the project "MonoGameLibrary".
@@ -52,9 +52,9 @@ To add the class library using the MonoGame Game Library project template in Vis
 
 To add the class library using the MonoGame Game Library project template with the dotnet CLI, perform the following:
 
-1. Open a new Command Prompt or Terminal window in the same directory as the *MonoGameSnake.sln* solution file.
+1. Open a new Command Prompt or Terminal window in the same directory as the *DungeonSlime.sln* solution file.
 2. Enter the command `dotnet new mglib -n MonoGameLibrary` to create the project, placing it in a folder next to your game project.
-3. Enter the command `dotnet sln MonoGameSnake.sln add ./MonoGameLibrary/MonoGameLibrary.csproj` to add the newly created class library project to the *MonoGameSnake.sln* solution file.
+3. Enter the command `dotnet sln DungeonSlime.sln add ./MonoGameLibrary/MonoGameLibrary.csproj` to add the newly created class library project to the *DungeonSlime.sln* solution file.
 
 ---
 
@@ -66,7 +66,7 @@ Now that the game library project has been created, a reference to it needs to b
 
 To add the game library project as a reference to the game project in Visual Studio Code:
 
-1. In the Solution Explorer panel, right-click the *MonoGameSnake* project.
+1. In the Solution Explorer panel, right-click the *DungeonSlime* project.
 2. Choose "Add Project Reference" from the context menu.
 3. Choose *MonoGameLibrary" from the available options.
 
@@ -80,7 +80,7 @@ To add the game library project as a reference to the game project in Visual Stu
 
 To add the game library project as a reference to the game project in Visual Studio 2022:
 
-1. In the Solution Explorer panel, right-click the *MonoGameSnake* project.
+1. In the Solution Explorer panel, right-click the *DungeonSlime* project.
 2. Select Add > Project Reference from the context menu.
 3. Check the box for the *MonoGameLibrary* project.
 4. Click Ok.
@@ -89,8 +89,8 @@ To add the game library project as a reference to the game project in Visual Stu
 
 To add the game library project as a reference to the game project with the dotnet CLI:
 
-1. Open a new Command Prompt or Terminal window in the same directory as the *MonoGameSnake.csproj* C# project file.
-2. Enter the command `dotnet add ./MonoGameSnake.csproj reference ../MonoGameLibrary/MonoGameLibrary.csproj`.  This will add the *MonoGameLibrary* reference to the *MonoGameSnake* game project.
+1. Open a new Command Prompt or Terminal window in the same directory as the *DungeonSlime.csproj* C# project file.
+2. Enter the command `dotnet add ./DungeonSlime.csproj reference ../MonoGameLibrary/MonoGameLibrary.csproj`.  This will add the *MonoGameLibrary* reference to the *DungeonSlime* game project.
 
 ---
 

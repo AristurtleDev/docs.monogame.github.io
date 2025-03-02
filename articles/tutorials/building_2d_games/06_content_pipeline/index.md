@@ -150,9 +150,12 @@ The new folder will appear in your content tree, and you can now add items to it
 
 The folder structure you create in the MGCB Editor affects how you'll access your content in code. It's good practice to establish a folder structure early in your project development to avoid having to reorganize and update content paths later.
 
-## Loading Assets using the ContentManager Class
+## The ContentManager Class
 
-To load assets that have been processed through the content pipeline, we can use the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) class in code.
+To load assets in code that have been processed through the content pipeline, MonoGame provides the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) class.
+
+> [!NOTE]
+> The [**Game**](xref:Microsoft.Xna.Framework.Game) class provides the [**Content**](xref:Microsoft.Xna.Framework.Game.Content) property which is ready to use instance of the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager).
 
 ### ContentManager Properties
 
@@ -175,9 +178,6 @@ The [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) of
 | [**UnloadAsset(string)**](xref:Microsoft.Xna.Framework.Content.ContentManager.UnloadAsset(System.String)) | `void` | Unloads the asset with the specified name that has been loaded by that content manager instance. |
 | [**UnloadAssets(IList&lt;string&gt;)**](xref:Microsoft.Xna.Framework.Content.ContentManager.UnloadAssets(System.Collections.Generic.IList{System.String})) | `void` | Unloads the assets that have been loaded by that content manager with the names specified in the list provided. |
 | [**Dispose**](xref:Microsoft.Xna.Framework.Content.ContentManager.Dispose(System.Boolean)) | `void` | Unloads all assets from the content manager and disposes of the content manager instance. |
-
-> [!NOTE]
-> The [**Game**](xref:Microsoft.Xna.Framework.Game) class provides the [**Content**](xref:Microsoft.Xna.Framework.Game.Content) property which is ready to use instance of the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager).
 
 > [!TIP]
 > When an asset is loaded for the first time, the [**ContentManager**](xref:Microsoft.Xna.Framework.Content.ContentManager) will internally cache the loaded asset.  Loading that same asset later will return the cached asset instead of having to perform another disk read to load the asset again.
@@ -247,7 +247,7 @@ With the MonoGame logo image now added to the content project, we can load it in
 
 3. In [**Draw**](xref:xref:Microsoft.Xna.Framework.Game.Draw(Microsoft.Xna.Framework.GameTime)), draw the texture using the [**SpriteBatch**](xref:xref:Microsoft.Xna.Framework.Graphics.SpriteBatch)
 
-    [!code-csharp[](./snippets/game1/draw.cs?highlight=5-8)]
+    [!code-csharp[](./snippets/game1/draw.cs?highlight=6-13)]
 
     > [!NOTE]
     > We'll go more into detail about the [**SpriteBatch**](xref:Microsoft.Xna.Framework.Graphics.SpriteBatch) in the next chapter.

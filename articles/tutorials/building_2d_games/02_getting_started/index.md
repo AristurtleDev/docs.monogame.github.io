@@ -152,7 +152,7 @@ Now that you have your development environment setup, it's time to create your f
 3. Type `.NET New Project` in the *Command Palette* and choose the *.NET New Project* command
 4. Next you'll be shown a list of the available .NET project templates. Enter `MonoGame` into the prompt to filter the project templates to only show the MonoGame ones, then choose the *MonoGame Cross-Platform Desktop Application* project template.
 5. After choosing the template, a dialog window will appear asking you to choose a location to save the project.
-6. Next you'll be prompted to enter a name for the project. Enter the name `MonoGameSnake`.
+6. Next you'll be prompted to enter a name for the project. Enter the name `DungeonSlime`.
 7. Finally, select the *Create Project* prompt.
 
 After selecting *Create Project*, a new C# project will be created based on the MonoGame template we choose and opened automatically in VSCode.
