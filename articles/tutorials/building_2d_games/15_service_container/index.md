@@ -117,7 +117,7 @@ public interface IExampleService
 }
 
 // Create a concrete implementation of the interface.
-public class ExampleService : GameComponent : IExampleService
+public class ExampleService : GameComponent, IExampleService
 {
     // Implementation. ...
 }
