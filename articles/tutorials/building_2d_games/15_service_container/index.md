@@ -362,8 +362,7 @@ namespace MonoGameLibrary.Audio
         /// Plays a song.
         /// </summary>
         /// <param name="assetName">The asset name of the song to play.</param>
-        /// <param name="isLooped">Whether the song should loop.</param>
-        void PlaySong(string assetName, bool isLooped = true);
+        void PlaySong(string assetName);
         
         /// <summary>
         /// Pauses all currently playing audio.
