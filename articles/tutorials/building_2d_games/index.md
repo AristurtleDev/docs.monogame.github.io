@@ -36,6 +36,7 @@ This documentation will introduce game development concepts using the MonoGame f
 | [13: Collision Detection](13_collision_detection/index.md)                   | Learn how to implement collision detection between game objects and handle collision responses like blocking, triggering events, and bouncing.                                                    |              |
 | [14: Sound Effects and Music](14_soundeffects_and_music/index.md)            | Learn how to load and play sound effects and background music in MonoGame including managing audio volume, looping, and handling multiple sound effects at once.                                  |              |
 | [15: Working with SpriteFonts](15_working_with_spritefonts/index.md)         | Learn how to create and use SpriteFonts to render text in your MonoGame project, including loading custom fonts and controlling text appearance.                                                  |              |
+| [16: The MonoGame Services Container](16_service_container/index.md)         | Learn how to use MonoGame's Service Container to create a modular game architecture, enabling components to easily find and communicate with each other.                                          |              |
 
 In additional to the chapter documentation, supplemental documentation is also provided to give a more in-depth look at different topics with MonoGame. These are provided through the Appendix documentation below:
 
