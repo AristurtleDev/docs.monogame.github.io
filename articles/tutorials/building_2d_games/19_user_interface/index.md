@@ -122,3 +122,11 @@ The `UIElement` class will need methods to manage the lifecycle of updating and 
 [!code-csharp[](./snippets/uielement.cs#lifecycle)]
 
 These methods are marked as `virtual` so derived classes can override them to add their own behavior will still being able to call the base implementation to ensure children are updated and drawn.
+
+### The UISprite Class
+
+The `UISprite` class will be the first class we implemented that extends the base `UIElement` class.  This class adds a visual component using the previously created `Sprite` class in our library.
+
+Create a new class file named *UISprite.cs* in the *UI* directory of the *MonoGameLibrary* project and add the following code as the initial structure:
+
+[]
