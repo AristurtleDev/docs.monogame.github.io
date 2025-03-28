@@ -125,8 +125,64 @@ These methods are marked as `virtual` so derived classes can override them to ad
 
 ### The UISprite Class
 
-The `UISprite` class will be the first class we implemented that extends the base `UIElement` class.  This class adds a visual component using the previously created `Sprite` class in our library.
+The `UISprite` class extends the `UIElement` class to add a visual component using the previously created `Sprite` class in our library.  It will handle
 
-Create a new class file named *UISprite.cs* in the *UI* directory of the *MonoGameLibrary* project and add the following code as the initial structure:
+- Drawing the sprite at the elements position.
+- Color tinting the sprite based on enabled and disabled states
+- Propagation of color settings to child elements
 
-[]
+In the *UI* directory of the *MonoGameLibrary* project, create a new class file named *UISprite.cs* and add the following code as the initial structure:
+
+[!code-csharp[](./snippets/uisprite.cs#declaration)]
+
+#### UISprite Fields and Properties
+
+The `UISprite` class needs fields and properties to track the color tint to use based on the enabled state, as well as the `Sprite` to draw.  Add the following fields and properties:
+
+[!code-csharp[](./snippets/uisprite.cs#properties)]
+
+When a `UISprite` is the parent element to other `UISprites` and the `EnabledColor` or `DisabledColor` property changes, the value is propagated to the child `UiSprites` to ensure visual consistency within the UI group.
+
+#### UISprite Constructors
+
+The `UISprite` class provides constructors that accept a `Sprite` and an optional parent element.  Add the following constructors:
+
+[!code-csharp[](./snippets/uisprite.cs#ctors)]
+
+These constructors initialize the sprite with the default [**Color.White**](xref:Microsoft.Xna.Framework.Color.White) value for both the enabled and disabled states, which can be customized after creation if needed.
+
+#### UISprite Methods
+
+The `UISprite` class overrides the `Update` and `Draw` methods to handle the sprite specific functionality, and adds a `CenterOrigin` method for convenient sprite positioning.  Add the following methods:
+
+[!code-csharp[](./snippets/uielement.cs#methods)]
+
+Since an `AnimatedSprite` is a derived class from `Sprite`, the `Update` method here performs special handling to determine if the sprite given is an animated one, and automatically updates it if so.  This allows us to use both animated and non-animated sprites for this element.  The `Draw` method applies the appropriate color tint to the sprite before drawing it based on the enabled stated.  Both `Update` and `Draw` call into the their respective base methods at the end to ensure that the base `UIElement` class handles updating and drawing any child elements.
+
+### The UIButton Class
+
+The `UIButton` class extends the `UISprite` class to create interactive buttons.  It handles two visual states; normal and selected.  It also automatically handles switching between sprites based on the selection state.
+
+In the *UI* directory of the *MonoGameLibrary* project, create a new class file named *UIButton.cs* and add the following code as the initial structure:
+
+[!code-csharp[](./snippets/uibutton.cs#declaration)]
+
+#### UIButton Fields and Properties
+
+The `UIButton` class needs fields to track the two different sprites that represent the different states, and a property to track whether the button is currently selected or not.  Add the following fields and properties:
+
+[!code-csharp[](./snippets/uibutton.cs#properties)]
+
+To allow the button to change its visual state based on its selected stated, the `IsSelected` property, when set, will adjust the base `Sprite` property to reference either the selected or normal sprite based on the value being set.
+
+#### UIButton Constructors
+
+The `UIButton` class provides constructors that accept both normal and selected state sprites, with an optional parent element.  Add the following constructors:
+
+[!code-csharp[](./snippets/uibutton.cs#ctors)]
+
+#### UIButton Methods
+
+The `UIButton` class overrides the `CenterOrigin` method from the base `UISprite` class to handle its two sprite nature, ensuring that both sprites are centered.  Add the following method:
+
+[!code-csharp[](./snippets/uibutton.cs#methods)]

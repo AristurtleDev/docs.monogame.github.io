@@ -102,7 +102,7 @@ public class UISprite : UIElement
     }
     #endregion
 
-    #region utilities
+    #region methods
     /// <summary>
     /// Centers the origin of the sprite rendered for this ui sprite.
     /// </summary>
@@ -110,9 +110,7 @@ public class UISprite : UIElement
     {
         Sprite.CenterOrigin();
     }
-    #endregion
 
-    #region update
     /// <summary>
     /// Updates this ui sprite.
     /// </summary>
@@ -134,9 +132,7 @@ public class UISprite : UIElement
         // Call base update so that child elements are updated.
         base.Update(gameTime);
     }
-    #endregion
 
-    #region draw
     /// <summary>
     /// Draws this ui sprite.
     /// </summary>
