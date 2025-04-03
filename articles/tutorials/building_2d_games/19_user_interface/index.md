@@ -8,10 +8,10 @@ A critical component of any game is the user interface (UI) that allows players 
 In this chapter you will
 
 - Learn the basics of user interface design in games.
-- Create reusable UI components for the MonoGameLibrary.
 - Understand the parent-child relationship for UI elements.
+- Create reusable UI components for the MonoGameLibrary.
 - Implement a UI component hierarchy for flexible layouts.
-- Build an options menu for our game using the UI system.
+- Build game menus including title, options, and in-game pause and game over screens.
 
 Let's start by understanding what a user interface is and how it functions in game development.
 
@@ -27,22 +27,22 @@ Game UIs consist of various visual elements that serve different purposes:
 
 User interfaces for games can be categorized into two main types, each with its own design considerations
 
-- **Diegetic UI**: These elements exist within the game world itself and are often part of the narrative.  Examples include a health meter integrated into a character's suit, ammunition displayed on a weapon's holographic sight, or the dashboard instruments the cockpit of a racing game.  Diegetic UI can enhance immersion by making interface elements feel like natural parts of the game world.
-- **Non-diegetic UI**: These elements exist outside the game world, overlaid on top of the gameplay.  Traditional menus, health bars int he corner of the screen, and score displays are common examples.  While less immersive than diegetic UI, non-diegetic elements are often clearer and easier to read.
+- **Diegetic UI**: These elements exist within the game world itself and are often part of the narrative.  Examples include a health meter integrated into a character's suit, ammunition displayed on a weapon's holographic sight, or the dashboard instruments in the cockpit of a racing game.  A Diegetic UI can enhance immersion by making interface elements feel like natural parts of the game world.
+- **Non-diegetic UI**: These elements exist outside the game world, overlaid on top of the gameplay.  Traditional menus, health bars in the corner of the screen, and score displays are common examples.  While less immersive than a diegetic UI, non-diegetic elements are often clearer and easier to read.
 
 For our game project, we'll focus on creating non-diegetic UI elements, specifically menu screens that allow players to navigate between different parts of the game and adjust settings.  This approach provides a solid foundation for understanding UI concepts that you can later expand upon in more complex games.
 
 ### UI Layout Systems
 
-WHen designing and implementing game UI systems, developers must decide how UI elements will be positioned on the screen. Two primary approaches exist, each with distinct advantages and trade-offs;
+When designing and implementing game UI systems, developers must decide how UI elements will be positioned on the screen. Two primary approaches exist, each with distinct advantages and trade-offs;
 
-1. **Absolute Positioning**:  In this approach, each Ui element is placed at specific coordinates on the screen.  Elements are positioned using exact locations, which gives precise control over the layout.  This approach is straightforward to implement and works well for static layouts where elements don't need to adjust based on screen size or content changes.  The main disadvantage of absolute positioning is its lack of flexibility.  If the screen resolution changes or if an element's size changes, manual adjustments to positions are often necessary to maintain the desired layout.
+1. **Absolute Positioning**:  In this approach, each UI element is placed at specific coordinates on the screen.  Elements are positioned using exact locations, which gives precise control over the layout.  This approach is straightforward to implement and works well for static layouts where elements don't need to adjust based on screen size or content changes.  The main disadvantage of absolute positioning is its lack of flexibility.  If the screen resolution changes or if an element's size changes, manual adjustments to positions are often necessary to maintain the desired layout.
 
 2. **Layout engines**: These system position UI elements relative to one another using rules and constraints.  Elements might be positioned using concepts like "center", "align to parent", or "flow horizontally with spacing".  Layout engines add complexity but provide flexibility.  The advantage of layout engines is adaptability to different screen sizes and content changes.  However, they require more initial setup and can be more complex to implement from scratch.
 
 For our implementation we'll take a middle ground approach.  We'll primarily use absolute positioning for simplicity but will build a parent-child relationship system that provides some of the flexibility found in layout engines.  This hybrid approach gives us reasonable control without adding a lot of complexity.
 
-Child elements will be positioned relative to their parent's position, forming a hierarchial structure.  When a parent element moves, all its children move with it, maintaining their relative positions.  This approach simplifies the management of grouped elements without requiring a fully layout engine.
+Child elements will be positioned relative to their parent's position, forming a hierarchial structure.  When a parent element moves, all its children move with it, maintaining their relative positions.  This approach simplifies the management of grouped elements without requiring a full layout engine.
 
 ### Parent-Child Relationships
 
@@ -53,20 +53,22 @@ For example, a settings panel might contain multiple buttons, labels, and slider
 - **Inheritance of Properties**: Child elements can automatically inherit certain properties from their parents.  For instance, if a parent element is hidden or disabled, all its children can be hidden or disabled as well. This cascading behavior simplifies state management across complex interfaces.
 - **Relative Positioning**: Child elements can be positioned relative to their parents rather than relative to the screen.  This means you can place elements within a contain and then move the entire container as a unit without having to update ach child's position individually.
 - **Simplified State Management**:  Actions on parent elements can automatically propagate to their children.  For example, disabling a menu panel can automatically disable all buttons within it, preventing interaction with elements that should be active.
-- **Batch Operations**: Operations like drawing and updating can be performed on a parent element and automatically cascade to all children, reducing hte need for repetitive code.
+- **Batch Operations**: Operations like drawing and updating can be performed on a parent element and automatically cascade to all children, reducing the need for repetitive code.
 - **Logical Grouping**: The hierarchy naturally models the conceptual grouping of UI elements, making the code structure more intuitive and easier to maintain.
 
 ## Creating a UI System
 
-With an understanding of hte core concepts behind game user interfaces, let's build our own UI system for MonoGame.  WE'll implement a set of reusable classes that can be extended and combined to create various UI elements for our game.
+With an understanding of the core concepts behind game user interfaces, let's build our own UI system for MonoGame.  We'll implement a set of reusable classes that can be extended and combined to create various UI elements for our game.
 
-Our UI system will consist of three primary classes that build upon each other
+Our UI system will consist of the following key components:
 
-1. `UIElement`: The base class that handles the parent-child relationship, positioning, and visibility and enabled states.
+1. `UIElement`: The base class that handles the parent-child relationship, positioning, visibility, and enabled states.
 2. `UISprite`: Extends the `UIElement` to include visual representation using our existing `Sprite` class.
-3. `UIButton` Extends `UISprite` to add interactivity and selection states.
+3. `UIButton`: Extends `UIElement` to provide interactive buttons with different visual states for normal and selected.
+4. `UISlider`: Extends `UIElement` to implement adjustable controls for values like volume.
+5. `IUIElementController`: An interface for handling UI navigation through different input devices.
 
-This hierarchial design allows each class to focus on a specific aspect of UI functionality while building on the capabilities of its parent class.
+This hierarchical design allows each class to focus on a specific aspect of UI functionality while building on the capabilities of its parent class.
 
 ### The UIElement Class
 
@@ -76,6 +78,7 @@ The `UIElement` class is the foundation of our UI system.  It provides core func
 - Handling visibility and enabled states.
 - Calculating absolute position from relative positions.
 - Providing update and draw lifecycle methods.
+- Managing UI navigation through action delegates.
 
 To get started, in the *MonoGameLibrary* project:
 
@@ -88,22 +91,44 @@ To get started, in the *MonoGameLibrary* project:
     > [!NOTE]
     > The `UIElement` class implements the [`IEnumerable<T>`](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-9.0) interface.  Using this interface provides an enumerator for the `UIElement` class that we can use to iterate each of the child elements without directly exposing the internal collection.
 
-#### UIElement Field and Properties
+#### UIElement Properties
 
-The `UIElement` class will need fields and properties to track the parent-child relationship between elements, if the element is enabled or visible, and the position of the element.  Add the following fields and properties:
+The `UIElement` class will need various properties to track its state and relationship with other element and navigational properties.  These are broken down into the sections below.
 
-[!code-csharp[](./snippets/uielement.cs#properties)]
+##### State and Relationship Properties
+
+First, the `UIElement` class will need properties to track the state of the element such as whether it is enabled or visible, as well as its relationship with other elements through a parent-child hierarchy.  Add the following fields and properties:
+
+[!code-csharp[](./snippets/uielement.cs#properties-state)]
+
 
 Let's take a look at some of the key properties here and their significance:
 
+- `Parent`: This stores a reference to the parent element, if there is a parent.
 - `Position`: This stores the elements position relative to its parent. For root elements (those without a parent), this is equivalent to the screen position.  This is the property that will be used to adjust the position of the element.
 - `AbsolutePosition`: This calculates the elements absolute position on the screen by combining its relative position with the absolute position of its parent.  This property is what will be used when drawing the element.
-- `Enabled`: Determines whether the element can be interacted with. The getter checks if the parent is enabled first because if the parent is disabled, then all children of it should effectively disabled as well.
-- `Visible`: Determines whether the element should be drawn. Similar to `Enabled`, the getter checks if the parent is visible first because if the parent is not visible, then all children of it should not be visible either.
+- `IsEnabled`: Determines whether the element is enabled (can be updated).  The getter first determines if the element is disabled by determining if it has a parent element and if that parent element is disabled.  If so, then it will automatically return false since child elements of disabled parents are also disabled.  If there is no parent element, or if there is and the parent element is enabled, only then is this elements internal enabled value returned.
+- `IsVisible`: Determines whether the element is visible (should be drawn).
+- `EnabledColor`: This stores the color mask to apply when drawing the UI element when the `IsEnabled` property is true.
+- `DisabledColor`: This stores the color mask to apply when drawing this element while the `IsEnabled` property is false.
+- `IsSelected`: Determines whether the element is currently selected.
+- `Controller`: Stores a reference to the `IUIElementController` instance that is used to determine when actions are performed on this element such as navigating up, down, left, or right, or performing a confirm or cancel action.
+- `UpAction`, `DownAction`, `LeftAction`, `RightAction`, `ConfirmAction`, and `CancelAction`: These are all actions that will be invoked while the element `IsSelected` property is true and the `Controller` returns true for the respective action.
+  
+> [!NOTE]
+> For the `IsEnabled`, `IsVisible`, `EnabledColor` and `DisabledColor` properties, the getters all first determine if the element has a parent element, and if so, returns back the parent elements value.  Doing this allows us to maintain logical and visual consistency between parent and child elements (e.g. if a parent element is disabled, so are all of its child elements).
+>
+> If there is no parent element, then the elements own internal value for that property is returned instead.
+
+##### Navigation Properties
+
+A critical feature of any user interface is being able to navigate it.  The `UIElement` class needs action properties that can define the actions to take when a navigation input occurs.  Add the following properties:
+
+[!code-csharp[](./snippets/uielement.cs#properties-navigation)]
 
 #### UIElement Constructor
 
-The `UIElement` constructor will take an optional `UIElement` parameter that will automatically set that as the parent of the one being created.  Add the following constructor:
+The `UIElement` constructor simply constructs the instance and sets the defaults for various properties.  Add the following constructor.
 
 [!code-csharp[](./snippets/uielement.cs#ctors)]
 
