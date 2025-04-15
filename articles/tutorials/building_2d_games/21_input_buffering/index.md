@@ -1,6 +1,6 @@
 ---
 title: "Chapter 21: Input Buffering"
-description: ""
+description: "Learn how to implement input buffering for more responsive controls."
 ---
 
 In the [previous chapter](../20_the_game/index.md) we completed our Dungeon Slime game with class snake-like mechanics.  While the game is now playable, you might have noticed an issue with the inputs.  In games where movement updates happen at fixed intervals that are less frequent than input polling, inputs can sometimes feel unresponsive, especially when trying to make multiple inputs in succession.
